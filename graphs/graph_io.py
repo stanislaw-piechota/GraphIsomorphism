@@ -16,7 +16,7 @@ import colorsys
 import xml.etree.ElementTree as ET
 from typing import IO, Tuple, List, Union, Any
 from collections import defaultdict
-from graph import Graph, Edge
+from graphs.graph import Graph, Edge
 
 
 # GraphML settings

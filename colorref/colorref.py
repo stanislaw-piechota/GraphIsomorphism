@@ -1,9 +1,9 @@
 from collections import defaultdict
 
-from graph import Vertex, Graph
-from graph_io import load_graph, write_dot
+from graphs.graph import Vertex, Graph
+from graphs.graph_io import load_graph
 
-MIN_COLOR = 1
+MIN_COLOR = 0
 
 
 def transform_coloring(color_vertices: dict[int, list[Vertex]], vertex_color: dict[Vertex, int]) -> tuple[
@@ -36,29 +36,13 @@ def transform_coloring(color_vertices: dict[int, list[Vertex]], vertex_color: di
     return dict(output_color_vertices), output_vertex_colors
 
 
-def draw_graphs_by_vertices(graph_list, vertex_color: dict[Vertex, int]):
-    for vertex, color in vertex_color.items():
-        vertex.color = color
-
-    for i, graph in enumerate(graph_list):
-        with open(f'graph_{i + 1}.dot', 'w') as file:
-            write_dot(graph, file)
-
-
-def draw_graphs_by_colors(graph_list, color_vertices: dict[int, list[Vertex]]):
-    for color, vertices in color_vertices.items():
-        for vertex in vertices:
-            vertex.color = color
-
-    for i, graph in enumerate(graph_list):
-        with open(f'graph_{i + 1}.dot', 'w') as file:
-            write_dot(graph, file)
-
-
-def solve_colorref(graph_list) -> tuple[dict[int, list[Vertex]], int]:
+def solve_colorref(graph_list, initial_coloring: dict[int, list[Vertex]] = None) -> tuple[dict[int, list[Vertex]], int]:
     all_vertices = [vertex for graph in graph_list for vertex in graph.vertices]
-    prev_color_vertices, prev_vertex_color = {MIN_COLOR: all_vertices}, {vertex: MIN_COLOR for vertex in
-                                                                         all_vertices}  # coloring a_1
+    prev_color_vertices = {MIN_COLOR: all_vertices} if initial_coloring is None else initial_coloring
+    prev_vertex_color = {} # coloring a_1
+    for color, color_class in prev_color_vertices.items():
+        for vertex in color_class:
+            prev_vertex_color[vertex] = color
     cur_color_vertices, cur_vertex_color = transform_coloring(prev_color_vertices, prev_vertex_color)  # coloring a_2
     iteration_count = 1
 
@@ -100,8 +84,31 @@ def get_equivalence_classes(graph_list: list[Graph], color_vertices: dict[int, l
     return graph_equivalence_classes
 
 
-def verify_discrete(color_counts: list[int]) -> bool:
+def is_discrete(color_counts: list[int]) -> bool:
     return color_counts.count(1) == len(color_counts)
+
+
+def is_balanced(graph_list: list[Graph], coloring: dict[int, list[Vertex]]) -> bool:
+    for color, color_class in coloring.items():
+        for i in range(len(graph_list) - 1):
+            for j in range(i + 1, len(graph_list)):
+                # TODO: Optimize memory/time usage
+                color_class_set = set(color_class)
+                if len(color_class_set.intersection(set(graph_list[i].vertices))) != len(
+                        color_class_set.intersection(set(graph_list[j].vertices))):
+                    return False
+    return True
+
+
+def is_bijection(g: Graph, h: Graph, coloring: dict[int, list[Vertex]]) -> bool:
+    g_set, h_set = set(g.vertices), set(h.vertices)
+    for color, color_class in coloring.items():
+        color_class_set = set(color_class)
+        g_inter, h_inter = color_class_set.intersection(g_set), color_class_set.intersection(h_set)
+        if len(g_inter) != len(h_inter) or len(g_inter) != 1:
+            return False
+
+    return True
 
 
 def basic_colorref(path: str) -> list[tuple[list[int], dict[int, int], int, bool]]:
@@ -115,9 +122,8 @@ def basic_colorref(path: str) -> list[tuple[list[int], dict[int, int], int, bool
     for equivalence_class in graph_equivalence_classes:
         class_graph_list = [graph_list[i] for i in equivalence_class]
         class_coloring, iteration_count = solve_colorref(class_graph_list)
-        # draw_graphs_by_colors(class_graph_list, class_coloring)git
         color_counts = [len(vertices) // len(equivalence_class) for vertices in class_coloring.values()]
-        output_data.append((equivalence_class, sorted(color_counts), iteration_count, verify_discrete(color_counts)))
+        output_data.append((equivalence_class, sorted(color_counts), iteration_count, is_discrete(color_counts)))
 
     return output_data
 

@@ -2,3 +2,5 @@
 genAIstatement.doc
 __pycache__
 .idea
+graphs_out
+*.pclprof
