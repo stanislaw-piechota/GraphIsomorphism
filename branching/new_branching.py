@@ -1,24 +1,23 @@
 from line_profiler_pycharm import profile
 
-from colorref.colorref import solve_colorref, is_balanced, is_bijection, MIN_COLOR
-from colorref.colorref_draw import draw_graphs_by_colors
-from graphs.graph import Vertex, Graph
+from colorref.colorref import is_balanced, is_bijection
+from colorref.new_colorref import MIN_COLOR, solve_colorref_transform
+from graphs.graph import Graph, Vertex
 from graphs.graph_io import load_graph
+from branching.branching import basic_branching as old_branching
 from testing.test_function import create_report
-from alex.fast_branching_v2 import basic_branching as fast_branching
-from colorref.new_colorref import solve_colorref as new_colorref
+from alex.fast_branching import basic_branching as fast_branching_v1
+from alex.fast_branching import basic_branching as fast_branching_v2
 
 
-@profile
 def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex]) -> int:
     graph_list = [g, h]
-    initial_coloring = {MIN_COLOR: g.vertices + h.vertices}
-    for i, x_vertex in enumerate(d_seq):
-        y_vertex = i_seq[i]
-        initial_coloring[MIN_COLOR].remove(x_vertex)
-        initial_coloring[MIN_COLOR].remove(y_vertex)
-        initial_coloring[MIN_COLOR + i + 1] = [x_vertex, y_vertex]
-    coloring, _ = solve_colorref(graph_list, initial_coloring)
+    initial_coloring = {vertex: MIN_COLOR for vertex in g.vertices + h.vertices}
+    for i, vertices in enumerate(zip(d_seq, i_seq)):
+        x_vertex, y_vertex = vertices
+        initial_coloring[x_vertex] = MIN_COLOR + i + 1
+        initial_coloring[y_vertex] = MIN_COLOR + i + 1
+    coloring = solve_colorref_transform(graph_list, initial_coloring)
     # draw_graphs_by_colors(graph_list, coloring)
 
     if not is_balanced(graph_list, coloring):
@@ -48,7 +47,7 @@ def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vert
     return num
 
 
-# @profile
+@profile
 def basic_branching(path: str):
     with open(path, 'r') as file:
         graph_list = load_graph(file, read_list=True)
@@ -79,17 +78,19 @@ def basic_branching(path: str):
 
 
 if __name__ == "__main__":
-    # print(basic_branching("input/branching/wheeljoin14.grl"))
+    # paths = [
+    #     'input/branching/cubes3.grl',
+    #     'input/branching/cubes4.grl',
+    #     'input/branching/cubes5.grl',
+    #     'input/branching/trees36.grl',
+    #     'input/branching/wheeljoin14.grl'
+    # ]
+    #
+    # create_report(paths, {
+    #     'normal_old_branching': old_branching,
+    #     'normal_new_branching': basic_branching,
+    #     'fast_branching_v1': fast_branching_v1,
+    #     'fast_branching_v2': fast_branching_v2,
+    # }, out_path='docs/branching-old-vs-new-1.0.0.tex')
 
-    paths = [
-        'input/branching/cubes3.grl',
-        'input/branching/cubes4.grl',
-        'input/branching/cubes5.grl',
-        'input/branching/trees36.grl',
-        'input/branching/wheeljoin14.grl'
-    ]
-
-    create_report(paths, {
-        'normal_branching': basic_branching,
-        'fast_branching': fast_branching
-    }, out_path='docs/branching-normal-vs-fast-1.0.0.tex')
+    basic_branching('input/branching/modulesD.grl')

@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+from line_profiler_pycharm import profile
+
 from graphs.graph import Vertex, Graph
 from graphs.graph_io import load_graph
 
@@ -111,21 +113,22 @@ def is_bijection(g: Graph, h: Graph, coloring: dict[int, list[Vertex]]) -> bool:
     return True
 
 
+@profile
 def basic_colorref(path: str) -> list[tuple[list[int], dict[int, int], int, bool]]:
     with open(path, 'r') as file:
         graph_list = load_graph(file, read_list=True)
 
     all_graphs_coloring, _ = solve_colorref(graph_list)
-    graph_equivalence_classes = get_equivalence_classes(graph_list, all_graphs_coloring)
+    # graph_equivalence_classes = get_equivalence_classes(graph_list, all_graphs_coloring)
+    #
+    # output_data = []
+    # for equivalence_class in graph_equivalence_classes:
+    #     class_graph_list = [graph_list[i] for i in equivalence_class]
+    #     class_coloring, iteration_count = solve_colorref(class_graph_list)
+    #     color_counts = [len(vertices) // len(equivalence_class) for vertices in class_coloring.values()]
+    #     output_data.append((equivalence_class, sorted(color_counts), iteration_count, is_discrete(color_counts)))
 
-    output_data = []
-    for equivalence_class in graph_equivalence_classes:
-        class_graph_list = [graph_list[i] for i in equivalence_class]
-        class_coloring, iteration_count = solve_colorref(class_graph_list)
-        color_counts = [len(vertices) // len(equivalence_class) for vertices in class_coloring.values()]
-        output_data.append((equivalence_class, sorted(color_counts), iteration_count, is_discrete(color_counts)))
-
-    return output_data
+    # return output_data
 
 
 if __name__ == "__main__":
