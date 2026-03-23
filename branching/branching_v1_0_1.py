@@ -1,7 +1,10 @@
 from typing import Iterable
-from graph import Edge, Graph, Vertex
-from graph_io import load_graph, write_visualization
+from graphs.graph import Edge, Graph, Vertex
+from graphs.graph_io import load_graph, write_visualization
 import os
+from colorref.colorref_v1_0_0 import basic_colorref as old_colorref
+
+from testing.test_function import create_report
 
 type TColorClass = dict[int, set[Vertex]]
 
@@ -228,5 +231,29 @@ def run_branching():
   path = "input/branching/modulesD.grl"
   basic_branching(path)
 
+
+def basic_colorref(path: str):
+    graphs: list[Graph]
+    with open(path, "r") as f:
+        graphs = load_graph(f, Graph, True)
+
+    initialize_colors(graphs)
+
+    _, color_classes = refine_vertices([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices])
+
+
 if __name__ == '__main__':
-  run_branching()
+    create_report([
+        'input/colorref',
+        'input/fast_colorref/threepaths5.gr',
+        'input/fast_colorref/threepaths10.gr',
+        'input/fast_colorref/threepaths20.gr',
+        'input/fast_colorref/threepaths40.gr',
+        'input/fast_colorref/threepaths80.gr',
+        'input/fast_colorref/threepaths160.gr',
+        'input/fast_colorref/threepaths320.gr',
+        'input/fast_colorref/threepaths640.gr',
+    ], {
+        'basic colorref 1.0.0': old_colorref,
+        'fast colorref 1.1.0': basic_colorref
+    }, out_path='docs/colorref-1.0.0-vs.1.1.0.tex', multiplier=1000)

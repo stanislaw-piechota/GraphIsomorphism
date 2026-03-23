@@ -1,13 +1,11 @@
 from line_profiler_pycharm import profile
 
-from colorref.colorref import solve_colorref, is_balanced, is_bijection, MIN_COLOR
-from colorref.colorref_draw import draw_graphs_by_colors
+from colorref.colorref_v1_0_0 import is_balanced, is_bijection, solve_colorref
 from graphs.graph import Vertex, Graph
 from graphs.graph_io import load_graph
-from testing.test_function import create_report
-from alex.fast_branching_v2 import basic_branching as fast_branching
-from colorref.new_colorref import solve_colorref as new_colorref
 
+
+MIN_COLOR = 0
 
 @profile
 def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex]) -> int:
@@ -19,7 +17,6 @@ def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vert
         initial_coloring[MIN_COLOR].remove(y_vertex)
         initial_coloring[MIN_COLOR + i + 1] = [x_vertex, y_vertex]
     coloring, _ = solve_colorref(graph_list, initial_coloring)
-    # draw_graphs_by_colors(graph_list, coloring)
 
     if not is_balanced(graph_list, coloring):
         return 0
@@ -79,17 +76,17 @@ def basic_branching(path: str):
 
 
 if __name__ == "__main__":
-    # print(basic_branching("input/branching/wheeljoin14.grl"))
+    print(basic_branching("input/branching/cubes4.grl"))
 
-    paths = [
-        'input/branching/cubes3.grl',
-        'input/branching/cubes4.grl',
-        'input/branching/cubes5.grl',
-        'input/branching/trees36.grl',
-        'input/branching/wheeljoin14.grl'
-    ]
-
-    create_report(paths, {
-        'normal_branching': basic_branching,
-        'fast_branching': fast_branching
-    }, out_path='docs/branching-normal-vs-fast-1.0.0.tex')
+    # paths = [
+    #     'input/branching/cubes3.grl',
+    #     'input/branching/cubes4.grl',
+    #     'input/branching/cubes5.grl',
+    #     'input/branching/trees36.grl',
+    #     'input/branching/wheeljoin14.grl'
+    # ]
+    #
+    # create_report(paths, {
+    #     'normal_branching': basic_branching,
+    #     'fast_branching': fast_branching
+    # }, out_path='docs/branching-normal-vs-fast-1.0.0.tex')

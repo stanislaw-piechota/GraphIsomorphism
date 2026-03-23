@@ -1,0 +1,44 @@
+
+%! Author = stanislaw
+%! Date = 12.03.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        File name & \seqsplit{colorref 1.0.0} \\
+        \hline
+		test\_iter.grl & 8.44 \\
+		colorref\_largeexample\_4\_1026.grl & 409.31 \\
+		test\_empty.grl & 0.26 \\
+		cref9vert3comp\_10\_27.grl & 10.11 \\
+		test\_cycles.grl & 1.47 \\
+		colorref\_smallexample\_4\_16.grl & 2.47 \\
+		colorref\_smallexample\_2\_49.grl & 4.35 \\
+		test\_cref9.grl & 2.05 \\
+		test\_trees.grl & 2.29 \\
+		colorref\_smallexample\_6\_15.grl & 5.23 \\
+		colorref\_smallexample\_4\_7.grl & 0.94 \\
+		lecture.grl & 1.39 \\
+		test\_3reg.grl & 1.29 \\
+		colorref\_largeexample\_6\_960.grl & 7897.13 \\
+        \hline
+    \end{tabularx}
+    \caption{Example of a basic table}
+    \label{tab:1}
+\end{table}
+
+\end{document}

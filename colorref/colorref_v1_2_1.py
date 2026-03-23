@@ -1,9 +1,5 @@
 from collections import defaultdict
 
-from line_profiler_pycharm import profile
-
-from colorref.colorref_draw import draw_graphs_by_vertices
-from colorref.colorref import basic_colorref as old_colorref
 from graphs.graph import Vertex, Graph
 from graphs.graph_io import load_graph
 from testing.test_function import create_report
@@ -58,18 +54,23 @@ def basic_colorref(path: str) -> Coloring:
 
 
 if __name__ == '__main__':
-    # basic_colorref('input/colorref/colorref_largeexample_6_960.grl')
+    basic_colorref('input/colorref/colorref_largeexample_6_960.grl')
 
-    paths = [
-        'input/branching/cubes3.grl',
-        'input/branching/cubes4.grl',
-        'input/branching/cubes5.grl',
-        'input/branching/trees36.grl',
-        'input/branching/wheeljoin14.grl',
-        'input/colorref',
-    ]
-
-    create_report(paths, {
-        'colorref 1.0.0' : old_colorref,
-        'colorref 1.1.0' : basic_colorref
-    }, out_path='docs/colorref-1.0-vs-1.1.tex')
+    # paths = [
+    #     'input/colorref',
+    #     'input/fast_colorref/threepaths5.gr',
+    #     'input/fast_colorref/threepaths10.gr',
+    #     'input/fast_colorref/threepaths20.gr',
+    #     'input/fast_colorref/threepaths40.gr',
+    #     'input/fast_colorref/threepaths80.gr',
+    #     'input/fast_colorref/threepaths160.gr',
+    #     'input/fast_colorref/threepaths320.gr',
+    #     'input/fast_colorref/threepaths640.gr',
+    #     'input/fast_colorref/threepaths1280.gr',
+    #     'input/fast_colorref/threepaths2560.gr',
+    # ]
+    #
+    # create_report(paths, {
+    #     'colorref 1.2.0' : fast_colorref,
+    #     'colorref 1.2.1' : basic_colorref
+    # }, out_path='docs/colorref-1.2.0-vs-1.2.1.tex', multiplier=1000)

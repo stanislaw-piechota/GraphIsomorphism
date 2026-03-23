@@ -4,6 +4,7 @@ from line_profiler_pycharm import profile
 
 from graphs.graph import Vertex, Graph
 from graphs.graph_io import load_graph
+from testing.test_function import create_report
 
 MIN_COLOR = 0
 
@@ -132,5 +133,9 @@ def basic_colorref(path: str) -> list[tuple[list[int], dict[int, int], int, bool
 
 
 if __name__ == "__main__":
-    result = basic_colorref("input/colorref/colorref_largeexample_6_960.grl")
-    print(result)
+    # result = basic_colorref("input/colorref/colorref_largeexample_6_960.grl")
+    # print(result)
+
+    create_report(['input/colorref'], {
+        'colorref 1.0.0': basic_colorref
+    }, out_path='docs/colorref-1.0.0.tex', multiplier=1000)

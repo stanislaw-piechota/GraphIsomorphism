@@ -64,7 +64,7 @@ DOCUMENT_TEMPLATE = """
 
 
 def create_report(in_paths: list[str], functions: dict,
-                  out_path: str = "docs/benchmarks.tex"):
+                  out_path: str = "docs/benchmarks.tex", multiplier=1):
     file_names = " & ".join(["\\seqsplit{"+name+"}" for name in functions.keys()]).replace("_", "\\_")
     document = DOCUMENT_TEMPLATE.replace("#FILE_NAMES#", file_names)
     document = document.replace("#LAYOUT#", "|"+"X|"*len(functions.keys()))
@@ -79,14 +79,14 @@ def create_report(in_paths: list[str], functions: dict,
                 for f_name, func in functions.items():
                     print(f"Running {f_name} on {base_name}")
                     result_time = measure_time(func, file_name)
-                    results += f" & {round(result_time, 2)}"
+                    results += f" & {round(result_time * multiplier, 2)}"
                 results += " \\\\\n"
         else:
             results += f"\t\t{os.path.basename(in_path)}"
             for f_name, func in functions.items():
                 print(f"Running {f_name} on {in_path}")
                 result_time = measure_time(func, in_path)
-                results += f" & {round(result_time, 2)}"
+                results += f" & {round(result_time * multiplier, 2)}"
             results += " \\\\\n"
 
     document = document.replace("#DATA#", results.replace('_', '\\_'))

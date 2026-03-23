@@ -1,7 +1,8 @@
 from line_profiler_pycharm import profile
 from typing import Iterable
-from graph import Edge, Graph, Vertex
-from graph_io import load_graph, write_visualization
+
+from graphs.graph import Edge, Graph, Vertex
+from graphs.graph_io import load_graph, write_visualization
 import os
 
 type TColorClass = dict[int, set[Vertex]]
@@ -10,7 +11,7 @@ type TColorClass = dict[int, set[Vertex]]
 def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) -> tuple[list[int], int]:
   base_color = queue.pop(0)
 
-  # Optimize me: computing A takes most time of refine step
+  # TODO: computing A takes most time of refine step
   neighbouring_base: dict[Vertex, int] = dict()
   for base_vertex in color_classes[base_color]:
     for neighbour in base_vertex.neighbours:
@@ -24,7 +25,7 @@ def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) ->
     if i in a:
       a[i].add(vertex)
     else:
-      a[i] = set([vertex])
+      a[i] = {vertex}
 
   for i, vertices in a.items():
     vertex_by_color: TColorClass = dict()
@@ -32,7 +33,7 @@ def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) ->
       if vertex.color in vertex_by_color:
         vertex_by_color[vertex.color].add(vertex)
       else:
-        vertex_by_color[vertex.color] = set([vertex])
+        vertex_by_color[vertex.color] = {vertex}
 
     for color_to_split, vertices in vertex_by_color.items():
       if len(vertices) != len(color_classes[color_to_split]):
@@ -61,52 +62,27 @@ def compute_base_states(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
     if vertex.color in color_classes:
       color_classes[vertex.color].add(vertex)
     else:
-      color_classes[vertex.color] = set([vertex])
+      color_classes[vertex.color] = {vertex}
       max_color = max(max_color, vertex.color)
   return (color_classes, max_color)
 
 @profile
 def refine(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
+
   color_classes, max_color = compute_base_states(vertices)
-  queue: list[int] = list(range(max_color))
+  # print(color_classes)
+  # queue: list[int] = list(range(max_color+1))
+  queue = [0]
 
   while len(queue) > 0:
     queue, max_color = refine_step(color_classes, queue, max_color)
-  return (color_classes, max_color)
+  return color_classes, max_color
 
 def initialize_colors(graphs: list[Graph], force: bool = False):
   for g in graphs:
     for v in g.vertices:
       if not hasattr(v, 'color') or force:
         v.color = 0
-
-def combine_graphs(graphs: Iterable[Graph]) -> Graph:
-  graphs_combined = Graph(False)
-  for graph in graphs:
-    vertex_map: dict[Vertex, Vertex] = {}
-
-    for vertex in graph.vertices:
-      new_vertex = Vertex(graphs_combined)
-      if hasattr(vertex, 'color'):
-        new_vertex.color = vertex.color
-      vertex_map[vertex] = new_vertex
-      graphs_combined += new_vertex
-
-    for edge in graph.edges:
-      orig_head = edge.head
-      orig_tail = edge.tail
-
-      head = vertex_map[orig_head]
-      tail = vertex_map[orig_tail]
-
-      new_edge = Edge(tail, head)
-      graphs_combined += new_edge
-  return graphs_combined
-
-def save_graphs(graphs: Iterable[Graph], id: str = ''):
-  graphs_combined = combine_graphs(graphs)
-  with open(id + '.graphML', 'w+') as f:
-    write_visualization(graphs_combined, f)
 
 def is_balanced(g: Graph, h: Graph, color_classes: TColorClass) -> bool:
   g_vertices_set, h_vertices_set = set(g.vertices), set(h.vertices)
@@ -189,44 +165,34 @@ def basic_branching(path: str):
   for i, iso_class in enumerate(isomorphic_graphs):
     print(iso_class, iso_counts[i])
 
-def group_by_color(graphs: Iterable[Graph], color_classes: TColorClass) -> list[set[Graph]]:
-  groups: list[set[Graph]] = []
-  for graph in graphs:
-    found = False
-    for group in groups:
-      if is_balanced(graph, next(iter(group)), color_classes):
-        group.add(graph)
-        found = True
-        break
-    if not found:
-      groups.append(set([graph]))
-  return groups
 
-def run_colorref():
-  path = "../../input/cref9vert3comp_10_27.grl"
+def basic_colorref(path: str):
+    with open(path, 'r') as f:
+        graphs = load_graph(f, Graph, True)
 
-  graphs: list[Graph]
-  with open(path, "r") as f:
-    graphs = load_graph(f, Graph, True)  # pyright: ignore[reportAssignmentType]
+    # graphs = [graphs[0]]
+    initialize_colors(graphs)
+    return refine([v for graph in graphs for v in graph.vertices])
 
-  initialize_colors(graphs)
-
-  color_classes, _ = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices])
-
-  for group in group_by_color(graphs, color_classes):
-    print(sorted([graphs.index(g) for g in group]))
-  save_graphs(graphs, 'test/colorref')
-
-def run_all_branching():
-  for path in os.listdir("../../input/branching"):
-    print(path)
-    basic_branching('input/branching/' + path)
-    print('-'*20)
-
-@profile
-def run_branching():
-  path = "../../input/branching/products72.grl"
-  basic_branching(path)
 
 if __name__ == '__main__':
-  run_branching()
+    basic_colorref('input/colorref/colorref_largeexample_6_960.grl')
+    # basic_colorref('input/fast_colorref/threepaths10240.gr')
+    # basic_branching('input/branching/modulesD.grl')
+
+    # create_report([
+    #     # 'input/colorref',
+    #     # 'input/fast_colorref/threepaths5.gr',
+    #     # 'input/fast_colorref/threepaths10.gr',
+    #     # 'input/fast_colorref/threepaths20.gr',
+    #     # 'input/fast_colorref/threepaths40.gr',
+    #     # 'input/fast_colorref/threepaths80.gr',
+    #     # 'input/fast_colorref/threepaths160.gr',
+    #     # 'input/fast_colorref/threepaths320.gr',
+    #     # 'input/fast_colorref/threepaths640.gr',
+    #     'input/fast_colorref',
+    #     'input/branching'
+    # ], {
+    #     # 'fast colorref 1.1.0': old_colorref,
+    #     'fast colorref 1.2.0': basic_colorref,
+    # }, out_path='docs/colorref-1.2.0.tex', multiplier=1000)

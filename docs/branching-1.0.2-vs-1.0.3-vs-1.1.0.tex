@@ -1,0 +1,35 @@
+
+%! Author = stanislaw
+%! Date = 12.03.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        File name & \seqsplit{branching 1.0.2} & \seqsplit{branching 1.0.3} & \seqsplit{branching 1.1.0} \\
+        \hline
+		cubes3.grl & 0.13 & 0.02 & 0.02 \\
+		cubes4.grl & 2.88 & 0.27 & 0.28 \\
+		cubes5.grl & 22.02 & 6.32 & 6.39 \\
+		trees36.grl & 0.14 & 0.07 & 0.08 \\
+		wheeljoin14.grl & 14.48 & 2.62 & 2.52 \\
+        \hline
+    \end{tabularx}
+    \caption{Example of a basic table}
+    \label{tab:1}
+\end{table}
+
+\end{document}

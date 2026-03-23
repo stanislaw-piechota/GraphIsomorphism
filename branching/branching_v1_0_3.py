@@ -1,15 +1,12 @@
 from line_profiler_pycharm import profile
 
-from colorref.colorref import is_balanced, is_bijection
-from colorref.new_colorref import MIN_COLOR, solve_colorref_transform
+from colorref.colorref_v1_0_0 import is_balanced, is_bijection
+from colorref.colorref_v1_2_1 import MIN_COLOR, solve_colorref_transform
 from graphs.graph import Graph, Vertex
 from graphs.graph_io import load_graph
-from branching.branching import basic_branching as old_branching
-from testing.test_function import create_report
-from alex.fast_branching import basic_branching as fast_branching_v1
-from alex.fast_branching import basic_branching as fast_branching_v2
 
 
+@profile
 def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex]) -> int:
     graph_list = [g, h]
     initial_coloring = {vertex: MIN_COLOR for vertex in g.vertices + h.vertices}
@@ -83,14 +80,13 @@ if __name__ == "__main__":
     #     'input/branching/cubes4.grl',
     #     'input/branching/cubes5.grl',
     #     'input/branching/trees36.grl',
-    #     'input/branching/wheeljoin14.grl'
+    #     'input/branching/wheeljoin14.grl',
+    #     # 'input/branching/modulesD.grl'
     # ]
     #
     # create_report(paths, {
-    #     'normal_old_branching': old_branching,
     #     'normal_new_branching': basic_branching,
-    #     'fast_branching_v1': fast_branching_v1,
     #     'fast_branching_v2': fast_branching_v2,
-    # }, out_path='docs/branching-old-vs-new-1.0.0.tex')
+    # }, out_path='docs/branching-old-vs-new-v2.1.tex')
 
     basic_branching('input/branching/modulesD.grl')
