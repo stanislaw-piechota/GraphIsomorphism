@@ -1,4 +1,4 @@
-from line_profiler_pycharm import profile
+# from line_profiler_pycharm import profile
 from typing import Iterable
 from graph import Graph, Vertex
 from graph_io import load_graph
@@ -6,7 +6,6 @@ import os
 
 type TColorClass = dict[int, set[Vertex]]
 
-@profile
 def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) -> tuple[list[int], TColorClass, int]:
   base_color = queue.pop(0)
 
@@ -55,7 +54,6 @@ def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) ->
   
   return queue, color_classes, max_color
 
-@profile
 def refine(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
   color_classes, max_color = compute_states(vertices)
   queue: list[int] = list(color_classes.keys())
@@ -78,7 +76,6 @@ def is_bijection(g: Graph, h: Graph, color_classes: TColorClass) -> bool:
       return False
   return True
 
-@profile
 def compute_states(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
   color_classes: TColorClass = dict()
   max_color: int = 0
@@ -93,11 +90,7 @@ def compute_states(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
 
   return (color_classes, max_color)
 
-@profile
-def count_isomorphisms(g: Graph, h: Graph, x_label: int | None = None, y_label: int | None = None, max_color: int | None = None) -> int:
-  if x_label is not None and y_label is not None and max_color is not None:
-    g[x_label].color = h[y_label].color = max_color + 1
-
+def count_isomorphisms(g: Graph, h: Graph) -> int:
   graphs = [g, h]
 
   color_classes, max_color = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices])
@@ -125,12 +118,15 @@ def count_isomorphisms(g: Graph, h: Graph, x_label: int | None = None, y_label: 
   y_set = class_to_fix.intersection(set(h.vertices))
   x = list(class_to_fix.difference(y_set))[0]
   for y in y_set:
-    g_cpoy = g.copy()
+    g_copy = g.copy()
     h_copy = h.copy()
-    num += count_isomorphisms(g_cpoy, h_copy, x.label, y.label, max_color)
+
+    g_copy[x.label].color = h_copy[y.label].color = max_color + 1
+
+    counted = count_isomorphisms(g_copy, h_copy)
+    num += counted
   return num
 
-@profile
 def basic_branching(path: str):
   graphs: list[Graph]
   with open(path, 'r') as f:
@@ -191,7 +187,6 @@ def run_all_branching():
     basic_branching('input/branching/' + path)
     print('-'*20)
 
-@profile
 def run_branching(): 
   path = "input/branching/cubes4.grl"
   basic_branching(path)
