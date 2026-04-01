@@ -1,0 +1,128 @@
+﻿from dataclasses import dataclass, field
+
+from graphs.graph import Graph, Vertex
+from colorref.colorref_v1_0_0 import is_balanced, is_bijection
+from colorref.colorref_v1_2_1 import MIN_COLOR, solve_colorref_transform
+from .permv2 import permutation
+from .basicpermutationgroup import Orbit, Stabilizer, FindNonTrivialOrbit
+
+@dataclass
+class AutoAnal:
+    """Automorphism Analysis results"""
+    automorphism_count: int
+    generators: list[permutation]
+
+@dataclass
+class _AutSearchContext:
+    """context for the automorphism search"""
+    g: Graph # original graph
+    h: Graph # copy of original graph (for compat with cref)
+    mapping: dict
+    inv_mapping: dict
+    generators: list[permutation] = field(default_factory=list)
+    def add_generator(self, f: permutation) -> None:
+        self.generators.append(f)
+
+def is_member(f: permutation, generators: list[permutation]) -> bool:
+    alpha = FindNonTrivialOrbit(generators)
+    if alpha is None:
+        return f.istrivial()
+    orbit, transversal = Orbit(generators, alpha, True)
+    beta = f[alpha]
+    if beta not in orbit:
+        return False
+    idx = orbit.index(beta)
+    u_beta = transversal[idx]
+    stabilizer_gens = Stabilizer(generators, alpha)
+    return is_member(-u_beta * f, stabilizer_gens)
+
+def compute_order(generators: list[permutation]) -> int:
+    alpha = FindNonTrivialOrbit(generators)
+    if alpha is None:
+        return 1
+    orbit = Orbit(generators, alpha)
+    stabilizer_gens = Stabilizer(generators, alpha)
+    return len(orbit) * compute_order(stabilizer_gens)
+
+
+def _extract_permutation(coloring: dict[int, list[Vertex]], ctx: _AutSearchContext) -> permutation:
+    n = len(ctx.g.vertices)
+    perm_mapping = [0] * n
+
+    for color, cls in coloring.items():
+        cls_list = list(cls)
+        if cls_list[0] in ctx.g.vertices:
+            u = cls_list[0]
+            v_h = cls_list[1]
+        else:
+            u = cls_list[1]
+            v_h = cls_list[0]
+
+        v = ctx.inv_mapping[v_h]
+        perm_mapping[ctx.g.vertices.index(u)] = ctx.g.vertices.index(v)
+
+    return permutation(n, mapping=perm_mapping)
+
+
+def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext) -> bool:
+    graph_list = [ctx.g, ctx.h]
+    initial_coloring = {v: MIN_COLOR for v in ctx.g.vertices + ctx.h.vertices}
+    for i, (vertices) in enumerate(zip(d_seq, i_seq)):
+        x_vertex, y_vertex = vertices
+        initial_coloring[x_vertex] = MIN_COLOR + i + 1
+        initial_coloring[y_vertex] = MIN_COLOR + i + 1
+    coloring = solve_colorref_transform(graph_list, initial_coloring)
+
+    if not is_balanced(graph_list, coloring):
+        return False
+
+    if is_bijection(ctx.g, ctx.h, coloring):
+        f = _extract_permutation(coloring, ctx)
+        if not is_member(f, ctx.generators):
+            ctx.add_generator(f)
+        return True
+
+    # copied 1:1 from Stanislaw's basic branching
+    min_color_class : None | int = None
+    for color, color_class in coloring.items():
+        if len(color_class) == 4:
+            min_color_class = color
+            break
+        elif len(color_class) > 4 and (min_color_class is None or len(color_class) < len(coloring[min_color_class])):
+            min_color_class = color
+
+    if min_color_class is None:
+        return False
+
+    class_to_fix = set(coloring[min_color_class])
+
+    y_set = class_to_fix.intersection(set(ctx.h.vertices))
+    x = list(class_to_fix.difference(y_set))[0]
+
+    is_trivial_branch = all(ctx.mapping[d] == i for d, i in zip(d_seq, i_seq))
+    if is_trivial_branch:
+        _generate_automorphism(d_seq + [x], i_seq + [x], ctx)
+        for y in y_set:
+            if y == x:
+                continue
+            _generate_automorphism(d_seq + [x], i_seq + [y], ctx)
+        return False
+    else:
+        for y in y_set:
+            if _generate_automorphism(d_seq + [x], i_seq + [y], ctx):
+                return True
+        return False
+
+def analyze_automorphisms(g: Graph) -> AutoAnal:
+    h, mapping = g.copy()
+    ctx = _AutSearchContext(
+        g=g,
+        h=h,
+        mapping=mapping,
+        inv_mapping={v: u for u, v in mapping.items()}
+    )
+
+    _generate_automorphism([], [], ctx)
+    
+    order = compute_order(ctx.generators)
+    return AutoAnal(automorphism_count=order, generators=ctx.generators)

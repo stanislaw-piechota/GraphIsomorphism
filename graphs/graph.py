@@ -357,6 +357,25 @@ class Graph(object):
         """
         return v in u.neighbours and (not self.directed or any(e.head == v for e in u.incidence))
 
+    def copy(self) -> tuple["Graph", dict]:
+        """
+        builds a copy of the graph, also returns a dictionary mapping the old vertices to the new ones for reference
+        the built-in python copy and deepcopy functions didnt like the bindings in this class apparently
+        """
+        result = Graph(directed=self.directed, simple=self.simple)
+
+        mapping = {}
+        for v in self.vertices:
+            new_v = Vertex(result, label=v.label)
+            result.add_vertex(new_v)
+            mapping[v] = new_v
+
+        for e in self.edges:
+            new_tail = mapping[e.tail]
+            new_head = mapping[e.head]
+            result.add_edge(Edge(new_tail, new_head, weight=e.weight))
+
+        return result, mapping
 
 class UnsafeGraph(Graph):
     @property
