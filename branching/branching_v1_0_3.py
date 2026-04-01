@@ -69,7 +69,7 @@ def basic_branching(path: str):
             isomorphic_graphs.append([i+1])
             iso_counts.append(0)
 
-
+    # NOTE: it doesn't count automorphisms for unique graphs - resolved by addition of the new automorphisms module in v1_0_4
     for i, iso_class in enumerate(isomorphic_graphs):
         print(iso_class, iso_counts[i])
 
@@ -89,4 +89,4 @@ if __name__ == "__main__":
     #     'fast_branching_v2': fast_branching_v2,
     # }, out_path='docs/branching-old-vs-new-v2.1.tex')
 
-    basic_branching('input/branching/modulesD.grl')
+    basic_branching('../input/branching/modulesD.grl')
