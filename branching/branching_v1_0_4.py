@@ -1,9 +1,6 @@
-from typing import List
-
 from line_profiler_pycharm import profile
 
 from automorphisms.automorphisms import analyze_automorphisms
-from automorphisms.permv2 import permutation
 from colorref.colorref_v1_0_0 import is_balanced, is_bijection
 from colorref.colorref_v1_2_1 import MIN_COLOR, solve_colorref_transform
 from graphs.graph import Graph, Vertex
@@ -86,7 +83,7 @@ if __name__ == "__main__":
          '../input/branching/cubes5.grl',
          '../input/branching/trees36.grl',
          '../input/branching/wheeljoin14.grl',
-         # 'input/branching/modulesD.grl'
+         # '../input/branching/modulesD.grl'
     ]
     create_report(paths, {
          'aut_branching': aut_branching,
