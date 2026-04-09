@@ -1,11 +1,12 @@
-# from line_profiler_pycharm import profile
+from line_profiler_pycharm import profile
 from typing import Iterable
 from graph import Graph, Vertex
 from graph_io import load_graph
 
 type TColorClass = dict[int, set[Vertex]]
 
-def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) -> tuple[list[int], TColorClass, int]:
+@profile
+def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) -> tuple[list[int], int]:
   base_color = queue.pop(0)
 
   visited: set[Vertex] = set()
@@ -51,15 +52,48 @@ def refine_step(color_classes: TColorClass, queue: list[int], max_color: int) ->
           else:
             queue.append(color_to_split)
   
-  return queue, color_classes, max_color
+  return queue, max_color
 
-def refine(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
-  color_classes, max_color = compute_states(vertices)
-  queue: list[int] = list(color_classes.keys())
+@profile
+def compute_base_states(vertices: Iterable[Vertex], d_seq: list[Vertex], i_seq: list[Vertex]) -> tuple[TColorClass, int]:
+  color_classes: TColorClass = dict()
+  color_classes[0] = set()
+  max_color: int = 0
+
+  for vertex in vertices:
+    color = -1
+    if vertex in d_seq:
+      color = d_seq.index(vertex) + 1
+    elif vertex in i_seq:
+      color = i_seq.index(vertex) + 1
+    
+    if color != -1:
+      vertex.color = color
+      if color in color_classes:
+        color_classes[color].add(vertex)
+      else:
+        color_classes[color] = set([vertex])
+        max_color = max(max_color, color)
+    else:
+      vertex.color = 0
+      color_classes[0].add(vertex)
+
+  return (color_classes, max_color)
+
+@profile
+def refine(vertices: Iterable[Vertex], d_seq: list[Vertex], i_seq: list[Vertex]) -> tuple[TColorClass, int]:
+  color_classes, max_color = compute_base_states(vertices, d_seq, i_seq)
+  queue: list[int] = list(range(max_color))
 
   while len(queue) > 0:
-    queue, color_classes, max_color = refine_step(color_classes, queue, max_color)
+    queue, max_color = refine_step(color_classes, queue, max_color)
   return (color_classes, max_color)
+
+def initialize_colors(graphs: list[Graph], force: bool = False):
+  for g in graphs:
+    for v in g.vertices:
+      if not hasattr(v, 'color') or force:
+        v.color = 0
 
 def is_balanced(g: Graph, h: Graph, color_classes: TColorClass) -> bool:
   g_vertices_set, h_vertices_set = set(g.vertices), set(h.vertices)
@@ -75,24 +109,11 @@ def is_bijection(g: Graph, h: Graph, color_classes: TColorClass) -> bool:
       return False
   return True
 
-def compute_states(vertices: Iterable[Vertex]) -> tuple[TColorClass, int]:
-  color_classes: TColorClass = dict()
-  max_color: int = 0
-
-  for vertex in vertices:
-    color = vertex.color
-    if color in color_classes:
-      color_classes[color].add(vertex)
-    else:
-      color_classes[color] = set([vertex])
-      max_color = max(max_color, color)
-
-  return (color_classes, max_color)
-
-def count_isomorphisms(g: Graph, h: Graph) -> int:
+@profile
+def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex]) -> int:
   graphs = [g, h]
 
-  color_classes, max_color = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices])
+  color_classes, _ = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices], d_seq, i_seq)
 
   if not is_balanced(g, h, color_classes):
     return 0
@@ -117,15 +138,10 @@ def count_isomorphisms(g: Graph, h: Graph) -> int:
   y_set = class_to_fix.intersection(set(h.vertices))
   x = list(class_to_fix.difference(y_set))[0]
   for y in y_set:
-    g_copy = g.copy()
-    h_copy = h.copy()
-
-    g_copy[x.label].color = h_copy[y.label].color = max_color + 1
-
-    counted = count_isomorphisms(g_copy, h_copy)
-    num += counted
+    num += count_isomorphisms(g, h, d_seq + [x], i_seq + [y])
   return num
 
+@profile
 def basic_branching(path: str):
   graphs: list[Graph]
   with open(path, 'r') as f:
@@ -140,7 +156,7 @@ def basic_branching(path: str):
     for iso_idx, iso_class in enumerate(isomorphic_graphs[::]):
       print(f"Comparing with iso class {iso_idx+1}")
       base_graph = graphs[iso_class[0]]
-      count = count_isomorphisms(base_graph, graph)
+      count = count_isomorphisms(base_graph, graph, [], [])
       if count != 0:
         iso_class.append(i+1)
         iso_counts[iso_idx] = count
@@ -175,12 +191,15 @@ def run_colorref():
   with open(path, "r") as f:
     graphs = load_graph(f, Graph, True)  # pyright: ignore[reportAssignmentType]
 
-  color_classes, _ = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices])
+  initialize_colors(graphs)
+
+  color_classes, _ = refine([v for graph_vertices in [g.vertices for g in graphs] for v in graph_vertices], [], [])
 
   for group in group_by_color(graphs, color_classes):
     print(sorted([graphs.index(g) for g in group]))
 
-def run_branching(): 
+@profile
+def run_branching():
   path = "input/branching/cubes4.grl"
   basic_branching(path)
 
