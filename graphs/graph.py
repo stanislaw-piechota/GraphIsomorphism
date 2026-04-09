@@ -357,7 +357,7 @@ class Graph(object):
         """
         return v in u.neighbours and (not self.directed or any(e.head == v for e in u.incidence))
 
-    def copy(self) -> tuple["Graph", dict]:
+    def copy_with_mapping(self) -> tuple["Graph", dict]:
         """
         builds a copy of the graph, also returns a dictionary mapping the old vertices to the new ones for reference
         the built-in python copy and deepcopy functions didnt like the bindings in this class apparently

@@ -65,7 +65,7 @@ def _extract_permutation(coloring: dict[int, list[Vertex]], ctx: _AutSearchConte
 
 
 # branching based on branching_v1_0_3.py
-def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext) -> bool:
+def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext, is_trivial_branch: bool) -> bool:
     graph_list = [ctx.g, ctx.h]
     initial_coloring = {v: MIN_COLOR for v in ctx.g.vertices + ctx.h.vertices}
     for i, (vertices) in enumerate(zip(d_seq, i_seq)):
@@ -100,22 +100,22 @@ def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext) -> 
     y_set = class_to_fix.intersection(set(ctx.h.vertices))
     x = list(class_to_fix.difference(y_set))[0]
 
-    is_trivial_branch = all(ctx.mapping[d] == i for d, i in zip(d_seq, i_seq))
     if is_trivial_branch:
-        _generate_automorphism(d_seq + [x], i_seq + [x], ctx)
+        y_trivial = ctx.mapping[x]
+        _generate_automorphism(d_seq + [x], i_seq + [y_trivial], ctx, is_trivial_branch=True)
         for y in y_set:
             if y == x:
                 continue
-            _generate_automorphism(d_seq + [x], i_seq + [y], ctx)
+            _generate_automorphism(d_seq + [x], i_seq + [y], ctx, is_trivial_branch=False)
         return False
     else:
         for y in y_set:
-            if _generate_automorphism(d_seq + [x], i_seq + [y], ctx):
+            if _generate_automorphism(d_seq + [x], i_seq + [y], ctx, is_trivial_branch=False):
                 return True
         return False
 
 def analyze_automorphisms(g: Graph) -> AutoAnal:
-    h, mapping = g.copy()
+    h, mapping = g.copy_with_mapping()
     ctx = _AutSearchContext(
         g=g,
         h=h,
@@ -123,7 +123,7 @@ def analyze_automorphisms(g: Graph) -> AutoAnal:
         inv_mapping={v: u for u, v in mapping.items()}
     )
 
-    _generate_automorphism([], [], ctx)
+    _generate_automorphism([], [], ctx, is_trivial_branch=True)
     
     order = compute_order(ctx.generators)
     return AutoAnal(automorphism_count=order, generators=ctx.generators)
