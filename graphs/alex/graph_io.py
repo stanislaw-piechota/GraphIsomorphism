@@ -13,7 +13,7 @@ Includes functions for reading and writing graphs, in a very simple readable for
 
 import colorsys
 from typing import IO, Tuple, List, Union
-from graph import Graph, Vertex
+from graphs.alex.graph import Graph, Vertex
 
 
 # GraphML settings

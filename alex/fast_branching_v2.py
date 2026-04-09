@@ -1,7 +1,7 @@
 from line_profiler_pycharm import profile
 from typing import Iterable
-from graph import Graph, Vertex
-from graph_io import load_graph
+from graphs.alex.graph import Graph, Vertex
+from graphs.alex.graph_io import load_graph
 
 type TColorClass = dict[int, set[Vertex]]
 
