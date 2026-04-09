@@ -1,0 +1,51 @@
+
+%! Author = wojtek
+%! Date = 09.04.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|}
+        \hline
+        File name & \seqsplit{aut\_fast\_branching\_v3} & \seqsplit{aut\_mixed\_branching} & \seqsplit{aut\_basic\_branching} & \seqsplit{basic\_branching} & \seqsplit{fast\_branching} \\
+        \hline
+		cubes3.grl & 0.03 & 0.02 & 0.02 & 0.02 & 0.02 \\
+		cubes4.grl & 0.1 & 0.09 & 0.1 & 0.22 & 0.22 \\
+		cubes5.grl & 0.57 & 0.77 & 0.74 & 5.04 & 4.53 \\
+		cubes6.grl & 6.83 & 6.37 & 6.55 & 149.7 & 109.01 \\
+		trees36.grl & 0.54 & 0.4 & 0.06 & 0.04 & 0.41 \\
+		wheeljoin14.grl & 0.42 & 0.42 & 0.45 & 1.96 & 2.23 \\
+		modulesD.grl & 72.84 & 93.27 & 63.87 & 70.6 & 91.22 \\
+		cubes3.grl & 0.03 & 0.02 & 0.02 & 0.02 & 0.02 \\
+		cubes4.grl & 0.09 & 0.1 & 0.11 & 0.27 & 0.36 \\
+		cubes5.grl & 0.89 & 0.74 & 0.71 & 5.51 & 4.36 \\
+		cubes6.grl & 5.24 & 5.56 & 7.49 & 165.4 & 117.17 \\
+		trees36.grl & 0.55 & 0.42 & 0.08 & 0.06 & 0.51 \\
+		wheeljoin14.grl & 0.63 & 0.48 & 0.55 & 2.4 & 2.24 \\
+		modulesD.grl & 62.57 & 97.82 & 62.93 & 64.54 & 79.35 \\
+		cubes3.grl & 0.03 & 0.03 & 0.02 & 0.02 & 0.04 \\
+		cubes4.grl & 0.11 & 0.16 & 0.13 & 0.24 & 0.29 \\
+		cubes5.grl & 0.82 & 0.82 & 0.75 & 5.09 & 4.29 \\
+		cubes6.grl & 6.81 & 6.55 & 8.3 & 184.62 & 135.34 \\
+		trees36.grl & 0.62 & 0.52 & 0.09 & 0.07 & 0.5 \\
+		wheeljoin14.grl & 0.52 & 0.6 & 0.76 & 2.41 & 2.66 \\
+		modulesD.grl & 66.44 & 114.85 & 73.08 & 77.0 & 119.03 \\
+        \hline
+    \end{tabularx}
+    \caption{Example of a basic table}
+    \label{tab:1}
+\end{table}
+
+\end{document}

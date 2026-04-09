@@ -113,3 +113,13 @@ class Graph(object):
                 v.add_incidence(result[neighbour.label])
 
         return result
+
+    def copy_with_mapping(self) -> tuple["Graph", dict[Vertex, Vertex]]:
+        """Returns a copy of the graph alongside a mapping from original to new vertices."""
+        result = self.copy()
+        mapping = {orig: result[orig.label] for orig in self}
+        return result, mapping
+
+    def index(self, vertex: Vertex) -> int:
+        """Returns the 0-based integer index of a given vertex."""
+        return list(self._vdict.values()).index(vertex)
