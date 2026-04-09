@@ -6,7 +6,6 @@ from graphs.graph import Graph, Vertex
 from graphs.graph_io import load_graph
 
 
-@profile
 def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex]) -> int:
     graph_list = [g, h]
     initial_coloring = {vertex: MIN_COLOR for vertex in g.vertices + h.vertices}
@@ -44,7 +43,6 @@ def count_isomorphisms(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vert
     return num
 
 
-@profile
 def basic_branching(path: str):
     with open(path, 'r') as file:
         graph_list = load_graph(file, read_list=True)
