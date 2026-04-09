@@ -64,6 +64,7 @@ def _extract_permutation(coloring: dict[int, list[Vertex]], ctx: _AutSearchConte
     return permutation(n, mapping=perm_mapping)
 
 
+# branching based on branching_v1_0_3.py
 def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext) -> bool:
     graph_list = [ctx.g, ctx.h]
     initial_coloring = {v: MIN_COLOR for v in ctx.g.vertices + ctx.h.vertices}
