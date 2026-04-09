@@ -1,0 +1,38 @@
+
+%! Author = stanislaw
+%! Date = 12.03.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        File name & \seqsplit{aut\_branching} & \seqsplit{basic\_branching} \\
+        \hline
+		cubes3.grl & 0.12 & 0.06 \\
+		cubes4.grl & 0.51 & 0.84 \\
+		cubes5.grl & 5.79 & 18.86 \\
+		trees36.grl & 0.22 & 0.16 \\
+		wheeljoin14.grl & 2.22 & 7.24 \\
+        \hline
+    \end{tabularx}
+    \caption{
+        This run compares branching using generator-based automorphism counting v1\_0\_4 against basic branching v1\_0\_3 with naive automorphism counting.
+        The generator-based automorphism counting does add some overhead, but it significantly reduces the computation time for large \& symmetric graphs
+    }
+    \label{tab:1}
+\end{table}
+
+\end{document}

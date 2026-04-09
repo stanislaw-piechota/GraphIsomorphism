@@ -1,0 +1,40 @@
+
+%! Author = wojtek
+%! Date = 01.04.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|}
+        \hline
+        File name & \seqsplit{aut\_branching} & \seqsplit{basic\_branching} \\
+        \hline
+		cubes3.grl & 0.12 & 0.06 \\
+		cubes4.grl & 1.12 & 0.71 \\
+		cubes5.grl & 23.61 & 17.29 \\
+		trees36.grl & 0.24 & 0.16 \\
+		wheeljoin14.grl & 9.97 & 7.76 \\
+        \hline
+    \end{tabularx}
+    \caption{
+        This run compares branching using generator-based automorphism counting v1\_0\_4 against basic branching v1\_0\_3 with naive automorphism counting.
+        Note that the generator-based automorphism counting had a bug in the code during this run:
+        it only considered a new branch to be an automorphism if it found a new generator.
+        Thus, it explored almost the whole tree anyway, without any pruning.
+    }
+    \label{tab:1}
+\end{table}
+
+\end{document}
