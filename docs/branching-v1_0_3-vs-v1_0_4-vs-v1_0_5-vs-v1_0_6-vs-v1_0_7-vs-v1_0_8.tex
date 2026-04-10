@@ -1,0 +1,120 @@
+
+%! Author = wojtek
+%! Date = 10.04.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|X|}
+        \hline
+        File name & \seqsplit{aut\_basic\_multicore\_branching} & \seqsplit{aut\_fast\_branching\_v3} & \seqsplit{aut\_mixed\_branching} & \seqsplit{aut\_basic\_branching} & \seqsplit{basic\_branching} & \seqsplit{fast\_branching} \\
+        \hline
+		bigtrees1.grl & 2.92 & 368.28 & 422.88 & 2.08 & ERR & ERR \\
+		bigtrees2.grl & 25.0 & 20.21 & 27.01 & 24.19 & ERR & ERR \\
+		bigtrees3.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		cographs1.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		cubes3.grl & 0.8 & 0.02 & 0.02 & 0.03 & 0.02 & 0.02 \\
+		cubes4.grl & 0.89 & 0.09 & 0.09 & 0.09 & 0.18 & 0.16 \\
+		cubes5.grl & 1.52 & 0.72 & 0.73 & 0.82 & 5.58 & 4.35 \\
+		cubes6.grl & 9.48 & 8.82 & 8.47 & 8.92 & 181.11 & 129.45 \\
+		cubes7.grl & 102.81 & 91.45 & 103.02 & 101.72 & ERR & ERR \\
+		cubes8.grl & 459.62 & ERR & ERR & ERR & ERR & ERR \\
+		cubes9.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		lecture.grl & 0.41 & 0.0 & 0.01 & 0.0 & 0.0 & 0.0 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 82.98 & 79.89 & 111.79 & 78.09 & 111.06 & 124.57 \\
+		products216.grl & 420.16 & 382.54 & 424.75 & 460.95 & 530.05 & 221.74 \\
+		products72.grl & 13.12 & 12.06 & 14.34 & 14.38 & 13.28 & 10.03 \\
+		regulartwins.grl & 11.86 & 2.87 & 9.22 & 12.03 & ERR & ERR \\
+		small forest.gr & 0.2 & 0.15 & 0.17 & 0.17 & 0.0 & 0.0 \\
+		torus144.grl & 142.46 & 101.19 & 130.6 & 176.25 & 148.0 & 35.85 \\
+		torus24.grl & 0.73 & 0.15 & 0.18 & 0.18 & 0.16 & 0.13 \\
+		torus72.grl & 12.76 & 8.85 & 11.52 & 13.14 & 11.38 & 3.88 \\
+		trees11.grl & 0.85 & 0.02 & 0.02 & 0.01 & 0.01 & 0.02 \\
+		trees36.grl & 0.92 & 0.45 & 0.4 & 0.09 & 0.05 & 0.37 \\
+		trees90.grl & 2.89 & 1.46 & 2.75 & 2.21 & 247.41 & 63.53 \\
+		wheeljoin14.grl & 1.49 & 0.54 & 0.55 & 0.52 & 2.09 & 2.29 \\
+		wheeljoin19.grl & 4.65 & 6.06 & 5.71 & 9.11 & 71.25 & 68.98 \\
+		wheeljoin25.grl & 8.23 & 14.74 & 16.54 & 1.96 & ERR & ERR \\
+		wheeljoin33.grl & 262.41 & 464.31 & 464.35 & 231.22 & ERR & ERR \\
+		wheelstar12.grl & 27.19 & 8.41 & 11.48 & 32.69 & ERR & ERR \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		threepaths10.gr & 0.01 & 0.02 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		threepaths10240.gr & ERR & ERR & ERR & ERR & ERR & ERR \\
+		threepaths1280.gr & 27.52 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths160.gr & 0.29 & 4.61 & 0.3 & 0.28 & 0.0 & 0.0 \\
+		threepaths20.gr & 0.01 & 0.06 & 0.01 & 0.01 & 0.0 & 0.0 \\
+		threepaths2560.gr & 112.21 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths320.gr & 1.38 & 21.35 & 1.35 & 1.31 & 0.01 & 0.01 \\
+		threepaths40.gr & 0.03 & 0.24 & 0.03 & 0.02 & 0.0 & 0.0 \\
+		threepaths5.gr & 0.0 & 0.01 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		threepaths5120.gr & 512.92 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths640.gr & 5.94 & 112.5 & 5.87 & 5.92 & 0.01 & 0.01 \\
+		threepaths80.gr & 0.08 & 1.0 & 0.07 & 0.07 & 0.0 & 0.0 \\
+		colorref\_largeexample\_4\_1026.grl & 1.78 & 359.56 & 211.6 & 0.8 & 0.49 & 317.71 \\
+		colorref\_largeexample\_6\_960.grl & 30.95 & 252.33 & 192.23 & 34.84 & 30.15 & 234.56 \\
+		bigtrees1.grl & 2.8 & 340.59 & 366.14 & 2.12 & ERR & ERR \\
+		bigtrees2.grl & 24.03 & 21.61 & 26.3 & 23.01 & ERR & ERR \\
+		bigtrees3.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		cographs1.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		cubes3.grl & 0.82 & 0.02 & 0.02 & 0.02 & 0.01 & 0.02 \\
+		cubes4.grl & 0.93 & 0.11 & 0.1 & 0.11 & 0.21 & 0.18 \\
+		cubes5.grl & 1.58 & 0.77 & 0.81 & 0.9 & 5.45 & 4.25 \\
+		cubes6.grl & 8.23 & 7.28 & 8.65 & 8.86 & 167.99 & 117.68 \\
+		cubes7.grl & 96.63 & 86.48 & 97.18 & 96.8 & ERR & ERR \\
+		cubes8.grl & 441.14 & ERR & ERR & ERR & ERR & ERR \\
+		cubes9.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		lecture.grl & 0.5 & 0.0 & 0.01 & 0.01 & 0.0 & 0.0 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 70.99 & 79.83 & 94.68 & 77.68 & 107.34 & 131.45 \\
+		products216.grl & 397.04 & 388.94 & 430.66 & 478.24 & 530.9 & 224.51 \\
+		products72.grl & 13.2 & 12.21 & 15.0 & 14.0 & 12.99 & 10.16 \\
+		regulartwins.grl & 11.85 & 3.04 & 9.53 & 12.14 & ERR & ERR \\
+		small forest.gr & 0.17 & 0.15 & 0.18 & 0.17 & 0.0 & 0.0 \\
+		torus144.grl & 147.01 & 94.55 & 137.28 & 178.44 & 147.89 & 35.99 \\
+		torus24.grl & 1.05 & 0.22 & 0.25 & 0.28 & 0.23 & 0.17 \\
+		torus72.grl & 13.79 & 9.71 & 12.06 & 14.09 & 12.2 & 4.72 \\
+		trees11.grl & 0.62 & 0.02 & 0.02 & 0.01 & 0.0 & 0.01 \\
+		trees36.grl & 0.74 & 0.35 & 0.3 & 0.05 & 0.04 & 0.31 \\
+		trees90.grl & 1.83 & 0.98 & 1.63 & 1.35 & 247.33 & 63.45 \\
+		wheeljoin14.grl & 1.3 & 0.39 & 0.44 & 0.45 & 1.86 & 2.02 \\
+		wheeljoin19.grl & 4.68 & 6.05 & 6.64 & 8.98 & 71.05 & 67.71 \\
+		wheeljoin25.grl & 8.37 & 15.98 & 13.06 & 2.11 & ERR & ERR \\
+		wheeljoin33.grl & 136.12 & 438.37 & 420.82 & 229.64 & ERR & ERR \\
+		wheelstar12.grl & 27.39 & 6.91 & 14.11 & 32.98 & ERR & ERR \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR & ERR \\
+		threepaths10.gr & 0.0 & 0.02 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		threepaths10240.gr & ERR & ERR & ERR & ERR & ERR & ERR \\
+		threepaths1280.gr & 28.25 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths160.gr & 0.29 & 4.65 & 0.27 & 0.26 & 0.0 & 0.0 \\
+		threepaths20.gr & 0.01 & 0.06 & 0.01 & 0.01 & 0.0 & 0.0 \\
+		threepaths2560.gr & 114.46 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths320.gr & 1.35 & 21.01 & 1.34 & 1.33 & 0.01 & 0.01 \\
+		threepaths40.gr & 0.04 & 0.24 & 0.03 & 0.02 & 0.0 & 0.0 \\
+		threepaths5.gr & 0.0 & 0.01 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		threepaths5120.gr & 513.86 & ERR & ERR & ERR & ERR & ERR \\
+		threepaths640.gr & 6.13 & 113.12 & 6.12 & 5.92 & 0.02 & 0.01 \\
+		threepaths80.gr & 0.08 & 1.1 & 0.07 & 0.07 & 0.0 & 0.0 \\
+		colorref\_largeexample\_4\_1026.grl & 1.73 & 344.31 & 201.71 & 0.79 & 0.42 & 310.32 \\
+		colorref\_largeexample\_6\_960.grl & 31.95 & 259.49 & 192.71 & 37.14 & 28.59 & 236.49 \\
+        \hline
+    \end{tabularx}
+    \caption{Example of a basic table}
+    \label{tab:1}
+\end{table}
+
+\end{document}
