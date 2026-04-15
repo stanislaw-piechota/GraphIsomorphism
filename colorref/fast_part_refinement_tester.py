@@ -4,7 +4,7 @@ from branching.branching_v1_0_4 import refine
 from colorref.colorref_v1_2_1 import basic_colorref
 from graphs.alex.graph import Graph
 from graphs.alex.graph_io import load_graph
-from testing.test_function import create_report
+from testing.test_function_multicore import create_report
 
 
 def fast_part_refinement(path: str):
@@ -64,6 +64,8 @@ def run_fast_part_refinement_benchmark():
         '../input/colorref/colorref_largeexample_4_1026.grl',
         '../input/colorref/colorref_largeexample_6_960.grl',
     ]
+
+    paths = paths * 4
 
     create_report(
         [str(path) for path in paths],

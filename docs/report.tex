@@ -132,7 +132,9 @@ According to the following documentation of computational results for the graph 
 \end{table}
 
 \section*{On computational results}
-For the computational results we have used different machines. We did ensure that the computation times presented within one table, come from the same machine, and we ensured as much as possible that these computations were done under identical circumstances. All computations were performed X times ignoring the largest and smallest, and the computation times recorded are the average over the remaining computations.\footnote{How you perform your computational tests is up to you. This is often a trade-off between time and validity of results.}
+For the computational results we have used different machines.
+We did ensure that the computation times presented within one table, come from the same machine, and we ensured as much as possible that these computations were done under identical circumstances.
+All computations were performed 4 times, and the computation times recorded are the average over the remaining computations with the standard deviation also indicated.
 
 %------------------------------------------------
 \section{Category 6 (pass): Basic Problem Instances}
@@ -170,55 +172,42 @@ algorithm is also significantly faster than our basic colour refinement algorith
 &&&\multicolumn{2}{c}{comp.\ times (s)}\\
 instance& instance size $|V|$ & \# autom.\ & standard & fast part.\ ref.\\
 \noalign{\smallskip}\hline\hline\noalign{\smallskip}
-%Threepaths50& 50 & 1.256  & 0.5 & 2.4\\
-%Threepaths100& 100 & 118.430  &12.6 & 6.7\\
-%Threepaths1000& 1000& 196.000.340  &1257 & 120\\
-threepaths5		& 5			&xx		& 0s			& 0s			\\
-threepaths10	& 10		&xx		& 0s			& 0s			\\
-threepaths20	& 20		&xx		& 0s			& 0s			\\
-threepaths40	& 40		&xx		& 0s			& 0s			\\
-threepaths80	& 80		&xx		& 0s			& 0.05s			\\
-threepaths160	& 160		&xx		& 0.3s			& 0.10s			\\
-threepaths320	& 320		&xx		& 2s			& 0.19s	 		\\
-threepaths640	& 640		&xx		& 17s			& 0.41s			\\
-threepaths1280	& 1280		&xx		& 125s			& 0.90s			\\
-threepaths2560	& 2560		&xx		& -				& 2.12s			\\
-threepaths5120	& 5120		&xx		& -				& 4.50s			\\
-threepaths10240	& 10240		&xx		& -				& 9.23s			\\
-sampleinstance1	& xxxx		&xx		& xxx			& xxx			\\
-sampleinstance2	& xxxx		&xx		& xxx			& xxx			\\
-sampleinstance3	& xxxx		&xx		& xxx			& xxx			\\
-sampleinstance4	& xxxx		&xx		& xxx			& xxx			\\
-sampleinstance5	& xxxx		&xx		& xxx			& xxx			\\
+threepaths5		& 5			& xx	& 0.000 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
+threepaths10	& 10		& xx	& 0.000 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
+threepaths20	& 20		& xx	& 0.003 $\pm$ 0.005		& 0.000 $\pm$ 0.000		\\
+threepaths40	& 40		& xx	& 0.010 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
+threepaths80	& 80		& xx	& 0.035 $\pm$ 0.006		& 0.000 $\pm$ 0.000		\\
+threepaths160	& 160		& xx	& 0.133 $\pm$ 0.019		& 0.000 $\pm$ 0.000		\\
+threepaths320	& 320		& xx	& 0.550 $\pm$ 0.027		& 0.005 $\pm$ 0.006		\\
+threepaths640	& 640		& xx	& 2.183 $\pm$ 0.104		& 0.010 $\pm$ 0.000		\\
+threepaths1280	& 1280		& xx	& 10.370 $\pm$ 1.136	& 0.020 $\pm$ 0.000		\\
+threepaths2560	& 2560		& xx	& 45.013 $\pm$ 7.639	& 0.035 $\pm$ 0.006		\\
+threepaths5120	& 5120		& xx	& 192.417 $\pm$ 16.736	& 0.060 $\pm$ 0.000		\\
+threepaths10240	& 10240		& xx	& -				        & -				        \\
+colorref\_largeexample\_6\_960 & 960	& xx	& 5.715 $\pm$ 0.684		& 0.020 $\pm$ 0.000		\\
+colorref\_largeexample\_4\_1026 & 1026& xx	& 0.217 $\pm$ 0.017		& 0.050 $\pm$ 0.000		\\
+cubes9			& 9			& xx	& 0.043 $\pm$ 0.005		& 0.020 $\pm$ 0.000		\\
+modulesD		& xx		& xx	& 0.075 $\pm$ 0.006		& 0.035 $\pm$ 0.006		\\
+torus144		& 144		& xx	& 0.022 $\pm$ 0.005		& 0.010 $\pm$ 0.000		\\
 \end{tabular}
 \caption{Computation times to the coarsest stable colouring with basic and fast partition refinement. ``-'' in the comp.\ times columns means that the instance could not be solved within 600 seconds.}
 \label{tab:FPR}
 \end{table}
 
-%\begin{tabular}{|l|lll|}
-%	\hline
-%	Instance:	& naive\_graphs.py	& Using adj.\ lists,		& Using adj.\ lists,	\\
-%	& basic color ref.:	& basic color ref.:		& fast color ref.:\\
-%	\hline
-%	threepaths5		& 5			& 0s			& 0s			\\
-%	threepaths10	& 10		& 0s			& 0s			\\
-%	threepaths20	& 20		& 0s			& 0s			\\
-%	threepaths40	& 40		& 0s			& 0s			\\
-%	threepaths80	& 80		& 0s			& 0.05s			\\
-%	threepaths160	& 160		& 0.3s			& 0.10s			\\
-%	threepaths320	& 320		& 2s			& 0.19s	 		\\
-%	threepaths640	& 640		& 17s			& 0.35s			\\
-%	threepaths1280	& 1280		& 125s			& 1.0s			\\
-%	threepaths2560	& 2560		& -				& 2.9s			\\
-%	threepaths5120	& 5120		& -				& 9.1s			\\
-%	threepaths10240	& 10240		& -				& 20.0s			\\
-%	\hline
-%\end{tabular}
-
-
 \section{Using Generating Sets for Computing |Aut(G)|}
-Not implemented.\
 
+We have implemented the automorphism counting algorithms based on the permutation group techniques discussed in the course. To compute the total number of automorphisms efficiently, our implementation finds a polynomial-sized generating set for the automorphism group, $Aut(G)$, rather than explicitly generating every single automorphism, which would not be computationally feasible for large graphs.
+
+We created two variations of this counting mechanism, based on our two branching algorithms.
+In both variations, we apply individualization refinement and continuously maintain a set of found generators.
+To optimize the search space, we utilized the Pruning Lemma: whenever the search yields a trivial prescribed mapping, we safely prune the recursion tree and stop exploring that branch, as any further automorphisms discovered would already be accounted for in our generating set.
+
+To handle the underlying group theory, we leveraged the provided utility code to compute orbits, transversals, and generating sets for stabilizer subgroups.
+Building on these tools, we implemented algorithms for Order Computation, utilizing the Orbit-Stabilizer Theorem, and Membership Testing, utilizing recursive sifting to check if newly found automorphisms are already within the generated subgroup.
+
+The computation times on the mandatory sample instances are documented in Table~\ref{todo}\footnote{TODO: this}.
+As expected, applying this generator-based counting drastically reduces the computation time for large, highly symmetric graphs due to the heavily pruned recursion tree.
+However, the mathematical operations required for order computation and membership testing introduce a noticeable overhead for smaller instances where explicit branching would otherwise be quick.
 
 
 \section{Additional Techniques for Faster Algorithms}
