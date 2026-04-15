@@ -1,8 +1,12 @@
 ﻿from dataclasses import dataclass, field
+import concurrent.futures
+from typing import Dict
 
 from graphs.graph import Graph, Vertex
 from colorref.colorref_v1_0_0 import is_balanced, is_bijection
 from colorref.colorref_v1_2_1 import MIN_COLOR, solve_colorref_transform
+from graphs.graph_io import load_graph
+from orchestration.dataclasses import AutomorphismsAnalResult
 from .permv2 import permutation
 from .basicpermutationgroup import Orbit, Stabilizer, FindNonTrivialOrbit
 
@@ -19,6 +23,7 @@ class _AutSearchContext:
     h: Graph # copy of original graph (for compat with cref)
     mapping: dict
     inv_mapping: dict
+    do_membership_testing: bool = field(default=True)
     generators: list[permutation] = field(default_factory=list)
     def add_generator(self, f: permutation) -> None:
         self.generators.append(f)
@@ -79,7 +84,7 @@ def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext, is_
 
     if is_bijection(ctx.g, ctx.h, coloring):
         f = _extract_permutation(coloring, ctx)
-        if not is_member(f, ctx.generators):
+        if not ctx.do_membership_testing or not is_member(f, ctx.generators):
             ctx.add_generator(f)
         return True
 
@@ -104,7 +109,7 @@ def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext, is_
         y_trivial = ctx.mapping[x]
         _generate_automorphism(d_seq + [x], i_seq + [y_trivial], ctx, is_trivial_branch=True)
         for y in y_set:
-            if y == x:
+            if y == y_trivial:
                 continue
             _generate_automorphism(d_seq + [x], i_seq + [y], ctx, is_trivial_branch=False)
         return False
@@ -114,16 +119,43 @@ def _generate_automorphism(d_seq: list, i_seq: list, ctx: _AutSearchContext, is_
                 return True
         return False
 
-def analyze_automorphisms(g: Graph) -> AutoAnal:
+def analyze_automorphisms(g: Graph, do_membership_testing: bool = True) -> AutoAnal:
     h, mapping = g.copy_with_mapping()
     ctx = _AutSearchContext(
         g=g,
         h=h,
         mapping=mapping,
-        inv_mapping={v: u for u, v in mapping.items()}
+        inv_mapping={v: u for u, v in mapping.items()},
+        do_membership_testing=do_membership_testing
     )
 
     _generate_automorphism([], [], ctx, is_trivial_branch=True)
     
     order = compute_order(ctx.generators)
     return AutoAnal(automorphism_count=order, generators=ctx.generators)
+
+def count_automorphisms(path: str) -> AutomorphismsAnalResult:
+    results: AutomorphismsAnalResult = AutomorphismsAnalResult()
+    with open(path, 'r') as f:
+        graph_list = load_graph(f, read_list=True)
+    for i, graph in enumerate(graph_list):
+        results.list_of_automorphism_counts.append(analyze_automorphisms(graph).automorphism_count)
+    return results
+
+def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
+    results: AutomorphismsAnalResult = AutomorphismsAnalResult()
+    with open(path, 'r') as f:
+        graph_list = load_graph(f, read_list=True)
+    future_to_graph_idx : Dict[concurrent.futures.Future, int] = {}
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for i, graph in enumerate(graph_list):
+            future = executor.submit(analyze_automorphisms, graph)
+            future_to_graph_idx[future] = i
+        for future in concurrent.futures.as_completed(future_to_graph_idx):
+            graph_idx = future_to_graph_idx[future]
+            try:
+                auto_anal = future.result()
+                results.list_of_automorphism_counts.append(auto_anal.automorphism_count)
+            except Exception as exc:
+                print(f"Graph {graph_idx} generated an exception: {exc}")
+    return results

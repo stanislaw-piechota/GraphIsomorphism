@@ -1,7 +1,11 @@
-﻿from dataclasses import dataclass, field
+﻿import concurrent.futures
+from dataclasses import dataclass, field
+from typing import Dict
 
 from graphs.alex.graph import Graph, Vertex
 from branching.branching_v1_0_4 import refine, is_balanced, is_bijection
+from graphs.alex.graph_io import load_graph
+from orchestration.dataclasses import AutomorphismsAnalResult
 
 from .permv2 import permutation
 
@@ -99,3 +103,29 @@ def analyze_automorphisms(g: Graph) -> AutoAnal:
     
     order = compute_order(ctx.generators)
     return AutoAnal(automorphism_count=order, generators=ctx.generators)
+
+def count_automorphisms(path: str) -> AutomorphismsAnalResult:
+    results: AutomorphismsAnalResult = AutomorphismsAnalResult()
+    with open(path, 'r') as f:
+        graph_list = load_graph(f, read_list=True)
+    for i, graph in enumerate(graph_list):
+        results.list_of_automorphism_counts.append(analyze_automorphisms(graph).automorphism_count)
+    return results
+
+def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
+    results: AutomorphismsAnalResult = AutomorphismsAnalResult()
+    with open(path, 'r') as f:
+        graph_list = load_graph(f, read_list=True)
+    future_to_graph_idx : Dict[concurrent.futures.Future, int] = {}
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for i, graph in enumerate(graph_list):
+            future = executor.submit(analyze_automorphisms, graph)
+            future_to_graph_idx[future] = i
+        for future in concurrent.futures.as_completed(future_to_graph_idx):
+            graph_idx = future_to_graph_idx[future]
+            try:
+                auto_anal = future.result()
+                results.list_of_automorphism_counts.append(auto_anal.automorphism_count)
+            except Exception as exc:
+                print(f"Graph {graph_idx} generated an exception: {exc}")
+    return results

@@ -3,6 +3,7 @@ from colorref.colorref_v1_0_0 import is_balanced, is_bijection
 from graphs.alex.graph import Graph
 from graphs.alex.graph_io import load_graph
 from graphs.graph_io import load_graph as old_load_graph
+from orchestration.dataclasses import IsomorphismAnalResult
 from testing.test_function import create_report
 
 from branching.branching_v1_0_4 import refine, is_balanced, is_bijection
@@ -52,7 +53,7 @@ def are_isomorphic(g: Graph, h: Graph) -> int:
     return False
 
 
-def aut_mixed_branching(path: str):
+def aut_mixed_branching(path: str, do_aut_count: bool = True) -> IsomorphismAnalResult:
     with open(path, 'r') as file:
         graph_list = load_graph(file, read_list=True)
     with open(path, 'r') as file:
@@ -62,10 +63,10 @@ def aut_mixed_branching(path: str):
     iso_counts = []
 
     for i, graph in enumerate(graph_list):
-        print(f"Processing graph {i}")
+        # print(f"Processing graph {i}")
         class_found = False
         for iso_idx, iso_class in enumerate(isomorphic_graphs):
-            print(f"Comparing with iso class {iso_idx}")
+            # print(f"Comparing with iso class {iso_idx}")
             base_graph = graph_list[iso_class[0]]
             if are_isomorphic(base_graph, graph):
                 iso_class.append(i)
@@ -73,13 +74,17 @@ def aut_mixed_branching(path: str):
                 break
 
         if not class_found:
-            print(f"Creating new iso class for graph {i}")
-            anal_result = analyze_automorphisms(old_graph_list[i]) # dirty hack to avoid writing converters
             isomorphic_graphs.append([i])
-            iso_counts.append(anal_result.automorphism_count)
+            if do_aut_count:
+                anal_result = analyze_automorphisms(old_graph_list[i]) # dirty hack to avoid writing converters
+                iso_counts.append(anal_result.automorphism_count)
+            else:
+                iso_counts.append(0)
 
-    for i, iso_class in enumerate(isomorphic_graphs):
-        print(iso_class, iso_counts[i])
+    # for i, iso_class in enumerate(isomorphic_graphs):
+    #     print(iso_class, iso_counts[i])
+
+    return IsomorphismAnalResult(isomorphic_graphs=isomorphic_graphs, automorphism_counts=iso_counts, was_counting_automorphism=do_aut_count)
 
 
 if __name__ == "__main__":

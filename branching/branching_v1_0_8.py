@@ -3,12 +3,10 @@ from line_profiler_pycharm import profile
 import concurrent.futures
 
 from automorphisms.automorphisms import analyze_automorphisms
-from colorref.colorref_v1_0_0 import is_balanced, is_bijection
-from colorref.colorref_v1_2_1 import MIN_COLOR, solve_colorref_transform
-from graphs.graph import Graph, Vertex
 from graphs.graph_io import load_graph
 from testing.test_function_multicore import create_report
 from branching.branching_v1_0_5 import are_isomorphic
+from orchestration.dataclasses import IsomorphismAnalResult
 
 # for comparative testing
 from branching.branching_v1_0_3 import basic_branching
@@ -17,95 +15,17 @@ from branching.branching_v1_0_5 import aut_branching
 from branching.branching_v1_0_6 import aut_mixed_branching
 from branching.branching_v1_0_7 import aut_fast_branching_v3
 
-MAX_DEPTH_FOR_PARALLELIZATION = 0
 
-# early terminating branching based on branching_v1_0_3.py, augmented with process parallelization
-def are_isomorphic_multicore(g: Graph, h: Graph, d_seq: list[Vertex], i_seq: list[Vertex], depth: int = 0) -> bool:
-    graph_list = [g, h]
-    initial_coloring = {vertex: MIN_COLOR for vertex in g.vertices + h.vertices}
-    for i, vertices in enumerate(zip(d_seq, i_seq)):
-        x_vertex, y_vertex = vertices
-        initial_coloring[x_vertex] = MIN_COLOR + i + 1
-        initial_coloring[y_vertex] = MIN_COLOR + i + 1
-    coloring = solve_colorref_transform(graph_list, initial_coloring)
-    # draw_graphs_by_colors(graph_list, coloring)
-
-    if not is_balanced(graph_list, coloring):
-        return False
-
-    if is_bijection(g, h, coloring):
-        return True
-
-    min_color_class : None | int = None
-    for color, color_class in coloring.items():
-        if len(color_class) == 4:
-            min_color_class = color
-            break
-        elif len(color_class) > 4 and (min_color_class is None or len(color_class) < len(coloring[min_color_class])):
-            min_color_class = color
-
-    if min_color_class is None:
-        return False
-
-    class_to_fix = set(coloring[min_color_class])
-
-    y_set = class_to_fix.intersection(set(h.vertices))
-    x = list(class_to_fix.difference(y_set))[0]
-    if depth <= MAX_DEPTH_FOR_PARALLELIZATION and len(y_set) > 1:
-        with concurrent.futures.ProcessPoolExecutor() as executor:
-            futures = []
-            for y in y_set:
-                futures.append(executor.submit(are_isomorphic_multicore, g, h, d_seq + [x], i_seq + [y], depth + 1))
-            for future in concurrent.futures.as_completed(futures):
-                if future.result():
-                    executor.shutdown(wait=False, cancel_futures=True)
-                    return True
-        return False
-    else:
-        for y in y_set:
-            if are_isomorphic_multicore(g, h, d_seq + [x], i_seq + [y], depth + 1):
-                return True
-        return False
-
-
-def aut_basic_bad_multicore_branching(path: str):
-    with open(path, 'r') as file:
-        graph_list = load_graph(file, read_list=True)
-
-    isomorphic_graphs = []
-    iso_counts = []
-
-    for i, graph in enumerate(graph_list):
-        print(f"Processing graph {i}")
-        class_found = False
-        for iso_idx, iso_class in enumerate(isomorphic_graphs):
-            print(f"Comparing with iso class {iso_idx}")
-            base_graph = graph_list[iso_class[0]]
-            if are_isomorphic_multicore(base_graph, graph, [], []):
-                iso_class.append(i)
-                class_found = True
-                break
-
-        if not class_found:
-            print(f"Creating new iso class for graph {i}")
-            anal_result = analyze_automorphisms(graph)
-            isomorphic_graphs.append([i])
-            iso_counts.append(anal_result.automorphism_count)
-
-    for i, iso_class in enumerate(isomorphic_graphs):
-        print(iso_class, iso_counts[i])
-
-
-def aut_basic_multicore_branching(path: str):
+def aut_basic_multicore_branching(path: str, do_aut_count: bool = True) -> IsomorphismAnalResult:
     with open(path, "r") as file:
         graph_list = load_graph(file, read_list=True)
 
     isomorphic_graphs = []
     iso_counts = []
 
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_tasks_per_child=1) as executor:
         for i, graph in enumerate(graph_list):
-            print(f"Processing graph {i}")
+            # print(f"Processing graph {i}")
             class_found = False
             future_to_class_idx = {}
             for class_idx, iso_class in enumerate(isomorphic_graphs):
@@ -125,13 +45,15 @@ def aut_basic_multicore_branching(path: str):
                     break
 
             if not class_found:
-                print(f"Creating new iso class for graph {i}")
-                anal_result = analyze_automorphisms(graph)
                 isomorphic_graphs.append([i])
-                iso_counts.append(anal_result.automorphism_count)
+                if do_aut_count:
+                    anal_result = analyze_automorphisms(graph)
+                    iso_counts.append(anal_result.automorphism_count)
+                else:
+                    iso_counts.append(0)
 
-    for i, iso_class in enumerate(isomorphic_graphs):
-        print(iso_class, iso_counts[i])
+    return IsomorphismAnalResult(isomorphic_graphs=isomorphic_graphs, automorphism_counts=iso_counts, was_counting_automorphism=do_aut_count)
+
 
 if __name__ == "__main__":
     one_round_paths = [
@@ -184,11 +106,11 @@ if __name__ == "__main__":
     paths = one_round_paths * 2
 
     create_report(paths, {
-         #'aut_basic_bad_multicore_branching': aut_basic_bad_multicore_branching,
-        'aut_basic_multicore_branching': aut_basic_multicore_branching,
-        'aut_fast_branching_v3': aut_fast_branching_v3,
-         'aut_mixed_branching': aut_mixed_branching,
-        'aut_basic_branching': aut_branching,
+        #'aut_basic_bad_multicore_branching': aut_basic_bad_multicore_branching,
+        #'aut_basic_multicore_branching': aut_basic_multicore_branching,
+        #'aut_fast_branching_v3': aut_fast_branching_v3,
+        # 'aut_mixed_branching': aut_mixed_branching,
+        #'aut_basic_branching': aut_branching,
         'basic_branching': basic_branching,
         'fast_branching': fast_branching,
     }, out_path='../docs/branching-v1_0_3-vs-v1_0_4-vs-v1_0_5-vs-v1_0_6-vs-v1_0_7-vs-v1_0_8.tex')
