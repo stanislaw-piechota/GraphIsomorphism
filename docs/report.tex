@@ -229,54 +229,11 @@ Not implemented.
 \subsection{Preprocessing}
 
 \subsubsection{Trees (grade +1/2)}
-We have implemented a polynomial time algorithm for graph isomorphism counting for trees, along with a simple dijkstra-type implementation to recognise trees. Our algorithm works for trees, but not forests, therefore we think this is worth $+1/2$ a grade point. The computational overhead for the recognition algorithm is  moderate, while the speedup for trees is sometimes significant, as can be seen in Table~\ref{tab:trees}.
-\begin{table}[hb]
-	\centering
-	\begin{tabular}{l|r|r|c|c}
-		&&&\multicolumn{2}{c}{comp.\ times (s)}\\
-		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ tree detection\\
-		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
-		cubes5.grl& 32 &xx &25.4 & 28.2\\
-		products216.grl& 216 &xx & 126 & 132\\
-		trees36.grl& 36 &xx & 24.5 & 1.7\\
-		trees90.grl& 90 &xx & 30 & 1.8\\
-		bigtrees3.grl& 227 &xx & 45 & 2.4\\
-	\end{tabular}
-	\caption{Computation times for solving the \#AUT problem for certain tree instances with and without using tree detection and the polynomial time algorithm for trees. The standard algorithm, uses non of the algorithmic changes from later sections.}\label{tab:trees}
-\end{table}
+Not implemented.
 
 
 \subsubsection{Preprocesing using Twins or Modules (grade +1)}
-We have implemented the recognition and elimination of twins. After each time that we eliminate twins, we run the recognition and elimination again to further simplify the graph. This resulted in a significant speedup in counting the number of isomorphisms and recognising isomorphisms for some of the graphs. See Table~\ref{tab:twinsAUT} and~\ref{tab:twinsGI} for sample results on some instances.
-\begin{table}[h]
-	\centering
-	\begin{tabular}{l|r|r|c|c}
-		&&&\multicolumn{2}{c}{comp.\ times (s) \#AUT}\\
-		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
-		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
-		Instance1.grl& xx &xx & xxx & xxx\\
-		Instance2.grl& xx &xx & xxx & xxx\\
-		Instance3.grl& xx &xx & xxx & xxx\\
-		Instance4.grl& xx &xx & xxx & xxx\\
-		Instance5.grl& xx &xx & xxx & xxx\\
-	\end{tabular}
-	\caption{Computation times for solving the \#AUT problem for certain instances with and without using our recursive twin detection and elimination algorithm. The standard algorithm, uses our fast partition refinement, but not our tree preprocessing, and non of the algorithmic changes from later sections.}\label{tab:twinsAUT}
-\end{table}
-
-\begin{table}[h]
-	\centering
-	\begin{tabular}{l|r|r|c|c}
-		&&&\multicolumn{2}{c}{comp.\ times (s) GI}\\
-		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
-		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
-		Instance1.grl& xx &xx & xxx & xxx\\
-		Instance2.grl& xx &xx & xxx & xxx\\
-		Instance3.grl& xx &xx & xxx & xxx\\
-		Instance4.grl& xx &xx & xxx & xxx\\
-		Instance5.grl& xx &xx & xxx & xxx\\
-	\end{tabular}
-	\caption{Computation times for solving the GI problem for certain instances with and without using our recursive twin detection and elimination algorithm.  The standard algorithm, uses our fast partition refinement, but not our tree preprocessing, and non of the algorithmic changes from later sections.}\label{tab:twinsGI}
-\end{table}
+Not implemented.
 %Not implemented
 
 
@@ -289,75 +246,8 @@ We have implemented the recognition and elimination of twins. After each time th
 explain what it is, why it works, and prove why it is correct. Additionally,
 a table with a comparison of computational times is mandatory.)
 
-% Dummy text
 \subsection{Algorithm for ``Class'' graphs (grade +1)}
-We build a preprocessing algorithm that identifies ``Class'' graphs and an algorithm that solves the GI problem for ``CLASS'' graphs, see Algorithm~\ref{alg:class1} and Algorithm~\ref{alg:class2}.
-We only run it if we the task is to only solve the GI problem. Is greatly reduces the computation time if we solve for this class of graphs, while not increasing the computation time for other graphs too much.
-There where not enough graphs of this class in the sample graphs, so we constructed some really large ``CLASS'' graphs to test with. See Table~\ref{tab:class}. We think our implementation is worth +1 grade point.
-
-\begin{algorithm}
-	\caption{Class graph detection algorithm}\label{alg:class1}
-	\begin{algorithmic}[1] % The number tells where the line numbering should start
-		\Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}
-		\State $r\gets a \bmod b$
-		\While{$r\not=0$} \Comment{We have the answer if r is 0}
-		\State $a \gets b$
-		\State $b \gets r$
-		\State $r \gets a \bmod b$
-		\EndWhile\label{euclidendwhile}
-		\State \textbf{return} $b$\Comment{The gcd is b}
-		\EndProcedure
-	\end{algorithmic}
-\end{algorithm}
-
-\begin{algorithm}
-	\caption{Class graph GI algorithm}\label{alg:class2}
-	\begin{algorithmic}[1] % The number tells where the line numbering should start
-		\Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}
-		\State $r\gets a \bmod b$
-		\While{$r\not=0$} \Comment{We have the answer if r is 0}
-		\State $a \gets b$
-		\State $b \gets r$
-		\State $r \gets a \bmod b$
-		\EndWhile
-		\State \textbf{return} $b$\Comment{The gcd is b}
-		\EndProcedure
-	\end{algorithmic}
-\end{algorithm}
-
-\begin{theorem}
-	Our identification algorithm correctly identifies if a graph is a ``CLASS'' graph.
-\end{theorem}
-\begin{proof}
-	\lipsum[4]
-\end{proof}
-
-\begin{theorem}
-	Our GI algorithm correctly solves the GI problem for ``CLASS'' graphs.
-\end{theorem}
-\begin{proof}
-	\lipsum[4]
-\end{proof}
-
-\begin{table}[h]
-	\centering
-	\begin{tabular}{l|r|r|c|c}
-		&&&\multicolumn{2}{c}{comp.\ times (s) GI}\\
-		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
-		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
-		SampleClassInstance1.grl& xx &xx & xxx & xxx\\
-		CreatedClassInstance1.grl& xx &xx & xxx & xxx\\
-		CreatedClassInstance2.grl& xx &xx & xxx & xxx\\
-		CreatedClassInstance3.grl& xx &xx & xxx & xxx\\
-		CreatedClassInstance4.grl& xx &xx & xxx & xxx\\
-		SampleNon-ClassInstance1.grl& xx &xx & xxx & xxx\\
-		SampleNon-ClassInstance2.grl& xx &xx & xxx & xxx\\
-		SampleNon-ClassInstance3.grl& xx &xx & xxx & xxx\\
-		SampleNon-ClassInstance4.grl& xx &xx & xxx & xxx\\
-	\end{tabular}
-	\caption{Computation times for solving the GI problem for certain instances with and without using our ``Class''-graph algorithm. The standard algorithm, uses fast partition refinement, tree preprocessing, and twin elimination.}\label{tab:class}
-\end{table}
-
+Not implemented.
 
 \section{Balance Sheet \& Reflection}
 \subsection{Work Distribution}
@@ -368,11 +258,11 @@ The following is the estimated work distribution in the group for this implement
 & A.\ Zhuralev & S.\ Piechota& W.\ Walczak\\
 \noalign{\smallskip}\hline\hline\noalign{\smallskip}
 %Color Refinement  & 33\% & 33\%& 33\%\\
-Branching algorithm& 33\% & 33\%  & 33\% \\
-Trees algorithm&  50\%& --  & 50\% \\
-Preprocessing Twins& 80\% & 20\%  & -- \\
+Branching algorithm& 50\% & 50\%  & -- \\
+Testing Setup& 10\% & 50\%  & 40\% \\
+Computing Aut(G)& -- & --  & 100\% \\
+Multithreading& -- & --  & 100\% \\
 Fast Part.\ Refinement& --& 100\%  & -- \\
-``Class'' graphs alg.& 33\% & 33\%  & 33\% \\
 Documentation& 33\% & 33\%  & 33\% \\
 \end{tabular}
 \caption{Work Distribution Group 14.}\label{tab:workdistr}
