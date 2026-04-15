@@ -1,59 +1,22 @@
-from collections import defaultdict
+﻿from pathlib import Path
 
-from graphs.graph import Vertex, Graph
-from graphs.graph_io import load_graph
+from branching.branching_v1_0_4 import refine
+from colorref.colorref_v1_2_1 import basic_colorref
+from graphs.alex.graph import Graph
+from graphs.alex.graph_io import load_graph
 from testing.test_function import create_report
 
-type Coloring = dict[Vertex, int]
-type TColoring = dict[int, set[Vertex]]
-MIN_COLOR = 0
+
+def fast_part_refinement(path: str):
+    with open(path, "r") as file:
+        graph_list = load_graph(file, Graph, True)  # pyright: ignore[reportAssignmentType]
+
+    vertices = [vertex for graph in graph_list for vertex in graph.vertices]
+    color_classes, _ = refine(vertices)
+    return color_classes
 
 
-def transform_coloring(vertex_color: Coloring) -> Coloring:
-    new_vertex_color = {}
-    color_group_vertices = defaultdict(set)
-    for vertex, color in vertex_color.items():
-        neighbourhood = tuple(sorted(vertex_color[vertex] for vertex in vertex.neighbours))
-        color_group_vertices[(color, neighbourhood)].add(vertex)
-
-    for index, items in enumerate(color_group_vertices.items()):
-        color_group, vertices = items
-        for vertex in vertices:
-            new_vertex_color[vertex] = index
-
-    return new_vertex_color
-
-
-def solve_colorref(graph_list: list[Graph], initial_coloring: Coloring = None) -> Coloring:
-    prev_coloring: Coloring = initial_coloring if initial_coloring is not None else {vertex: MIN_COLOR for graph in
-                                                                                     graph_list for vertex in
-                                                                                     graph.vertices}
-    current_coloring = transform_coloring(prev_coloring)
-
-    while prev_coloring != current_coloring:
-        prev_coloring = current_coloring
-        current_coloring = transform_coloring(prev_coloring)
-
-    return current_coloring
-
-def solve_colorref_transform(graph_list: list[Graph], initial_coloring: Coloring = None) -> TColoring:
-    coloring = solve_colorref(graph_list, initial_coloring)
-    transformation: TColoring = defaultdict(set)
-
-    for vertex, color in coloring.items():
-        transformation[color].add(vertex)
-
-    return transformation
-
-# @profile
-def basic_colorref(path: str) -> Coloring:
-    with open(path, 'r') as file:
-        graph_list = load_graph(file, read_list=True)
-
-    return solve_colorref(graph_list)
-
-
-if __name__ == "__main__":
+def run_fast_part_refinement_benchmark():
     paths = [
         '../input/branching/bigtrees1.grl',
         '../input/branching/bigtrees2.grl',
@@ -102,7 +65,17 @@ if __name__ == "__main__":
         '../input/colorref/colorref_largeexample_6_960.grl',
     ]
 
-    create_report(paths, {
-        #'colorref 1.2.0' : fast_colorref,
-        'colorref 1.2.1' : basic_colorref
-    }, out_path='../docs/colorref.tex', multiplier=1)
+    create_report(
+        [str(path) for path in paths],
+        {
+            "colorref 1.2.1": basic_colorref,
+            "fast part refinement 1.0.4": fast_part_refinement,
+        },
+        out_path=str("../docs/colorref-v1_2_1-vs-fast-part-refinement.tex"),
+        multiplier=1,
+    )
+
+
+if __name__ == "__main__":
+    run_fast_part_refinement_benchmark()
+
