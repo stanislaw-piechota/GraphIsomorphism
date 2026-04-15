@@ -1,0 +1,421 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.6 (11 Mar. 2026)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Slightly updated by  Marc Uetz
+% Version 1.4 update by Ruben Hoeksma
+% Version 1.5 update by Ruben Hoeksma:
+% -    adapted AI rules
+% Version 1.6 update by Ruben Hoeksma:
+% -    now a pretty close example of what needs to be presented for each category instead of just one example.
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside]{article}
+
+\usepackage{lipsum,pifont} % Package to generate dummy text throughout this template
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage{amsmath,amssymb,amsthm} % Mathematical Symbols, styles, etc
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage[colorlinks,allcolors=blue]{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+%\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+%\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{A.\ Zhuralev, S.\ Piechota, W.\ Walczak: \shorttitle} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\articletitle}{Project Documentation Group 14}
+\newcommand{\shorttitle}{Project Documentation Group 14}
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{\articletitle}} % Article title
+
+\author{
+\large
+\textsc{Alexander Zhuralev, Stanislaw Piechota, and Wojciech Walczak}\\[2mm] % Your name
+\normalsize University of Twente \\ % Your institution
+\normalsize \href{mailto:a.zhuravlev@student.utwente.nl}{a.zhuravlev@student.utwente.nl},
+\href{mailto:j.piechota@student.utwente.nl}{j.piechota@student.utwente.nl},
+\href{mailto:w.walczak-1@student.utwente.nl}{w.walczak-1@student.utwente.nl}% Your email addresses
+}
+
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty}
+\maketitle % Insert title
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+%\begin{abstract}
+%
+%\noindent \lipsum[1] % Dummy abstract text
+%
+%\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+
+According to the following documentation of computational results for the graph isomorphism project, we aim at a group-average grade of 9.5, which is in accordance to the grading rules. Since Maarten put in more than average work and Pietje less than average, as evidenced by Table~\ref{tab:workdistr}, we suggest that Maarten receive a 0.5 point higher grade and Pietje a 0.5 point lower grade.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|c}
+		Team member &grade (deviation from average)\\
+		\hline
+		Alexander Zhuralev & 9.5 (+0.0)\\
+		Stanislaw Piechota & 10.0 (+0.5)\\
+		Wojciech Walczak & 9.0 (-0.5)
+	\end{tabular}
+	\caption{Suggested grades}
+\end{table}
+
+\section*{On computational results}
+For the computational results we have used different machines. We did ensure that the computation times presented within one table, come from the same machine, and we ensured as much as possible that these computations were done under identical circumstances. All computations were performed X times ignoring the largest and smallest, and the computation times recorded are the average over the remaining computations.\footnote{How you perform your computational tests is up to you. This is often a trade-off between time and validity of results.}
+
+%------------------------------------------------
+\section{Category 6 (pass): Basic Problem Instances}
+The basic problem instances have been solved correctly during the programming delivery/competition. Table~\ref{tab:basic} shows the computation times. (The ``\xmark''  should not be there when you want to have a sufficient grade ;-) )
+
+\begin{table}[h]
+\centering
+\begin{tabular}{r|c|r}
+instance&correctly solved& comp.\ time (s)\\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+basicGI1& \cmark & 0.3\\
+basicGI2& \cmark & 1.2\\
+basicGI3& \cmark & 0.5\\
+basicGIAut& \cmark & 12.2\\
+basicAut1& \cmark & 20.5\\
+basicAut2& \xmark & --\\
+\end{tabular}
+\caption{Computation times basic instances.}\label{tab:basic}
+\end{table}
+
+%------------------------------------------------
+\vspace{-1ex}
+\section{Implementation of Fast Partition Refinement (grade +1)}
+We have implemented the fast partition refinement Algorithm based on Hopcroft's algorithm for DFA minimization of finite automata \cite{Hop1971}.
+In order to achieve a speedup with this algorithm, we used \ldots [datastructure(s)].
+The speedup on the mandatory sample instances with
+this algorithm for computing a stable colouring is documented in
+Table~\ref{tab:FPR}\footnote{The table for this category needs to include at least these examples specifically}.
+As expected, the computation time(s) scale roughly linear with the size of the instances. On other instances the
+algorithm is also significantly faster than our basic colour refinement algorithm.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|c|r|c|c}
+&&&\multicolumn{2}{c}{comp.\ times (s)}\\
+instance& instance size $|V|$ & \# autom.\ & standard & fast part.\ ref.\\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+%Threepaths50& 50 & 1.256  & 0.5 & 2.4\\
+%Threepaths100& 100 & 118.430  &12.6 & 6.7\\
+%Threepaths1000& 1000& 196.000.340  &1257 & 120\\
+threepaths5		& 5			&xx		& 0s			& 0s			\\
+threepaths10	& 10		&xx		& 0s			& 0s			\\
+threepaths20	& 20		&xx		& 0s			& 0s			\\
+threepaths40	& 40		&xx		& 0s			& 0s			\\
+threepaths80	& 80		&xx		& 0s			& 0.05s			\\
+threepaths160	& 160		&xx		& 0.3s			& 0.10s			\\
+threepaths320	& 320		&xx		& 2s			& 0.19s	 		\\
+threepaths640	& 640		&xx		& 17s			& 0.41s			\\
+threepaths1280	& 1280		&xx		& 125s			& 0.90s			\\
+threepaths2560	& 2560		&xx		& -				& 2.12s			\\
+threepaths5120	& 5120		&xx		& -				& 4.50s			\\
+threepaths10240	& 10240		&xx		& -				& 9.23s			\\
+sampleinstance1	& xxxx		&xx		& xxx			& xxx			\\
+sampleinstance2	& xxxx		&xx		& xxx			& xxx			\\
+sampleinstance3	& xxxx		&xx		& xxx			& xxx			\\
+sampleinstance4	& xxxx		&xx		& xxx			& xxx			\\
+sampleinstance5	& xxxx		&xx		& xxx			& xxx			\\
+\end{tabular}
+\caption{Computation times to the coarsest stable colouring with basic and fast partition refinement. ``-'' in the comp.\ times columns means that the instance could not be solved within 600 seconds.}
+\label{tab:FPR}
+\end{table}
+
+%\begin{tabular}{|l|lll|}
+%	\hline
+%	Instance:	& naive\_graphs.py	& Using adj.\ lists,		& Using adj.\ lists,	\\
+%	& basic color ref.:	& basic color ref.:		& fast color ref.:\\
+%	\hline
+%	threepaths5		& 5			& 0s			& 0s			\\
+%	threepaths10	& 10		& 0s			& 0s			\\
+%	threepaths20	& 20		& 0s			& 0s			\\
+%	threepaths40	& 40		& 0s			& 0s			\\
+%	threepaths80	& 80		& 0s			& 0.05s			\\
+%	threepaths160	& 160		& 0.3s			& 0.10s			\\
+%	threepaths320	& 320		& 2s			& 0.19s	 		\\
+%	threepaths640	& 640		& 17s			& 0.35s			\\
+%	threepaths1280	& 1280		& 125s			& 1.0s			\\
+%	threepaths2560	& 2560		& -				& 2.9s			\\
+%	threepaths5120	& 5120		& -				& 9.1s			\\
+%	threepaths10240	& 10240		& -				& 20.0s			\\
+%	\hline
+%\end{tabular}
+
+
+\section{Using Generating Sets for Computing |Aut(G)|}
+Not implemented.\
+
+
+
+\section{Additional Techniques for Faster Algorithms}
+
+
+\subsection{Branching Rules}
+Not implemented.
+\subsection{Preprocessing}
+
+\subsubsection{Trees (grade +1/2)}
+We have implemented a polynomial time algorithm for graph isomorphism counting for trees, along with a simple dijkstra-type implementation to recognise trees. Our algorithm works for trees, but not forests, therefore we think this is worth $+1/2$ a grade point. The computational overhead for the recognition algorithm is  moderate, while the speedup for trees is sometimes significant, as can be seen in Table~\ref{tab:trees}.
+\begin{table}[hb]
+	\centering
+	\begin{tabular}{l|r|r|c|c}
+		&&&\multicolumn{2}{c}{comp.\ times (s)}\\
+		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ tree detection\\
+		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+		cubes5.grl& 32 &xx &25.4 & 28.2\\
+		products216.grl& 216 &xx & 126 & 132\\
+		trees36.grl& 36 &xx & 24.5 & 1.7\\
+		trees90.grl& 90 &xx & 30 & 1.8\\
+		bigtrees3.grl& 227 &xx & 45 & 2.4\\
+	\end{tabular}
+	\caption{Computation times for solving the \#AUT problem for certain tree instances with and without using tree detection and the polynomial time algorithm for trees. The standard algorithm, uses non of the algorithmic changes from later sections.}\label{tab:trees}
+\end{table}
+
+
+\subsubsection{Preprocesing using Twins or Modules (grade +1)}
+We have implemented the recognition and elimination of twins. After each time that we eliminate twins, we run the recognition and elimination again to further simplify the graph. This resulted in a significant speedup in counting the number of isomorphisms and recognising isomorphisms for some of the graphs. See Table~\ref{tab:twinsAUT} and~\ref{tab:twinsGI} for sample results on some instances.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|r|r|c|c}
+		&&&\multicolumn{2}{c}{comp.\ times (s) \#AUT}\\
+		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
+		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+		Instance1.grl& xx &xx & xxx & xxx\\
+		Instance2.grl& xx &xx & xxx & xxx\\
+		Instance3.grl& xx &xx & xxx & xxx\\
+		Instance4.grl& xx &xx & xxx & xxx\\
+		Instance5.grl& xx &xx & xxx & xxx\\
+	\end{tabular}
+	\caption{Computation times for solving the \#AUT problem for certain instances with and without using our recursive twin detection and elimination algorithm. The standard algorithm, uses our fast partition refinement, but not our tree preprocessing, and non of the algorithmic changes from later sections.}\label{tab:twinsAUT}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|r|r|c|c}
+		&&&\multicolumn{2}{c}{comp.\ times (s) GI}\\
+		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
+		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+		Instance1.grl& xx &xx & xxx & xxx\\
+		Instance2.grl& xx &xx & xxx & xxx\\
+		Instance3.grl& xx &xx & xxx & xxx\\
+		Instance4.grl& xx &xx & xxx & xxx\\
+		Instance5.grl& xx &xx & xxx & xxx\\
+	\end{tabular}
+	\caption{Computation times for solving the GI problem for certain instances with and without using our recursive twin detection and elimination algorithm.  The standard algorithm, uses our fast partition refinement, but not our tree preprocessing, and non of the algorithmic changes from later sections.}\label{tab:twinsGI}
+\end{table}
+%Not implemented
+
+
+
+
+%------------------------------------------------
+\section{Additional and Genuinely New Ideas}
+
+(This is reserved for your own, genuinely new ideas, which you need to explain here briefly. If you want to get points for your idea, you need to
+explain what it is, why it works, and prove why it is correct. Additionally,
+a table with a comparison of computational times is mandatory.)
+
+% Dummy text
+\subsection{Algorithm for ``Class'' graphs (grade +1)}
+We build a preprocessing algorithm that identifies ``Class'' graphs and an algorithm that solves the GI problem for ``CLASS'' graphs, see Algorithm~\ref{alg:class1} and Algorithm~\ref{alg:class2}.
+We only run it if we the task is to only solve the GI problem. Is greatly reduces the computation time if we solve for this class of graphs, while not increasing the computation time for other graphs too much.
+There where not enough graphs of this class in the sample graphs, so we constructed some really large ``CLASS'' graphs to test with. See Table~\ref{tab:class}. We think our implementation is worth +1 grade point.
+
+\begin{algorithm}
+	\caption{Class graph detection algorithm}\label{alg:class1}
+	\begin{algorithmic}[1] % The number tells where the line numbering should start
+		\Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}
+		\State $r\gets a \bmod b$
+		\While{$r\not=0$} \Comment{We have the answer if r is 0}
+		\State $a \gets b$
+		\State $b \gets r$
+		\State $r \gets a \bmod b$
+		\EndWhile\label{euclidendwhile}
+		\State \textbf{return} $b$\Comment{The gcd is b}
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Class graph GI algorithm}\label{alg:class2}
+	\begin{algorithmic}[1] % The number tells where the line numbering should start
+		\Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}
+		\State $r\gets a \bmod b$
+		\While{$r\not=0$} \Comment{We have the answer if r is 0}
+		\State $a \gets b$
+		\State $b \gets r$
+		\State $r \gets a \bmod b$
+		\EndWhile
+		\State \textbf{return} $b$\Comment{The gcd is b}
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{theorem}
+	Our identification algorithm correctly identifies if a graph is a ``CLASS'' graph.
+\end{theorem}
+\begin{proof}
+	\lipsum[4]
+\end{proof}
+
+\begin{theorem}
+	Our GI algorithm correctly solves the GI problem for ``CLASS'' graphs.
+\end{theorem}
+\begin{proof}
+	\lipsum[4]
+\end{proof}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|r|r|c|c}
+		&&&\multicolumn{2}{c}{comp.\ times (s) GI}\\
+		instance& instance size $|V|$ & \# autom.\ & standard & incl.\ twin elimination\\
+		\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+		SampleClassInstance1.grl& xx &xx & xxx & xxx\\
+		CreatedClassInstance1.grl& xx &xx & xxx & xxx\\
+		CreatedClassInstance2.grl& xx &xx & xxx & xxx\\
+		CreatedClassInstance3.grl& xx &xx & xxx & xxx\\
+		CreatedClassInstance4.grl& xx &xx & xxx & xxx\\
+		SampleNon-ClassInstance1.grl& xx &xx & xxx & xxx\\
+		SampleNon-ClassInstance2.grl& xx &xx & xxx & xxx\\
+		SampleNon-ClassInstance3.grl& xx &xx & xxx & xxx\\
+		SampleNon-ClassInstance4.grl& xx &xx & xxx & xxx\\
+	\end{tabular}
+	\caption{Computation times for solving the GI problem for certain instances with and without using our ``Class''-graph algorithm. The standard algorithm, uses fast partition refinement, tree preprocessing, and twin elimination.}\label{tab:class}
+\end{table}
+
+
+\section{Balance Sheet \& Reflection}
+\subsection{Work Distribution}
+The following is the estimated work distribution in the group for this implementation project.
+\begin{table}[h]
+\centering
+\begin{tabular}{r|c|c|c|}
+& A.\ Zhuralev & S.\ Piechota& W.\ Walczak\\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+%Color Refinement  & 33\% & 33\%& 33\%\\
+Branching algorithm& 33\% & 33\%  & 33\% \\
+Trees algorithm&  50\%& --  & 50\% \\
+Preprocessing Twins& 80\% & 20\%  & -- \\
+Fast Part.\ Refinement& --& 100\%  & -- \\
+``Class'' graphs alg.& 33\% & 33\%  & 33\% \\
+Documentation& 33\% & 33\%  & 33\% \\
+\end{tabular}
+\caption{Work Distribution Group 14.}\label{tab:workdistr}
+\end{table}
+
+\subsection{Team Dynamics}
+We ask you to briefly comment on both positive and/or negative experiences with respect to teamwork and team composition in your project group, specifically with respect to the interdisciplinary team composition (if applicable). Try to be brief, but as specific as possible.
+
+\medskip
+
+\noindent Examples could include:
+\begin{itemize}
+\item[+] Work distribution was fair.
+\item[+] Math student learned some programming hacks from computer science students.
+\item[-] As work was distributed (and partly done at home), for some of the parts of the algorithm there was no transfer of how things were actually implemented.
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Hop1971}
+Hopcroft J. (1971) An $n\log n$ algorithm for minimizing states in a finite automaton. In \emph{Theory of machines and computations} (Proc. Internat. Sympos., Technion, Haifa, 1971), New York: Academic Press, 189-196.
+
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+%\end{multicols}
+
+\appendix
+
+\section{AI promps and responses}
+These are links to all prompts and responses that we used while working on this project. Note that these are all ChatGPT links and we did not use any other AI. We found that asking an AI for help worked out some times, but it was not always aware of the intricacies involved in the algorithms. In retrospect, we would probably have encountered less bugs if we had not asked ChatGPT.
+
+\begin{itemize}
+	\item \url{https://chatgpt.com/share/67ff6bef-9360-800d-9e8b-5406d113b001}
+\end{itemize}
+
+
+\end{document}
