@@ -26,6 +26,10 @@ def count_graphs_in_file(filepath: str) -> int:
                 count += 1
     return count
 
+BRANCHING_ALGORITHM = aut_fast_branching_v3
+MULTICORE_BRANCHING_ALGORITHM = aut_fast_multicore_branching
+AUT_COUNTER_ALGORITHM = count_automorphisms
+MULTICORE_AUT_COUNTER_ALGORITHM = count_automorphisms_multicore
 def process_file(filepath: Path) -> tuple[str, str]:
     filename = filepath.name
     stem = filepath.stem  # filename without the extension
@@ -34,23 +38,23 @@ def process_file(filepath: Path) -> tuple[str, str]:
     try:
         if stem.endswith('GIAut'):
             if n_graphs >= 5:
-                result = aut_fast_multicore_branching(str(filepath))
+                result = MULTICORE_BRANCHING_ALGORITHM(str(filepath))
             else:
-                result = aut_fast_branching_v3(str(filepath), do_aut_count=True)
+                result = BRANCHING_ALGORITHM(str(filepath), do_aut_count=True)
             output_str = str(result)
 
         elif stem.endswith('GI'):
             if n_graphs >= 5:
-                result = aut_fast_multicore_branching(str(filepath), do_aut_count=False)
+                result = MULTICORE_BRANCHING_ALGORITHM(str(filepath), do_aut_count=False)
             else:
-                result = aut_fast_branching_v3(str(filepath), do_aut_count=False)
+                result = BRANCHING_ALGORITHM(str(filepath), do_aut_count=False)
             output_str = str(result)
 
         elif stem.endswith('Aut'):
-            if n_graphs >= 5:
-                result = count_automorphisms_fast_multicore(str(filepath))
+            if n_graphs >= 2:
+                result = MULTICORE_AUT_COUNTER_ALGORITHM(str(filepath))
             else:
-                result = count_automorphisms_fast(str(filepath))
+                result = AUT_COUNTER_ALGORITHM(str(filepath))
             output_str = str(result)
 
         else:
