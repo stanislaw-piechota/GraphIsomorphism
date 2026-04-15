@@ -117,7 +117,7 @@ def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
     with open(path, 'r') as f:
         graph_list = load_graph(f, read_list=True)
     future_to_graph_idx : Dict[concurrent.futures.Future, int] = {}
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_tasks_per_child=1) as executor:
         for i, graph in enumerate(graph_list):
             future = executor.submit(analyze_automorphisms, graph)
             future_to_graph_idx[future] = i
