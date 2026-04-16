@@ -119,6 +119,7 @@
 %\begin{multicols}{2} % Two-column layout throughout the main article text
 
 According to the following documentation of computational results for the graph isomorphism project, we aim at a group-average grade of 9.5, which is in accordance to the grading rules. Since Maarten put in more than average work and Pietje less than average, as evidenced by Table~\ref{tab:workdistr}, we suggest that Maarten receive a 0.5 point higher grade and Pietje a 0.5 point lower grade.
+% TODO: revise the point calculation
 \begin{table}[h]
 	\centering
 	\begin{tabular}{l|c}
@@ -134,12 +135,12 @@ According to the following documentation of computational results for the graph 
 \section*{On computational results}
 For the computational results we have used different machines.
 We did ensure that the computation times presented within one table, come from the same machine, and we ensured as much as possible that these computations were done under identical circumstances.
-All computations were performed 4 times, and the computation times recorded are the average over the remaining computations with the standard deviation also indicated.
+All computations were performed 8 times, and the computation times recorded are the average over the remaining computations with the standard deviation also indicated.
 
 %------------------------------------------------
 \section{Category 6 (pass): Basic Problem Instances}
 The basic problem instances have been solved correctly during the programming delivery/competition. Table~\ref{tab:basic} shows the computation times. (The ``\xmark''  should not be there when you want to have a sufficient grade ;-) )
-
+% TODO: run these tests and update the table with actual results
 \begin{table}[h]
 \centering
 \begin{tabular}{r|c|r}
@@ -166,33 +167,38 @@ Table~\ref{tab:FPR}\footnote{The table for this category needs to include at lea
 As expected, the computation time(s) scale roughly linear with the size of the instances. On other instances the
 algorithm is also significantly faster than our basic colour refinement algorithm.
 
+% TODO: the stuff above this still needs to be replaced with the actual report content (Alex)
+Late in the project we rewrote the fast partition refinement algorithm to be backwards compatible with basic graph class so we could isolate the speedup of the cref algorithm itself used in the basic branching algorithm.
+This backwards-compatible implementation used dictionaries instead of attaching properties to the vertices, which made it slighly slower than the original implementation, but still showcased the algorithmic dominance of fast part. ref.
+
 \begin{table}[h]
 \centering
-\begin{tabular}{l|c|r|c|c}
-&&&\multicolumn{2}{c}{comp.\ times (s)}\\
-instance& instance size $|V|$ & \# autom.\ & standard & fast part.\ ref.\\
+\begin{tabular}{l|c|r|c|c|c}
+&&&\multicolumn{3}{c}{comp.\ times (s)}\\
+instance& instance size $|V|$ & \# autom.\ & colorref 1.2.1 & fast part.\ ref.\ 1.0.4 & b-c fast part.\ ref.\footnotemark\\
 \noalign{\smallskip}\hline\hline\noalign{\smallskip}
-threepaths5		& 5			& xx	& 0.000 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
-threepaths10	& 10		& xx	& 0.000 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
-threepaths20	& 20		& xx	& 0.003 $\pm$ 0.005		& 0.000 $\pm$ 0.000		\\
-threepaths40	& 40		& xx	& 0.010 $\pm$ 0.000		& 0.000 $\pm$ 0.000		\\
-threepaths80	& 80		& xx	& 0.035 $\pm$ 0.006		& 0.000 $\pm$ 0.000		\\
-threepaths160	& 160		& xx	& 0.133 $\pm$ 0.019		& 0.000 $\pm$ 0.000		\\
-threepaths320	& 320		& xx	& 0.550 $\pm$ 0.027		& 0.005 $\pm$ 0.006		\\
-threepaths640	& 640		& xx	& 2.183 $\pm$ 0.104		& 0.010 $\pm$ 0.000		\\
-threepaths1280	& 1280		& xx	& 10.370 $\pm$ 1.136	& 0.020 $\pm$ 0.000		\\
-threepaths2560	& 2560		& xx	& 45.013 $\pm$ 7.639	& 0.035 $\pm$ 0.006		\\
-threepaths5120	& 5120		& xx	& 192.417 $\pm$ 16.736	& 0.060 $\pm$ 0.000		\\
-threepaths10240	& 10240		& xx	& -				        & -				        \\
-colorref\_largeexample\_6\_960 & 960	& xx	& 5.715 $\pm$ 0.684		& 0.020 $\pm$ 0.000		\\
-colorref\_largeexample\_4\_1026 & 1026& xx	& 0.217 $\pm$ 0.017		& 0.050 $\pm$ 0.000		\\
-cubes9			& 9			& xx	& 0.043 $\pm$ 0.005		& 0.020 $\pm$ 0.000		\\
-modulesD		& xx		& xx	& 0.075 $\pm$ 0.006		& 0.035 $\pm$ 0.006		\\
-torus144		& 144		& xx	& 0.022 $\pm$ 0.005		& 0.010 $\pm$ 0.000		\\
+threepaths5    & 5       & xx & 0.000 $\pm$ 0.000    & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+threepaths10   & 10      & xx & 0.001 $\pm$ 0.004    & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+threepaths20   & 20      & xx & 0.003 $\pm$ 0.005    & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+threepaths40   & 40      & xx & 0.010 $\pm$ 0.000    & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+threepaths80   & 80      & xx & 0.053 $\pm$ 0.036    & 0.000 $\pm$ 0.000 & 0.000 $\pm$ 0.000 \\
+threepaths160  & 160     & xx & 0.139 $\pm$ 0.017    & 0.000 $\pm$ 0.000 & 0.003 $\pm$ 0.005 \\
+threepaths320  & 320     & xx & 0.590 $\pm$ 0.065    & 0.005 $\pm$ 0.005 & 0.010 $\pm$ 0.000 \\
+threepaths640  & 640     & xx & 2.695 $\pm$ 0.237    & 0.010 $\pm$ 0.000 & 0.011 $\pm$ 0.004 \\
+threepaths1280 & 1280    & xx & 11.994 $\pm$ 1.067   & 0.018 $\pm$ 0.005 & 0.025 $\pm$ 0.005 \\
+threepaths2560 & 2560    & xx & 51.578 $\pm$ 5.732   & 0.031 $\pm$ 0.004 & 0.053 $\pm$ 0.005 \\
+threepaths5120 & 5120    & xx & 229.912 $\pm$ 22.127 & 0.075 $\pm$ 0.011 & 0.109 $\pm$ 0.008 \\
+threepaths10240& 10240   & xx & -                    & 0.124 $\pm$ 0.011 & 0.224 $\pm$ 0.017 \\
+cref\_le\_6\_960  & 960  & xx & 6.969 $\pm$ 0.609    & 0.028 $\pm$ 0.005 & 0.039 $\pm$ 0.006 \\
+cref\_le\_4\_1026 & 1026 & xx & 0.299 $\pm$ 0.059    & 0.074 $\pm$ 0.032 & 0.111 $\pm$ 0.006 \\
+modulesC       & 240      & xx & 0.010 $\pm$ 0.000    & 0.007 $\pm$ 0.005 & 0.010 $\pm$ 0.000 \\
+modulesD       & 864      & xx & 0.103 $\pm$ 0.021    & 0.040 $\pm$ 0.009 & 0.107 $\pm$ 0.016 \\
 \end{tabular}
-\caption{Computation times to the coarsest stable colouring with basic and fast partition refinement. ``-'' in the comp.\ times columns means that the instance could not be solved within 600 seconds.}
+
+\caption{Computation times to the coarsest stable colouring with basic, fast partition refinement, and fast partition backwards compatibility. ``-'' in the comp.\ times columns means that the instance could not be solved within 600 seconds. The algorithms were ran 8 times, computation times were averaged with the deviation also indicated.}
 \label{tab:FPR}
 \end{table}
+\footnotetext{backwards-compatible fast part.\ ref.\ (colorref 2.0.0)}
 
 \section{Using Generating Sets for Computing |Aut(G)|}
 
@@ -209,6 +215,9 @@ The computation times on the mandatory sample instances are documented in Table~
 As expected, applying this generator-based counting drastically reduces the computation time for large, highly symmetric graphs due to the heavily pruned recursion tree.
 However, the mathematical operations required for order computation and membership testing introduce a noticeable overhead for smaller instances where explicit branching would otherwise be quick.
 
+In many graphs, skipping membership testing does offer a significant speedup, but we opted to keep it enabled as we didn't come up with a good heuristic for toggling it.
+
+% TODO: add the table with computation times for the automorphism counting algorithm (Wojtek)
 
 \section{Additional Techniques for Faster Algorithms}
 
@@ -225,8 +234,16 @@ Not implemented.
 Not implemented.
 %Not implemented
 
+\subsection{Multithreading}
+We noticed the standard program achieved at most 6-8\% CPU utilization on machines with 16 cores, which is a clear indication that the algorithm is not fully utilizing the available computational resources. To address this, we implemented a multithreaded version of our algorithm, allowing it to run concurrently across multiple CPU cores.
+We experimented with different methods, first -threading- but found that it still didn't allow the python code to utilize more than one core, which is a known limitation.
+To actually get it to utilize multiple cores, we switched to -concurrent- and used the ProcessPoolExecutor.
+We tried to make branching itself spawn new processes, but even with this being limited to the first level of the search tree, the overhead of spawning processes and inter-process communication was too high, leading to worse performance than the single-threaded version.
+Instead, we implemented a more coarse-grained parallelism approach, where graphs are compared to known isomorphic classes in parallel, the first match being returned and the rest of the comparisons being cancelled.
+It still does add a couple seconds of overhead, but for a couple datasets it was the difference between solving the instance and timing out
 
-
+In the pure Aut(G) tasks parallelism was used to run the automorphism counting algorithm for each graph in a separate process
+% TODO: a selection of The comparative results
 
 %------------------------------------------------
 \section{Additional and Genuinely New Ideas}
@@ -234,6 +251,7 @@ Not implemented.
 (This is reserved for your own, genuinely new ideas, which you need to explain here briefly. If you want to get points for your idea, you need to
 explain what it is, why it works, and prove why it is correct. Additionally,
 a table with a comparison of computational times is mandatory.)
+% TODO: alex's graph copying and custom graph class?
 
 \subsection{Algorithm for ``Class'' graphs (grade +1)}
 Not implemented.
@@ -251,7 +269,7 @@ Branching algorithm& 50\% & 50\%  & -- \\
 Testing Setup& 10\% & 50\%  & 40\% \\
 Computing Aut(G)& -- & --  & 100\% \\
 Multithreading& -- & --  & 100\% \\
-Fast Part.\ Refinement& --& 100\%  & -- \\
+Fast Part.\ Refinement& 90\% & --  & 10\% \\
 Documentation& 33\% & 33\%  & 33\% \\
 \end{tabular}
 \caption{Work Distribution Group 14.}\label{tab:workdistr}
@@ -261,7 +279,7 @@ Documentation& 33\% & 33\%  & 33\% \\
 We ask you to briefly comment on both positive and/or negative experiences with respect to teamwork and team composition in your project group, specifically with respect to the interdisciplinary team composition (if applicable). Try to be brief, but as specific as possible.
 
 \medskip
-
+% TODO: replace the template with something specific
 \noindent Examples could include:
 \begin{itemize}
 \item[+] Work distribution was fair.
@@ -280,6 +298,7 @@ We ask you to briefly comment on both positive and/or negative experiences with 
 
 \bibitem{Hop1971}
 Hopcroft J. (1971) An $n\log n$ algorithm for minimizing states in a finite automaton. In \emph{Theory of machines and computations} (Proc. Internat. Sympos., Technion, Haifa, 1971), New York: Academic Press, 189-196.
+% TODO: add more references here
 
 \end{thebibliography}
 
@@ -293,7 +312,10 @@ Hopcroft J. (1971) An $n\log n$ algorithm for minimizing states in a finite auto
 These are links to all prompts and responses that we used while working on this project. Note that these are all ChatGPT links and we did not use any other AI. We found that asking an AI for help worked out some times, but it was not always aware of the intricacies involved in the algorithms. In retrospect, we would probably have encountered less bugs if we had not asked ChatGPT.
 
 \begin{itemize}
-	\item \url{https://chatgpt.com/share/67ff6bef-9360-800d-9e8b-5406d113b001}
+	\item \url{# https://gemini.google.com/share/a1fff68ccc17}
+    \item \url{# https://gemini.google.com/share/0082b4da8b45}
+    \item \url{# https://gemini.google.com/share/a2b6242f6fb5}
+    \item \url{# https://gemini.google.com/share/d4a4a9965887}
 \end{itemize}
 
 

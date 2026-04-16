@@ -19,7 +19,7 @@ def fast_part_refinement(path: str):
 
 def run_fast_part_refinement_benchmark():
     paths = [
-        #'../input/fast_colorref/threepaths10240.gr',
+        '../input/fast_colorref/threepaths10240.gr',
         #'../input/branching/bigtrees1.grl',
         #'../input/branching/bigtrees2.grl',
         #'../input/branching/bigtrees3.grl',
@@ -66,7 +66,7 @@ def run_fast_part_refinement_benchmark():
         '../input/colorref/colorref_largeexample_6_960.grl',
     ]
 
-    paths = paths * 4
+    paths = paths * 8
 
     create_report(
         [str(path) for path in paths],
@@ -75,7 +75,7 @@ def run_fast_part_refinement_benchmark():
             "fast part refinement 1.0.4": fast_part_refinement,
             "colorref 2.0.0": fast_colorref,
         },
-        out_path=str("../docs/colorref-v1_2_1-vs-fast-part-refinement.tex"),
+        out_path=str("../docs/colorref-v1_2_1-vs-fast-part-refinement-vs-colorref_v2_0_0.tex"),
         multiplier=1,
     )
 
