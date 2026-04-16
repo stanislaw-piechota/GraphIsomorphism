@@ -17,7 +17,7 @@ from branching.branching_v1_0_7 import aut_fast_branching_v3
 from branching.branching_v1_0_8 import aut_basic_multicore_branching
 
 
-def aut_dupa_multicore_branching(path: str, do_aut_count: bool = True) -> IsomorphismAnalResult:
+def aut_dupa_multicore_branching(path: str, do_aut_count: bool = True, do_membership_testing: bool = True) -> IsomorphismAnalResult:
     with open(path, "r") as file:
         graph_list = load_graph(file, read_list=True)
 
@@ -48,7 +48,7 @@ def aut_dupa_multicore_branching(path: str, do_aut_count: bool = True) -> Isomor
             if not class_found:
                 isomorphic_graphs.append([i])
                 if do_aut_count:
-                    anal_result = analyze_automorphisms(graph)
+                    anal_result = analyze_automorphisms(graph, do_membership_testing)
                     iso_counts.append(anal_result.automorphism_count)
                 else:
                     iso_counts.append(0)
@@ -58,6 +58,8 @@ def aut_dupa_multicore_branching(path: str, do_aut_count: bool = True) -> Isomor
 
     return IsomorphismAnalResult(isomorphic_graphs=isomorphic_graphs, automorphism_counts=iso_counts, was_counting_automorphism=do_aut_count)
 
+def aut_dupa_multicore_branching_no_mt(path: str, do_aut_count: bool = True) -> IsomorphismAnalResult:
+    return aut_dupa_multicore_branching(path, do_aut_count=do_aut_count, do_membership_testing=False)
 
 if __name__ == "__main__":
     one_round_paths = [

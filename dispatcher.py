@@ -11,14 +11,17 @@ from branching.branching_v1_0_5 import aut_branching
 from branching.branching_v1_0_6 import aut_mixed_branching
 from branching.branching_v1_0_7 import aut_fast_branching_v3
 from branching.branching_v1_1_0 import aut_dupa_branching
+from branching.branching_v1_1_0 import aut_dupa_branching_no_mt
 from branching.branching_v1_0_8 import aut_basic_multicore_branching
 from automorphisms.automorphisms import count_automorphisms, count_automorphisms_multicore
 from automorphisms.automorphisms_fast_branching import count_automorphisms as count_automorphisms_fast
 from automorphisms.automorphisms_fast_ref import count_automorphisms as count_automorphisms_faster
+from automorphisms.automorphisms_fast_ref import count_automorphisms_no_mt as count_automorphisms_faster_no_mt
 from automorphisms.automorphisms_fast_branching import count_automorphisms_multicore as count_automorphisms_fast_multicore
 from automorphisms.automorphisms_fast_ref import count_automorphisms_multicore as count_automorphisms_faster_multicore
+from automorphisms.automorphisms_fast_ref import count_automorphisms_multicore_no_mt as count_automorphisms_faster_multicore_no_mt
 from branching.branching_v1_1_1 import aut_dupa_multicore_branching
-
+from branching.branching_v1_1_1 import aut_dupa_multicore_branching_no_mt
 
 def count_graphs_in_file(filepath: str) -> int:
     count = 0
@@ -30,10 +33,10 @@ def count_graphs_in_file(filepath: str) -> int:
                 count += 1
     return count
 
-BRANCHING_ALGORITHM = aut_dupa_branching
-MULTICORE_BRANCHING_ALGORITHM = aut_dupa_multicore_branching
-AUT_COUNTER_ALGORITHM = count_automorphisms_faster
-MULTICORE_AUT_COUNTER_ALGORITHM = count_automorphisms_faster_multicore
+BRANCHING_ALGORITHM = aut_dupa_branching_no_mt
+MULTICORE_BRANCHING_ALGORITHM = aut_dupa_multicore_branching_no_mt
+AUT_COUNTER_ALGORITHM = count_automorphisms_faster_no_mt
+MULTICORE_AUT_COUNTER_ALGORITHM = count_automorphisms_faster_multicore_no_mt
 def process_file(filepath: Path) -> tuple[str, str]:
     filename = filepath.name
     stem = filepath.stem  # filename without the extension
@@ -42,7 +45,7 @@ def process_file(filepath: Path) -> tuple[str, str]:
     try:
         if stem.endswith('GIAut'):
             if n_graphs >= 5:
-                result = MULTICORE_BRANCHING_ALGORITHM(str(filepath))
+                result = MULTICORE_BRANCHING_ALGORITHM(str(filepath), do_aut_count=True)
             else:
                 result = BRANCHING_ALGORITHM(str(filepath), do_aut_count=True)
             output_str = str(result)
