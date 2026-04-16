@@ -1,16 +1,39 @@
 ﻿from testing.test_function_multicore import create_report
 
-from automorphisms.automorphisms import count_automorphisms as count_automorphisms
-from automorphisms.automorphisms import count_automorphisms_no_mt as count_automorphisms_no_mt
-from automorphisms.automorphisms_fast_branching import count_automorphisms as count_automorphisms_fast_branching
-from automorphisms.automorphisms_fast_branching import count_automorphisms_no_mt as count_automorphisms_fast_branching_no_mt
-from automorphisms.automorphisms_fast_ref import count_automorphisms as count_automorphisms_fast_ref
-from automorphisms.automorphisms_fast_ref import count_automorphisms_no_mt as count_automorphisms_fast_ref_no_mt
-from automorphisms.automorphisms_fast_ref import count_automorphisms_multicore as count_automorphisms_fast_ref_multicore
-from automorphisms.automorphisms_fast_ref import count_automorphisms_multicore_no_mt as count_automorphisms_fast_ref_no_mt
+# Import all the branching functions
+from branching.branching_v1_0_5 import aut_branching
+from branching.branching_v1_0_6 import aut_mixed_branching
+from branching.branching_v1_0_8 import aut_basic_multicore_branching
+from branching.branching_v1_0_9 import aut_fast_multicore_branching
+from branching.branching_v1_1_0 import aut_dupa_branching
+from branching.branching_v1_1_1 import aut_dupa_multicore_branching
 
 
-def run_automorphisms_benchmarks():
+def run_aut_branching(p):
+    return aut_branching(p, do_aut_count=False)
+
+
+def run_aut_mixed_branching(p):
+    return aut_mixed_branching(p, do_aut_count=False)
+
+
+def run_aut_basic_multicore_branching(p):
+    return aut_basic_multicore_branching(p, do_aut_count=False)
+
+
+def run_aut_fast_multicore_branching(p):
+    return aut_fast_multicore_branching(p, do_aut_count=False)
+
+
+def run_aut_dupa_branching(p):
+    return aut_dupa_branching(p, do_aut_count=False)
+
+
+def run_aut_dupa_multicore_branching(p):
+    return aut_dupa_multicore_branching(p, do_aut_count=False)
+
+
+def run_gi_benchmarks():
     paths = [
         '../input/branching/bigtrees1.grl',
         '../input/branching/bigtrees2.grl',
@@ -61,23 +84,22 @@ def run_automorphisms_benchmarks():
 
     paths = paths * 4
 
+    functions_to_test = {
+        "aut_branching": run_aut_branching,
+        "aut_mixed_branching": run_aut_mixed_branching,
+        "aut_basic_multicore_branching": run_aut_basic_multicore_branching,
+        "aut_fast_multicore_branching": run_aut_fast_multicore_branching,
+        "aut_dupa_branching": run_aut_dupa_branching,
+        "aut_dupa_multicore_branching": run_aut_dupa_multicore_branching,
+    }
+
     create_report(
         [str(path) for path in paths],
-        {
-            "basic no mt": count_automorphisms_no_mt,
-            "basic": count_automorphisms,
-            "fast branching no mt": count_automorphisms_fast_branching_no_mt,
-            "fast branching": count_automorphisms_fast_branching,
-            "fast ref no mt": count_automorphisms_fast_ref_no_mt,
-            "fast ref ": count_automorphisms_fast_ref,
-            "fast ref multicore no mt": count_automorphisms_fast_ref_no_mt,
-            "fast ref multicore": count_automorphisms_fast_ref_multicore,
-        },
-        out_path=str("../docs/automorphisms-benchmarks.tex"),
+        functions_to_test,
+        out_path=str("../docs/gi-benchmarks.tex"),
         multiplier=1,
     )
 
 
 if __name__ == "__main__":
-    run_automorphisms_benchmarks()
-
+    run_gi_benchmarks()
