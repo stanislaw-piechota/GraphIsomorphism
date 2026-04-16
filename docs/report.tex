@@ -135,7 +135,6 @@ According to the following documentation of computational results for the graph 
 \section*{On computational results}
 For the computational results we have used different machines.
 We did ensure that the computation times presented within one table, come from the same machine, and we ensured as much as possible that these computations were done under identical circumstances.
-All computations were performed 8 times, and the computation times recorded are the average over the remaining computations with the standard deviation also indicated.
 
 %------------------------------------------------
 \section{Category 6 (pass): Basic Problem Instances}
@@ -202,22 +201,49 @@ modulesD       & 864      & xx & 0.103 $\pm$ 0.021    & 0.040 $\pm$ 0.009 & 0.10
 
 \section{Using Generating Sets for Computing |Aut(G)|}
 
-We have implemented the automorphism counting algorithms based on the permutation group techniques discussed in the course. To compute the total number of automorphisms efficiently, our implementation finds a polynomial-sized generating set for the automorphism group, $Aut(G)$, rather than explicitly generating every single automorphism, which would not be computationally feasible for large graphs.
+We have implemented the automorphism counting algorithms based on the permutation group techniques discussed in the course.
+To compute the total number of automorphisms efficiently, our implementation finds a polynomial-sized generating set for the automorphism group, $Aut(G)$, rather than explicitly generating every single automorphism, which would not be computationally feasible for large graphs.
 
 We created two variations of this counting mechanism, based on our two branching algorithms.
 In both variations, we apply individualization refinement and continuously maintain a set of found generators.
 To optimize the search space, we utilized the Pruning Lemma: whenever the search yields a trivial prescribed mapping, we safely prune the recursion tree and stop exploring that branch, as any further automorphisms discovered would already be accounted for in our generating set.
 
 To handle the underlying group theory, we leveraged the provided utility code to compute orbits, transversals, and generating sets for stabilizer subgroups.
-Building on these tools, we implemented algorithms for Order Computation, utilizing the Orbit-Stabilizer Theorem, and Membership Testing, utilizing recursive sifting to check if newly found automorphisms are already within the generated subgroup.
+Building on these tools, we implemented algorithms for Order Computation, utilizing the Orbit-Stabilizer Theorem, and membership testing, utilizing recursive sifting to check if newly found automorphisms are already within the generated subgroup. % TODO: add souce for OST
 
-The computation times on the mandatory sample instances are documented in Table~\ref{todo}\footnote{TODO: this}.
+The computation times on the sample instances are documented in Table~\ref{tab:aut_counting}.
 As expected, applying this generator-based counting drastically reduces the computation time for large, highly symmetric graphs due to the heavily pruned recursion tree.
 However, the mathematical operations required for order computation and membership testing introduce a noticeable overhead for smaller instances where explicit branching would otherwise be quick.
 
-In many graphs, skipping membership testing does offer a significant speedup, but we opted to keep it enabled as we didn't come up with a good heuristic for toggling it.
+In all tested graphs, skipping membership testing led to a significant speedup, which either indicates that our implementation is not ideal or the graphs tested do not create enough redundant generators to slow down the order computation.
 
-% TODO: add the table with computation times for the automorphism counting algorithm (Wojtek)
+\begin{table}[H]
+\centering
+\begin{tabular}{l|r|r|r|r|r}
+& \multicolumn{5}{c}{comp.\ times (s)}\\
+instance & naive & basic & fast branch & fast ref & fast ref no-mt\footnotemark \\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+bigtrees1    & --     & 3.11   & 5.85   & 5.52   & 2.22 \\
+bigtrees2    & --     & 24.45  & 48.06  & 25.02  & 3.94 \\
+bigtrees3    & --     & --     & --     & --     & 58.76 \\
+cographs1    & --     & 1.40   & 1.91   & 1.57   & 1.53 \\
+cubes5       & 5.31   & 1.73   & 1.73   & 1.54   & 1.51 \\
+cubes6       & 144.39 & 14.61  & 13.74  & 13.94  & 3.04 \\
+cubes7       & --     & 127.41 & 98.46  & 97.58  & 10.70 \\
+cubes8       & --     & --     & --     & --     & 70.82 \\
+modulesD     & 92.32  & 58.29  & 94.96  & 59.46  & 35.74 \\
+products72   & 14.71  & 24.82  & 23.97  & 21.82  & 7.18 \\
+products216  & 553.62 & --     & --     & --     & 76.26 \\
+torus72      & 14.75  & 23.51  & 18.26  & 19.49  & 8.36 \\
+torus144     & 153.34 & 229.25 & 186.00 & 183.75 & 28.65 \\
+trees90      & 217.97 & 2.94   & 2.29   & 2.27   & 2.22 \\
+wheeljoin33  & --     & 12.50  & 19.79  & 11.04  & 4.90 \\
+wheelstar12  & --     & 12.68  & 9.12   & 7.09   & 3.83 \\
+\end{tabular}
+\caption{Computation times for finding $|Aut(G)|$ with various algorithms. ``--'' indicates the instance timed out (600s).}
+\label{tab:aut_counting}
+\end{table}
+\footnotetext{Fast partition refinement run without membership testing.}
 
 \section{Additional Techniques for Faster Algorithms}
 
@@ -242,8 +268,25 @@ We tried to make branching itself spawn new processes, but even with this being 
 Instead, we implemented a more coarse-grained parallelism approach, where graphs are compared to known isomorphic classes in parallel, the first match being returned and the rest of the comparisons being cancelled.
 It still does add a couple seconds of overhead, but for a couple datasets it was the difference between solving the instance and timing out
 
+
 In the pure Aut(G) tasks parallelism was used to run the automorphism counting algorithm for each graph in a separate process
-% TODO: a selection of The comparative results
+\begin{table}[H]
+\centering
+\begin{tabular}{l|r|r}
+& \multicolumn{2}{c}{comp.\ times (s)}\\
+instance & fast ref & multicore \\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+trees36      & 0.42   & 2.55   \\
+cubes4       & 0.22   & 1.29   \\
+modulesD     & 59.46  & 29.88  \\
+torus144     & 183.75 & 42.29  \\
+wheeljoin33  & 11.04  & 6.06   \\
+bigtrees3    & --     & 370.55 \\
+products216  & --     & 147.15 \\
+\end{tabular}
+\caption{Comparison of standard vs.\ multithreaded computation times for fast partition refinement. Smaller instances (like \emph{trees36} and \emph{cubes4}) highlight the process spawning overhead, while highly complex instances (\emph{bigtrees3}, \emph{torus144}) demonstrate significant parallel scaling.}
+\label{tab:multithreading_comparison}
+\end{table}
 
 %------------------------------------------------
 \section{Additional and Genuinely New Ideas}

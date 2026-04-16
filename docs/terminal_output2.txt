@@ -1,0 +1,818 @@
+﻿C:\Users\wojte\PycharmProjects\GraphIsomorphism\.venv\Scripts\python.exe C:\Users\wojte\PycharmProjects\GraphIsomorphism\testing\automorphisms_tester.py 
+Running naive on bigtrees1.grl
+Running basic on bigtrees1.grl
+Running fast branching on bigtrees1.grl
+Running fast ref no mt on bigtrees1.grl
+Running fast ref on bigtrees1.grl
+Running fast ref multicore no mt on bigtrees1.grl
+Running fast ref multicore on bigtrees1.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running fast ref no mt: 2.221253700001398s
+Total time of running fast ref multicore no mt: 2.244689200015273s
+Total time of running basic: 3.10756879998371s
+Total time of running fast ref multicore: 3.501598400005605s
+Total time of running fast ref: 5.516647899989039s
+Total time of running fast branching: 5.852026700013084s
+Timeout while running naive on ../input/branching/bigtrees1.grl: exceeded 600s
+Running naive on bigtrees2.grl
+Running basic on bigtrees2.grl
+Running fast branching on bigtrees2.grl
+Running fast ref no mt on bigtrees2.grl
+Running fast ref on bigtrees2.grl
+Running fast ref multicore no mt on bigtrees2.grl
+Running fast ref multicore on bigtrees2.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref no mt: 3.9439069999789353s
+Total time of running fast ref multicore no mt: 4.026780299987877s
+Total time of running fast ref multicore: 12.647959199995967s
+Total time of running basic: 24.44980790000409s
+Total time of running fast ref: 25.020393899991177s
+Total time of running fast branching: 48.0618819000083s
+Timeout while running naive on ../input/branching/bigtrees2.grl: exceeded 600s
+Running naive on bigtrees3.grl
+Running basic on bigtrees3.grl
+Running fast branching on bigtrees3.grl
+Running fast ref no mt on bigtrees3.grl
+Running fast ref on bigtrees3.grl
+Running fast ref multicore no mt on bigtrees3.grl
+Running fast ref multicore on bigtrees3.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running fast ref multicore no mt: 57.934132299997145s
+Total time of running fast ref no mt: 58.762541999982204s
+Total time of running fast ref multicore: 370.5464711000095s
+Timeout while running naive on ../input/branching/bigtrees3.grl: exceeded 600s
+Running naive on cographs1.grl
+Running basic on cographs1.grl
+Running fast branching on cographs1.grl
+Running fast ref no mt on cographs1.grl
+Running fast ref on cographs1.grl
+Running fast ref multicore no mt on cographs1.grl
+Running fast ref multicore on cographs1.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running basic: 1.4042558000073768s
+Total time of running fast ref multicore no mt: 1.5054018000082579s
+Total time of running fast ref no mt: 1.5255524000094738s
+Total time of running fast ref: 1.5703929000010248s
+Total time of running fast ref multicore: 1.637816499976907s
+Total time of running fast branching: 1.9141192999959458s
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running naive on ../input/branching/cographs1.grl: exceeded 600s
+Running naive on cubes3.grl
+Running basic on cubes3.grl
+Running fast branching on cubes3.grl
+Running fast ref no mt on cubes3.grl
+Running fast ref on cubes3.grl
+Running fast ref multicore no mt on cubes3.grl
+Running fast ref multicore on cubes3.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 2] 48
+[1, 3] 16
+Total time of running naive: 0.022999500011792406s
+Total time of running basic: 0.03299869998591021s
+Total time of running fast branching: 0.031055100000230595s
+Total time of running fast ref: 0.03338179999263957s
+Total time of running fast ref multicore no mt: 1.217803300009109s
+Total time of running fast ref no mt: 1.2281664999900386s
+Total time of running fast ref multicore: 1.218258999986574s
+Running naive on cubes4.grl
+Running basic on cubes4.grl
+Running fast branching on cubes4.grl
+Running fast ref no mt on cubes4.grl
+Running fast ref on cubes4.grl
+Running fast ref multicore no mt on cubes4.grl
+Running fast ref multicore on cubes4.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast branching: 0.20421700002043508s
+Total time of running fast ref: 0.22294430001056753s
+Total time of running basic: 0.26343740001902916s
+[0, 2] 8
+[1, 3] 384
+Total time of running naive: 0.4078838999848813s
+Total time of running fast ref no mt: 1.2768297000147868s
+Total time of running fast ref multicore no mt: 1.2787463999993633s
+Total time of running fast ref multicore: 1.2908722000138368s
+Running naive on cubes5.grl
+Running basic on cubes5.grl
+Running fast branching on cubes5.grl
+Running fast ref no mt on cubes5.grl
+Running fast ref on cubes5.grl
+Running fast ref multicore no mt on cubes5.grl
+Running fast ref multicore on cubes5.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref no mt: 1.5113416999811307s
+Total time of running fast ref multicore no mt: 1.532644099992467s
+Total time of running fast ref: 1.536185100005241s
+Total time of running basic: 1.7307878000137862s
+Total time of running fast branching: 1.7309379999933299s
+Total time of running fast ref multicore: 1.819542100012768s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 3840
+[2, 3] 24
+Total time of running naive: 5.308840800018515s
+Running naive on cubes6.grl
+Running basic on cubes6.grl
+Running fast branching on cubes6.grl
+Running fast ref no mt on cubes6.grl
+Running fast ref on cubes6.grl
+Running fast ref multicore no mt on cubes6.grl
+Running fast ref multicore on cubes6.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore no mt: 2.857882900018012s
+Total time of running fast ref no mt: 3.0372335000138264s
+Total time of running fast ref multicore: 7.571735000004992s
+Total time of running fast branching: 13.743973799981177s
+Total time of running fast ref: 13.93880909998552s
+Total time of running basic: 14.60669750001398s
+[0, 1] 96
+[2, 3] 46080
+Total time of running naive: 144.38923500000965s
+Running naive on cubes7.grl
+Running basic on cubes7.grl
+Running fast branching on cubes7.grl
+Running fast ref no mt on cubes7.grl
+Running fast ref on cubes7.grl
+Running fast ref multicore no mt on cubes7.grl
+Running fast ref multicore on cubes7.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Total time of running fast ref no mt: 10.70081080001546s
+Total time of running fast ref multicore no mt: 10.673840300005395s
+Total time of running fast ref multicore: 76.95218570000725s
+Total time of running fast ref: 97.58445460000075s
+Total time of running fast branching: 98.45675929999561s
+Total time of running basic: 127.40892349998467s
+Timeout while running naive on ../input/branching/cubes7.grl: exceeded 600s
+Running naive on cubes8.grl
+Running basic on cubes8.grl
+Running fast branching on cubes8.grl
+Running fast ref no mt on cubes8.grl
+Running fast ref on cubes8.grl
+Running fast ref multicore no mt on cubes8.grl
+Running fast ref multicore on cubes8.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref multicore no mt: 70.3462894000113s
+Total time of running fast ref no mt: 70.81623540000874s
+Timeout while running naive on ../input/branching/cubes8.grl: exceeded 600s
+Running naive on cubes9.grl
+Running basic on cubes9.grl
+Running fast branching on cubes9.grl
+Running fast ref no mt on cubes9.grl
+Running fast ref on cubes9.grl
+Running fast ref multicore no mt on cubes9.grl
+Running fast ref multicore on cubes9.grl
+Processing graph 2
+Comparing with iso class 1
+Timeout while running naive on ../input/branching/cubes9.grl: exceeded 600s
+Running naive on lecture.grl
+Running basic on lecture.grl
+Running fast branching on lecture.grl
+Running fast ref no mt on lecture.grl
+Running fast ref on lecture.grl
+Running fast ref multicore no mt on lecture.grl
+Running fast ref multicore on lecture.grl
+Processing graph 2
+Comparing with iso class 1
+[0, 1] 4
+Total time of running naive: 0.008023700007470325s
+Total time of running fast ref: 0.00820670000393875s
+Total time of running fast branching: 0.00943629999528639s
+Total time of running basic: 0.010985900007653981s
+Total time of running fast ref multicore no mt: 2.608900300023379s
+Total time of running fast ref multicore: 2.6253583999932744s
+Total time of running fast ref no mt: 2.6508171999885235s
+Running naive on modulesC.grl
+Running basic on modulesC.grl
+Running fast branching on modulesC.grl
+Running fast ref no mt on modulesC.grl
+Running fast ref on modulesC.grl
+Running fast ref multicore no mt on modulesC.grl
+Running fast ref multicore on modulesC.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast branching: 119.10191470000427s
+Total time of running fast ref multicore no mt: 217.55118730000686s
+Total time of running fast ref multicore: 217.55441440001596s
+Total time of running fast ref no mt: 217.5781197999895s
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Total time of running basic: 281.76622459999635s
+Total time of running fast ref: 285.89784770002007s
+Timeout while running naive on ../input/branching/modulesC.grl: exceeded 600s
+Running naive on modulesD.grl
+Running basic on modulesD.grl
+Running fast branching on modulesD.grl
+Running fast ref no mt on modulesD.grl
+Running fast ref on modulesD.grl
+Running fast ref multicore no mt on modulesD.grl
+Running fast ref multicore on modulesD.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running fast ref multicore: 29.877909500006353s
+Processing graph 4
+Comparing with iso class 1
+Total time of running fast ref multicore no mt: 32.518540599994594s
+Total time of running fast ref no mt: 35.736695300001884s
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running basic: 58.2900542000134s
+Total time of running fast ref: 59.45500970000285s
+[0, 2] 24
+[1, 3] 1
+[4, 5] 24
+Total time of running naive: 92.32066510000732s
+Total time of running fast branching: 94.95859739999287s
+Running naive on products216.grl
+Running basic on products216.grl
+Running fast branching on products216.grl
+Running fast ref no mt on products216.grl
+Running fast ref on products216.grl
+Running fast ref multicore no mt on products216.grl
+Running fast ref multicore on products216.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore no mt: 66.16360030000214s
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 6
+Comparing with iso class 1
+Total time of running fast ref no mt: 76.26354270000593s
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 7
+Comparing with iso class 1
+Total time of running fast ref multicore: 147.14963499997975s
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 6] 1728
+[1, 7] 1728
+[2, 9] 1728
+[3, 8] 10368
+[4, 5] 1728
+Total time of running naive: 553.6209286999947s
+Timeout while running basic on ../input/branching/products216.grl: exceeded 600s
+Running naive on products72.grl
+Running basic on products72.grl
+Running fast branching on products72.grl
+Running fast ref no mt on products72.grl
+Running fast ref on products72.grl
+Running fast ref multicore no mt on products72.grl
+Running fast ref multicore on products72.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore no mt: 7.132031700020889s
+Total time of running fast ref no mt: 7.179347700002836s
+Processing graph 7
+Comparing with iso class 1
+Total time of running fast ref multicore: 8.675019500020426s
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+[0, 6] 288
+[1, 5] 576
+[2, 3] 576
+[4, 7] 864
+Total time of running naive: 14.714242099988041s
+Total time of running fast ref: 21.817741000006208s
+Total time of running fast branching: 23.965632600011304s
+Total time of running basic: 24.82336100001703s
+Running naive on regulartwins.grl
+Running basic on regulartwins.grl
+Running fast branching on regulartwins.grl
+Running fast ref no mt on regulartwins.grl
+Running fast ref on regulartwins.grl
+Running fast ref multicore no mt on regulartwins.grl
+Running fast ref multicore on regulartwins.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore no mt: 4.238705100025982s
+Total time of running fast ref no mt: 4.3167876999941655s
+Total time of running fast ref multicore: 4.749588300008327s
+Total time of running fast ref: 7.920881300000474s
+Total time of running fast branching: 8.805811600002926s
+Total time of running basic: 15.867579499987187s
+Timeout while running naive on ../input/branching/regulartwins.grl: exceeded 600s
+Running naive on small forest.gr
+Running basic on small forest.gr
+Running fast branching on small forest.gr
+Running fast ref no mt on small forest.gr
+Running fast ref on small forest.gr
+Running fast ref multicore no mt on small forest.gr
+Running fast ref multicore on small forest.gr
+[0] 0
+Total time of running naive: 0.0015395999944303185s
+Total time of running basic: 0.11660700000356883s
+Total time of running fast ref: 0.12590310000814497s
+Total time of running fast branching: 0.14996209999662824s
+Total time of running fast ref multicore no mt: 0.9420425999851432s
+Total time of running fast ref no mt: 0.9477237999963108s
+Total time of running fast ref multicore: 1.0181063000054564s
+Running naive on torus144.grl
+Running basic on torus144.grl
+Running fast branching on torus144.grl
+Running fast ref no mt on torus144.grl
+Running fast ref on torus144.grl
+Running fast ref multicore no mt on torus144.grl
+Running fast ref multicore on torus144.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running fast ref multicore no mt: 28.608472399995662s
+Total time of running fast ref no mt: 28.646161199983908s
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running fast ref multicore: 42.29361079999944s
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 7
+Comparing with iso class 1
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 11
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 12
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Comparing with iso class 6
+[0, 6] 576
+[1, 7] 576
+[2, 4] 576
+[3, 10] 576
+[5, 9] 1152
+[8, 11] 576
+Total time of running naive: 153.34013180001057s
+Total time of running fast ref: 183.75303170000552s
+Total time of running fast branching: 186.0014194000105s
+Total time of running basic: 229.24822549999226s
+Running naive on torus24.grl
+Running basic on torus24.grl
+Running fast branching on torus24.grl
+Running fast ref no mt on torus24.grl
+Running fast ref on torus24.grl
+Running fast ref multicore no mt on torus24.grl
+Running fast ref multicore on torus24.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+[0, 3] 96
+[1, 2] 96
+Total time of running naive: 0.40081629998167045s
+Total time of running fast ref: 0.743462799990084s
+Total time of running fast branching: 0.8072417000075802s
+Total time of running basic: 0.9106830999953672s
+Total time of running fast ref no mt: 1.9532529000134673s
+Total time of running fast ref multicore no mt: 1.9498383000027388s
+Total time of running fast ref multicore: 1.988327400002163s
+Running naive on torus72.grl
+Running basic on torus72.grl
+Running fast branching on torus72.grl
+Running fast ref no mt on torus72.grl
+Running fast ref on torus72.grl
+Running fast ref multicore no mt on torus72.grl
+Running fast ref multicore on torus72.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref no mt: 8.359628800011706s
+Total time of running fast ref multicore no mt: 8.457469699991634s
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore: 9.397803900006693s
+Comparing with iso class 3
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+[0, 2] 288
+[1, 5] 288
+[3, 6] 288
+[4, 7] 288
+Total time of running naive: 14.75125949998619s
+Total time of running fast branching: 18.264010299986694s
+Total time of running fast ref: 19.492004200001247s
+Total time of running basic: 23.50921020001988s
+Running naive on trees11.grl
+Running basic on trees11.grl
+Running fast branching on trees11.grl
+Running fast ref no mt on trees11.grl
+Running fast ref on trees11.grl
+Running fast ref multicore no mt on trees11.grl
+Running fast ref multicore on trees11.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 3] 6
+[1, 4] 1
+[2, 5] 2
+Total time of running naive: 0.009250800008885562s
+Total time of running basic: 0.012066800001775846s
+Total time of running fast branching: 0.021079900005133823s
+Total time of running fast ref: 0.02092889999039471s
+Total time of running fast ref multicore: 1.7950876999821048s
+Total time of running fast ref no mt: 1.8167967000044882s
+Total time of running fast ref multicore no mt: 1.8610412999987602s
+Running naive on trees36.grl
+Running basic on trees36.grl
+Running fast branching on trees36.grl
+Running fast ref no mt on trees36.grl
+Running fast ref on trees36.grl
+Running fast ref multicore no mt on trees36.grl
+Running fast ref multicore on trees36.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 8
+Comparing with iso class 1
+[0, 7] 2
+[1, 4] 6
+[2, 6] 2
+[3, 5] 6
+Total time of running naive: 0.07390679998206906s
+Total time of running basic: 0.10767480000504293s
+Total time of running fast branching: 0.380058500013547s
+Total time of running fast ref: 0.42490459998953156s
+Total time of running fast ref multicore no mt: 2.5039969999925233s
+Total time of running fast ref no mt: 2.5550862000091s
+Total time of running fast ref multicore: 2.5546125000109896s
+Running naive on trees90.grl
+Running basic on trees90.grl
+Running fast branching on trees90.grl
+Running fast ref no mt on trees90.grl
+Running fast ref on trees90.grl
+Running fast ref multicore no mt on trees90.grl
+Running fast ref multicore on trees90.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running fast ref multicore no mt: 2.1759100000199396s
+Total time of running fast ref no mt: 2.2201474999892525s
+Total time of running fast ref multicore: 2.206511099997442s
+Total time of running fast ref: 2.2696557999879587s
+Total time of running fast branching: 2.2889931999961846s
+Total time of running basic: 2.937906799983466s
+Processing graph 4
+Comparing with iso class 1
+[0, 3] 6912
+[1, 2] 20736
+Total time of running naive: 217.97196639998583s
+Running naive on wheeljoin14.grl
+Running basic on wheeljoin14.grl
+Running fast branching on wheeljoin14.grl
+Running fast ref no mt on wheeljoin14.grl
+Running fast ref on wheeljoin14.grl
+Running fast ref multicore no mt on wheeljoin14.grl
+Running fast ref multicore on wheeljoin14.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref: 0.6665999999968335s
+Total time of running basic: 0.6847912999801338s
+Total time of running fast branching: 0.7692896999942604s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Total time of running fast ref no mt: 2.686553700012155s
+Total time of running fast ref multicore no mt: 2.682013099984033s
+Total time of running fast ref multicore: 2.78986360001727s
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 1] 1600
+[2, 3] 672
+[4, 7] 1536
+[5, 6] 720
+Total time of running naive: 3.4443719999981113s
+Running naive on wheeljoin19.grl
+Running basic on wheeljoin19.grl
+Running fast branching on wheeljoin19.grl
+Running fast ref no mt on wheeljoin19.grl
+Running fast ref on wheeljoin19.grl
+Running fast ref multicore no mt on wheeljoin19.grl
+Running fast ref multicore on wheeljoin19.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref: 2.5859966999851167s
+Total time of running basic: 3.099286899989238s
+Total time of running fast branching: 3.623642699996708s
+Total time of running fast ref no mt: 3.942806400009431s
+Total time of running fast ref multicore: 3.9367031999863684s
+Total time of running fast ref multicore no mt: 4.013815699989209s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 48000
+[2, 9] 13824
+[3, 4] 14400
+[5, 6] 15360
+[7, 8] 6720
+Total time of running naive: 58.35596620000433s
+Running naive on wheeljoin25.grl
+Running basic on wheeljoin25.grl
+Running fast branching on wheeljoin25.grl
+Running fast ref no mt on wheeljoin25.grl
+Running fast ref on wheeljoin25.grl
+Running fast ref multicore no mt on wheeljoin25.grl
+Running fast ref multicore on wheeljoin25.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running fast ref multicore no mt: 3.2204743000038434s
+Total time of running fast ref no mt: 3.236468099988997s
+Total time of running fast ref multicore: 3.2648583999834955s
+Total time of running basic: 3.737635199999204s
+Total time of running fast ref: 3.926540299988119s
+Total time of running fast branching: 4.568920799996704s
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running naive on ../input/branching/wheeljoin25.grl: exceeded 600s
+Running naive on wheeljoin33.grl
+Running basic on wheeljoin33.grl
+Running fast branching on wheeljoin33.grl
+Running fast ref no mt on wheeljoin33.grl
+Running fast ref on wheeljoin33.grl
+Running fast ref multicore no mt on wheeljoin33.grl
+Running fast ref multicore on wheeljoin33.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref multicore no mt: 4.852286000008462s
+Total time of running fast ref no mt: 4.90200420000474s
+Total time of running fast ref multicore: 6.061575400002766s
+Total time of running fast ref: 11.038360100006685s
+Total time of running basic: 12.500942299986491s
+Total time of running fast branching: 19.78725619998295s
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running naive on ../input/branching/wheeljoin33.grl: exceeded 600s
+Running naive on wheelstar12.grl
+Running basic on wheelstar12.grl
+Running fast branching on wheelstar12.grl
+Running fast ref no mt on wheelstar12.grl
+Running fast ref on wheelstar12.grl
+Running fast ref multicore no mt on wheelstar12.grl
+Running fast ref multicore on wheelstar12.grl
+Processing graph 2
+Comparing with iso class 1
+Total time of running fast ref no mt: 3.832011300022714s
+Total time of running fast ref multicore no mt: 4.041453400015598s
+Total time of running fast ref multicore: 4.577579300006619s
+Total time of running fast ref: 7.0874626000004355s
+Total time of running fast branching: 9.115241999999853s
+Processing graph 3
+Comparing with iso class 1
+Total time of running basic: 12.681656700005988s
+Comparing with iso class 2
+Timeout while running naive on ../input/branching/wheelstar12.grl: exceeded 600s
+Running naive on wheelstar15.grl
+Running basic on wheelstar15.grl
+Running fast branching on wheelstar15.grl
+Running fast ref no mt on wheelstar15.grl
+Running fast ref on wheelstar15.grl
+Running fast ref multicore no mt on wheelstar15.grl
+Running fast ref multicore on wheelstar15.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Timeout while running naive on ../input/branching/wheelstar15.grl: exceeded 600s
+Running naive on wheelstar16.grl
+Running basic on wheelstar16.grl
+Running fast branching on wheelstar16.grl
+Running fast ref no mt on wheelstar16.grl
+Running fast ref on wheelstar16.grl
+Running fast ref multicore no mt on wheelstar16.grl
+Running fast ref multicore on wheelstar16.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running naive on ../input/branching/wheelstar16.grl: exceeded 600s

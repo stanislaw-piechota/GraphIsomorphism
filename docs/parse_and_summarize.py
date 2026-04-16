@@ -129,7 +129,7 @@ def generate_report(data):
 
 if __name__ == "__main__":
     # Ensure this path matches the location of your output file
-    log_file_path = "terminal_output.txt"
+    log_file_path = "terminal_output2.txt"
     try:
         parsed_data = parse_log(log_file_path)
         generate_report(parsed_data)

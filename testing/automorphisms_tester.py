@@ -1,4 +1,5 @@
-﻿from testing.test_function_multicore import create_report
+﻿from branching.branching_v1_0_3 import basic_branching
+from testing.test_function_multicore import create_report
 
 from automorphisms.automorphisms import count_automorphisms as count_automorphisms
 from automorphisms.automorphisms import count_automorphisms_no_mt as count_automorphisms_no_mt
@@ -64,9 +65,10 @@ def run_automorphisms_benchmarks():
     create_report(
         [str(path) for path in paths],
         {
-            "basic no mt": count_automorphisms_no_mt,
+            "naive": basic_branching,
+            #"basic no mt": count_automorphisms_no_mt,
             "basic": count_automorphisms,
-            "fast branching no mt": count_automorphisms_fast_branching_no_mt,
+            #"fast branching no mt": count_automorphisms_fast_branching_no_mt,
             "fast branching": count_automorphisms_fast_branching,
             "fast ref no mt": count_automorphisms_fast_ref_no_mt,
             "fast ref ": count_automorphisms_fast_ref,
