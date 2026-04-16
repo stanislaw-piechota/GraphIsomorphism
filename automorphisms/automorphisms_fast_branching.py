@@ -116,7 +116,8 @@ def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
     results: AutomorphismsAnalResult = AutomorphismsAnalResult()
     with open(path, 'r') as f:
         graph_list = load_graph(f, read_list=True)
-    future_to_graph_idx : Dict[concurrent.futures.Future, int] = {}
+    future_to_graph_idx: Dict[concurrent.futures.Future, int] = {}
+    unordered_counts: Dict[int, int] = {}
     with concurrent.futures.ProcessPoolExecutor(max_tasks_per_child=1) as executor:
         for i, graph in enumerate(graph_list):
             future = executor.submit(analyze_automorphisms, graph)
@@ -125,7 +126,12 @@ def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
             graph_idx = future_to_graph_idx[future]
             try:
                 auto_anal = future.result()
-                results.list_of_automorphism_counts.append(auto_anal.automorphism_count)
+                unordered_counts[graph_idx] = auto_anal.automorphism_count
             except Exception as exc:
                 print(f"Graph {graph_idx} generated an exception: {exc}")
+
+    for i in range(len(graph_list)):
+        if i in unordered_counts:
+            results.list_of_automorphism_counts.append(unordered_counts[i])
+
     return results
