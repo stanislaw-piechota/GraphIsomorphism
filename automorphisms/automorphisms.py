@@ -134,15 +134,15 @@ def analyze_automorphisms(g: Graph, do_membership_testing: bool = True) -> AutoA
     order = compute_order(ctx.generators)
     return AutoAnal(automorphism_count=order, generators=ctx.generators)
 
-def count_automorphisms(path: str) -> AutomorphismsAnalResult:
+def count_automorphisms(path: str, do_membership_testing: bool = True) -> AutomorphismsAnalResult:
     results: AutomorphismsAnalResult = AutomorphismsAnalResult()
     with open(path, 'r') as f:
         graph_list = load_graph(f, read_list=True)
     for i, graph in enumerate(graph_list):
-        results.list_of_automorphism_counts.append(analyze_automorphisms(graph).automorphism_count)
+        results.list_of_automorphism_counts.append(analyze_automorphisms(graph, do_membership_testing).automorphism_count)
     return results
 
-def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
+def count_automorphisms_multicore(path: str, do_membership_testing: bool = True) -> AutomorphismsAnalResult:
     results: AutomorphismsAnalResult = AutomorphismsAnalResult()
     with open(path, 'r') as f:
         graph_list = load_graph(f, read_list=True)
@@ -150,7 +150,7 @@ def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
     unordered_counts: Dict[int, int] = {}
     with concurrent.futures.ProcessPoolExecutor(max_tasks_per_child=1) as executor:
         for i, graph in enumerate(graph_list):
-            future = executor.submit(analyze_automorphisms, graph)
+            future = executor.submit(analyze_automorphisms, graph, do_membership_testing)
             future_to_graph_idx[future] = i
         for future in concurrent.futures.as_completed(future_to_graph_idx):
             graph_idx = future_to_graph_idx[future]
@@ -165,3 +165,6 @@ def count_automorphisms_multicore(path: str) -> AutomorphismsAnalResult:
             results.list_of_automorphism_counts.append(unordered_counts[i])
 
     return results
+
+def count_automorphisms_no_mt(path):
+    return count_automorphisms(path, do_membership_testing=False)
