@@ -1,0 +1,2005 @@
+﻿Running aut_dupa_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_branching_v3 on bigtrees1.grl
+Running aut_mixed_branching on bigtrees1.grl
+Running aut_basic_branching on bigtrees1.grl
+Running basic_branching on bigtrees1.grl
+Running fast_branching on bigtrees1.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 0.9213490999827627s
+Total time of running aut_basic_branching: 1.2873124000034295s
+Total time of running aut_dupa_multicore_branching: 2.7301339999830816s
+Total time of running aut_basic_multicore_branching: 3.0000595999881625s
+
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 341.7361103000003s
+Total time of running aut_fast_branching_v3: 370.4348774999962s
+Timeout while running basic_branching on ../input/branching/bigtrees1.grl: exceeded 600s
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_branching_v3 on bigtrees2.grl
+Running aut_mixed_branching on bigtrees2.grl
+Running aut_basic_branching on bigtrees2.grl
+Running basic_branching on bigtrees2.grl
+Running fast_branching on bigtrees2.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 8.604719299997669s
+Total time of running aut_dupa_multicore_branching: 10.7305901000218s
+Total time of running aut_basic_branching: 10.777237100002822s
+Total time of running aut_basic_multicore_branching: 12.609216599987121s
+Total time of running aut_mixed_branching: 13.001454600016586s
+Total time of running aut_fast_branching_v3: 18.00168729998404s
+Timeout while running basic_branching on ../input/branching/bigtrees2.grl: exceeded 600s
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_branching_v3 on bigtrees3.grl
+Running aut_mixed_branching on bigtrees3.grl
+Running aut_basic_branching on bigtrees3.grl
+Running basic_branching on bigtrees3.grl
+Running fast_branching on bigtrees3.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_dupa_multicore_branching: 351.75075069998275s
+Total time of running aut_dupa_branching: 364.6051841000153s
+Total time of running aut_basic_branching: 491.4551983999845s
+Total time of running aut_basic_multicore_branching: 513.7047091000131s
+Total time of running aut_mixed_branching: 520.4558476000093s
+Timeout while running aut_fast_branching_v3 on ../input/branching/bigtrees3.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_branching_v3 on cographs1.grl
+Running aut_mixed_branching on cographs1.grl
+Running aut_basic_branching on cographs1.grl
+Running basic_branching on cographs1.grl
+Running fast_branching on cographs1.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 315.38461750000715s
+Comparing with iso class 2
+Total time of running aut_fast_branching_v3: 329.05206099999486s
+Total time of running aut_dupa_branching: 434.223241300002s
+Total time of running aut_dupa_multicore_branching: 494.9735844999959s
+Timeout while running aut_basic_multicore_branching on ../input/branching/cographs1.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_branching_v3 on cubes3.grl
+Running aut_mixed_branching on cubes3.grl
+Running aut_basic_branching on cubes3.grl
+Running basic_branching on cubes3.grl
+Running fast_branching on cubes3.grl
+Total time of running aut_dupa_branching: 0.019966599997133017s
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_fast_branching_v3: 0.023507699981564656s
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_mixed_branching: 0.02310430002398789s
+
+Processing graph 3
+Comparing with iso class 1
+[0, 2] 48
+[1, 3] 16
+Total time of running basic_branching: 0.02133060002233833s
+Comparing with iso class 2
+Total time of running aut_basic_branching: 0.026669600018067285s
+[0, 2] 48
+[1, 3] 16
+Total time of running fast_branching: 0.02113479998661205s
+Total time of running aut_dupa_multicore_branching: 1.8757848000095692s
+Total time of running aut_basic_multicore_branching: 1.8818948000262026s
+Running aut_dupa_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_branching_v3 on cubes4.grl
+Running aut_mixed_branching on cubes4.grl
+Running aut_basic_branching on cubes4.grl
+Running basic_branching on cubes4.grl
+Running fast_branching on cubes4.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 0.09422810000251047s
+Total time of running aut_mixed_branching: 0.10097150001092814s
+Total time of running aut_fast_branching_v3: 0.1210438999987673s
+Total time of running aut_basic_branching: 0.12121849998948164s
+[0, 2] 8
+[1, 3] 384
+Total time of running fast_branching: 0.23484399999142624s
+[0, 2] 8
+[1, 3] 384
+Total time of running basic_branching: 0.2471537000092212s
+Total time of running aut_dupa_multicore_branching: 1.9482024999742862s
+Total time of running aut_basic_multicore_branching: 1.9706347000028472s
+Running aut_dupa_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_branching_v3 on cubes5.grl
+Running aut_mixed_branching on cubes5.grl
+Running aut_basic_branching on cubes5.grl
+Running basic_branching on cubes5.grl
+Running fast_branching on cubes5.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 0.7639483000093605s
+Total time of running aut_dupa_branching: 0.8579864999919664s
+Total time of running aut_fast_branching_v3: 0.880309500003932s
+Total time of running aut_basic_branching: 0.9283051999809686s
+Total time of running aut_dupa_multicore_branching: 2.5884399999922607s
+Total time of running aut_basic_multicore_branching: 2.625326800014591s
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 3840
+[2, 3] 24
+Total time of running fast_branching: 4.540878200001316s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 3840
+[2, 3] 24
+Total time of running basic_branching: 5.68030920001911s
+Running aut_dupa_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_branching_v3 on cubes6.grl
+Running aut_mixed_branching on cubes6.grl
+Running aut_basic_branching on cubes6.grl
+Running basic_branching on cubes6.grl
+Running fast_branching on cubes6.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 6.473438699991675s
+Total time of running aut_basic_branching: 7.279960999992909s
+Total time of running aut_mixed_branching: 7.558873300004052s
+Total time of running aut_fast_branching_v3: 7.633816299989121s
+Total time of running aut_basic_multicore_branching: 7.851227300008759s
+Total time of running aut_dupa_multicore_branching: 9.512697799975285s
+[0, 1] 96
+[2, 3] 46080
+Total time of running fast_branching: 104.03374919999624s
+[0, 1] 96
+[2, 3] 46080
+Total time of running basic_branching: 147.68011739998474s
+Running aut_dupa_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_branching_v3 on cubes7.grl
+Running aut_mixed_branching on cubes7.grl
+Running aut_basic_branching on cubes7.grl
+Running basic_branching on cubes7.grl
+Running fast_branching on cubes7.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 79.70346069999505s
+Total time of running aut_dupa_multicore_branching: 81.88818240002729s
+Total time of running aut_basic_branching: 87.10791780002182s
+Total time of running aut_basic_multicore_branching: 88.1168209000025s
+Total time of running aut_fast_branching_v3: 88.92462949999026s
+Total time of running aut_mixed_branching: 90.06029710001894s
+Timeout while running basic_branching on ../input/branching/cubes7.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_branching_v3 on cubes8.grl
+Running aut_mixed_branching on cubes8.grl
+Running aut_basic_branching on cubes8.grl
+Running basic_branching on cubes8.grl
+Running fast_branching on cubes8.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_dupa_multicore_branching: 365.02988200000254s
+Total time of running aut_dupa_branching: 366.3556568000058s
+Total time of running aut_basic_branching: 417.96866399998544s
+Total time of running aut_basic_multicore_branching: 418.75065499998163s
+Total time of running aut_mixed_branching: 553.0529954999802s
+Timeout while running aut_fast_branching_v3 on ../input/branching/cubes8.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_branching_v3 on cubes9.grl
+Running aut_mixed_branching on cubes9.grl
+Running aut_basic_branching on cubes9.grl
+Running basic_branching on cubes9.grl
+Running fast_branching on cubes9.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Timeout while running aut_dupa_multicore_branching on ../input/branching/cubes9.grl: exceeded 600s
+Running aut_dupa_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_branching_v3 on lecture.grl
+Running aut_mixed_branching on lecture.grl
+Running aut_basic_branching on lecture.grl
+Running basic_branching on lecture.grl
+Running fast_branching on lecture.grl
+Total time of running aut_dupa_branching: 0.005398299981607124s
+
+Processing graph 1
+Comparing with iso class 1
+[0, 1] 4
+Total time of running fast_branching: 0.0027295000036247075s
+Total time of running aut_mixed_branching: 0.006901500019012019s
+Total time of running aut_basic_branching: 0.006291700003203005s
+Total time of running aut_fast_branching_v3: 0.00942159999976866s
+Processing graph 2
+Comparing with iso class 1
+[0, 1] 4
+Total time of running basic_branching: 0.011897699994733557s
+Total time of running aut_dupa_multicore_branching: 0.8403978999995161s
+Total time of running aut_basic_multicore_branching: 0.84096399997361s
+Running aut_dupa_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_branching_v3 on modulesC.grl
+Running aut_mixed_branching on modulesC.grl
+Running aut_basic_branching on modulesC.grl
+Running basic_branching on modulesC.grl
+Running fast_branching on modulesC.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Timeout while running aut_dupa_multicore_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_dupa_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_branching_v3 on modulesD.grl
+Running aut_mixed_branching on modulesD.grl
+Running aut_basic_branching on modulesD.grl
+Running basic_branching on modulesD.grl
+Running fast_branching on modulesD.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_basic_multicore_branching: 44.0983974999981s
+
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_dupa_multicore_branching: 49.10868249999476s
+Total time of running aut_basic_branching: 53.283209599991096s
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 60.77436919999309s
+Total time of running aut_mixed_branching: 64.37610779999522s
+Comparing with iso class 2
+[0, 2] 24
+[1, 3] 1
+[4, 5] 24
+Total time of running basic_branching: 67.25111169999582s
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_fast_branching_v3: 82.98701859998982s
+[0, 2] 24
+[1, 3] 1
+[4, 5] 24
+Total time of running fast_branching: 107.20832749997498s
+Running aut_dupa_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_branching_v3 on products216.grl
+Running aut_mixed_branching on products216.grl
+Running aut_basic_branching on products216.grl
+Running basic_branching on products216.grl
+Running fast_branching on products216.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 4
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 4
+Comparing with iso class 5
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 7
+Comparing with iso class 1
+
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 4
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 6] 1728
+[1, 7] 1728
+[2, 9] 1728
+[3, 8] 10368
+[4, 5] 1728
+Total time of running fast_branching: 220.1617492000223s
+Total time of running aut_dupa_branching: 392.12657990001026s
+Total time of running aut_fast_branching_v3: 395.91469599999255s
+Total time of running aut_basic_multicore_branching: 400.2106870000134s
+Total time of running aut_dupa_multicore_branching: 408.8687435000029s
+Total time of running aut_mixed_branching: 428.7992099999974s
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_basic_branching: 479.9213177000056s
+[0, 6] 1728
+[1, 7] 1728
+[2, 9] 1728
+[3, 8] 10368
+[4, 5] 1728
+Total time of running basic_branching: 504.43142390000867s
+Running aut_dupa_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_branching_v3 on products72.grl
+Running aut_mixed_branching on products72.grl
+Running aut_basic_branching on products72.grl
+Running basic_branching on products72.grl
+Running fast_branching on products72.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 7
+Comparing with iso class 1
+
+Processing graph 6
+Comparing with iso class 1
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+[0, 6] 288
+[1, 5] 576
+[2, 3] 576
+[4, 7] 864
+Total time of running fast_branching: 10.594168399984483s
+Total time of running aut_dupa_branching: 11.138689900020836s
+[0, 6] 288
+[1, 5] 576
+[2, 3] 576
+[4, 7] 864
+Total time of running basic_branching: 13.124796099989908s
+Total time of running aut_basic_branching: 13.911618499987526s
+Total time of running aut_fast_branching_v3: 13.965301499993075s
+Total time of running aut_dupa_multicore_branching: 14.51077449999866s
+Total time of running aut_mixed_branching: 14.937440299981972s
+Total time of running aut_basic_multicore_branching: 15.799308199988445s
+Running aut_dupa_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_branching_v3 on regulartwins.grl
+Running aut_mixed_branching on regulartwins.grl
+Running aut_basic_branching on regulartwins.grl
+Running basic_branching on regulartwins.grl
+Running fast_branching on regulartwins.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_fast_branching_v3: 3.296250300016254s
+Total time of running aut_dupa_branching: 3.558686000003945s
+Total time of running aut_dupa_multicore_branching: 5.401710600010119s
+Total time of running aut_mixed_branching: 6.551645300001837s
+Total time of running aut_basic_branching: 10.641497200005688s
+Total time of running aut_basic_multicore_branching: 11.279742899991106s
+Timeout while running basic_branching on ../input/branching/regulartwins.grl: exceeded 600s
+Running aut_dupa_multicore_branching on small forest.gr
+Running aut_dupa_branching on small forest.gr
+Running aut_basic_multicore_branching on small forest.gr
+Running aut_fast_branching_v3 on small forest.gr
+Running aut_mixed_branching on small forest.gr
+Running aut_basic_branching on small forest.gr
+Running basic_branching on small forest.gr
+Running fast_branching on small forest.gr
+[0] 0
+Total time of running basic_branching: 0.001433600002201274s
+[0] 0
+Total time of running fast_branching: 0.0014387000119313598s
+Total time of running aut_dupa_multicore_branching: 0.10090439999476075s
+Total time of running aut_dupa_branching: 0.09390450001228601s
+Total time of running aut_mixed_branching: 0.11025090000475757s
+Total time of running aut_basic_branching: 0.11686010000994429s
+Total time of running aut_basic_multicore_branching: 0.13843260001158342s
+Total time of running aut_fast_branching_v3: 0.18986640000366606s
+Running aut_dupa_multicore_branching on torus144.grl
+Running aut_dupa_branching on torus144.grl
+Running aut_basic_multicore_branching on torus144.grl
+Running aut_fast_branching_v3 on torus144.grl
+Running aut_mixed_branching on torus144.grl
+Running aut_basic_branching on torus144.grl
+Running basic_branching on torus144.grl
+Running fast_branching on torus144.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 2
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 3
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 4
+Comparing with iso class 2
+
+Processing graph 11
+Comparing with iso class 1
+Comparing with iso class 3
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 4
+Comparing with iso class 5
+Comparing with iso class 6
+Processing graph 7
+Comparing with iso class 1
+[0, 6] 576
+[1, 7] 576
+[2, 4] 576
+[3, 10] 576
+[5, 9] 1152
+[8, 11] 576
+Total time of running fast_branching: 34.61302419999265s
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Total time of running aut_dupa_multicore_branching: 88.66904639999848s
+Processing graph 11
+Comparing with iso class 1
+Total time of running aut_fast_branching_v3: 101.59124000000884s
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 104.59459779999452s
+Comparing with iso class 3
+Comparing with iso class 4
+Total time of running aut_basic_multicore_branching: 120.74950320000062s
+Processing graph 12
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_mixed_branching: 130.74640100001125s
+Comparing with iso class 4
+Comparing with iso class 5
+Comparing with iso class 6
+[0, 6] 576
+[1, 7] 576
+[2, 4] 576
+[3, 10] 576
+[5, 9] 1152
+[8, 11] 576
+Total time of running basic_branching: 142.30291349999607s
+Total time of running aut_basic_branching: 161.5917287999764s
+Running aut_dupa_multicore_branching on torus24.grl
+Running aut_dupa_branching on torus24.grl
+Running aut_basic_multicore_branching on torus24.grl
+Running aut_fast_branching_v3 on torus24.grl
+Running aut_mixed_branching on torus24.grl
+Running aut_basic_branching on torus24.grl
+Running basic_branching on torus24.grl
+Running fast_branching on torus24.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+[0, 3] 96
+[1, 2] 96
+Total time of running fast_branching: 0.2297009000030812s
+Total time of running aut_dupa_branching: 0.26920010001049377s
+[0, 3] 96
+[1, 2] 96
+Total time of running basic_branching: 0.2634347999992315s
+Total time of running aut_fast_branching_v3: 0.28023999999277294s
+Total time of running aut_basic_branching: 0.31557010000688024s
+Total time of running aut_mixed_branching: 0.3199697000090964s
+Total time of running aut_dupa_multicore_branching: 2.101889600016875s
+Total time of running aut_basic_multicore_branching: 2.1536747999780346s
+Running aut_dupa_multicore_branching on torus72.grl
+Running aut_dupa_branching on torus72.grl
+Running aut_basic_multicore_branching on torus72.grl
+Running aut_fast_branching_v3 on torus72.grl
+Running aut_mixed_branching on torus72.grl
+Running aut_basic_branching on torus72.grl
+Running basic_branching on torus72.grl
+Running fast_branching on torus72.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 6
+Comparing with iso class 1
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+[0, 2] 288
+[1, 5] 288
+[3, 6] 288
+[4, 7] 288
+Total time of running fast_branching: 4.64337480001268s
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Total time of running aut_dupa_branching: 9.819519599986961s
+Total time of running aut_fast_branching_v3: 9.905234300007578s
+Total time of running aut_dupa_multicore_branching: 11.059560699999565s
+Total time of running aut_mixed_branching: 11.848026399995433s
+[0, 2] 288
+[1, 5] 288
+[3, 6] 288
+[4, 7] 288
+Total time of running basic_branching: 12.287544599996181s
+Total time of running aut_basic_multicore_branching: 14.11976859997958s
+Total time of running aut_basic_branching: 14.520126599993091s
+Running aut_dupa_multicore_branching on trees11.grl
+Running aut_dupa_branching on trees11.grl
+Running aut_basic_multicore_branching on trees11.grl
+Running aut_fast_branching_v3 on trees11.grl
+Running aut_mixed_branching on trees11.grl
+Running aut_basic_branching on trees11.grl
+Running basic_branching on trees11.grl
+Running fast_branching on trees11.grl
+Total time of running aut_dupa_branching: 0.006158000003779307s
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Total time of running aut_basic_branching: 0.011354600021149963s
+Total time of running aut_mixed_branching: 0.02579470002092421s
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 3
+[0, 3] 6
+[1, 4] 1
+[2, 5] 2
+Total time of running basic_branching: 0.009320600016508251s
+Comparing with iso class 2
+Total time of running aut_fast_branching_v3: 0.034430400002747774s
+
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 3] 6
+[1, 4] 1
+[2, 5] 2
+Total time of running fast_branching: 0.018971000012243167s
+Total time of running aut_dupa_multicore_branching: 2.695331700000679s
+Total time of running aut_basic_multicore_branching: 2.7019677000062075s
+Running aut_dupa_multicore_branching on trees36.grl
+Running aut_dupa_branching on trees36.grl
+Running aut_basic_multicore_branching on trees36.grl
+Running aut_fast_branching_v3 on trees36.grl
+Running aut_mixed_branching on trees36.grl
+Running aut_basic_branching on trees36.grl
+Running basic_branching on trees36.grl
+Running fast_branching on trees36.grl
+Total time of running aut_dupa_branching: 0.038623100001132116s
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 2
+Processing graph 8
+Comparing with iso class 1
+[0, 7] 2
+[1, 4] 6
+[2, 6] 2
+[3, 5] 6
+Total time of running basic_branching: 0.05953519998001866s
+Total time of running aut_basic_branching: 0.06970409999485128s
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 7
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 0.43618650001008064s
+[0, 7] 2
+[1, 4] 6
+[2, 6] 2
+[3, 5] 6
+Total time of running fast_branching: 0.4274814999953378s
+Total time of running aut_fast_branching_v3: 0.4752930999966338s
+Total time of running aut_dupa_multicore_branching: 4.207463500002632s
+Total time of running aut_basic_multicore_branching: 4.217109399993205s
+Running aut_dupa_multicore_branching on trees90.grl
+Running aut_dupa_branching on trees90.grl
+Running aut_basic_multicore_branching on trees90.grl
+Running aut_fast_branching_v3 on trees90.grl
+Running aut_mixed_branching on trees90.grl
+Running aut_basic_branching on trees90.grl
+Running basic_branching on trees90.grl
+Running fast_branching on trees90.grl
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 0.558061199990334s
+Total time of running aut_basic_branching: 1.4251260999881197s
+Total time of running aut_fast_branching_v3: 1.5192096999962814s
+Total time of running aut_mixed_branching: 1.8623066000000108s
+Total time of running aut_dupa_multicore_branching: 2.19083999999566s
+Total time of running aut_basic_multicore_branching: 2.8445684999751393s
+
+Processing graph 3
+Comparing with iso class 1
+[0, 3] 6912
+[1, 2] 20736
+Total time of running fast_branching: 55.31270010001026s
+Processing graph 4
+Comparing with iso class 1
+[0, 3] 6912
+[1, 2] 20736
+Total time of running basic_branching: 196.37665209997795s
+Running aut_dupa_multicore_branching on wheeljoin14.grl
+Running aut_dupa_branching on wheeljoin14.grl
+Running aut_basic_multicore_branching on wheeljoin14.grl
+Running aut_fast_branching_v3 on wheeljoin14.grl
+Running aut_mixed_branching on wheeljoin14.grl
+Running aut_basic_branching on wheeljoin14.grl
+Running basic_branching on wheeljoin14.grl
+Running fast_branching on wheeljoin14.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 0.29231170000275597s
+Total time of running aut_basic_branching: 0.37729199999012053s
+Total time of running aut_mixed_branching: 0.46036679999087937s
+Total time of running aut_fast_branching_v3: 0.5332722000021022s
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 1] 1600
+[2, 3] 672
+[4, 7] 1536
+[5, 6] 720
+Total time of running fast_branching: 2.9532866000081412s
+[0, 1] 1600
+[2, 3] 672
+[4, 7] 1536
+[5, 6] 720
+Total time of running basic_branching: 3.292413300019689s
+Total time of running aut_dupa_multicore_branching: 4.249520000012126s
+Total time of running aut_basic_multicore_branching: 4.311788199993316s
+Running aut_dupa_multicore_branching on wheeljoin19.grl
+Running aut_dupa_branching on wheeljoin19.grl
+Running aut_basic_multicore_branching on wheeljoin19.grl
+Running aut_fast_branching_v3 on wheeljoin19.grl
+Running aut_mixed_branching on wheeljoin19.grl
+Running aut_basic_branching on wheeljoin19.grl
+Running basic_branching on wheeljoin19.grl
+Running fast_branching on wheeljoin19.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 5.83353229999193s
+Total time of running aut_fast_branching_v3: 7.5347813999978825s
+Total time of running aut_mixed_branching: 8.515159700007644s
+Total time of running aut_basic_branching: 8.653528099996038s
+Total time of running aut_dupa_multicore_branching: 8.692793100024574s
+Total time of running aut_basic_multicore_branching: 9.200902400014456s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 48000
+[2, 9] 13824
+[3, 4] 14400
+[5, 6] 15360
+[7, 8] 6720
+Total time of running basic_branching: 60.63082449999638s
+[0, 1] 48000
+[2, 9] 13824
+[3, 4] 14400
+[5, 6] 15360
+[7, 8] 6720
+Total time of running fast_branching: 61.47654039997724s
+Running aut_dupa_multicore_branching on wheeljoin25.grl
+Running aut_dupa_branching on wheeljoin25.grl
+Running aut_basic_multicore_branching on wheeljoin25.grl
+Running aut_fast_branching_v3 on wheeljoin25.grl
+Running aut_mixed_branching on wheeljoin25.grl
+Running aut_basic_branching on wheeljoin25.grl
+Running basic_branching on wheeljoin25.grl
+Running fast_branching on wheeljoin25.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_basic_branching: 2.6463240000011865s
+Total time of running aut_dupa_branching: 8.093263100017793s
+Total time of running aut_dupa_multicore_branching: 11.515876099991146s
+Total time of running aut_fast_branching_v3: 15.402612100006081s
+Total time of running aut_mixed_branching: 16.809323399997083s
+Total time of running aut_basic_multicore_branching: 22.120552300009876s
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running basic_branching on ../input/branching/wheeljoin25.grl: exceeded 600s
+Running aut_dupa_multicore_branching on wheeljoin33.grl
+Running aut_dupa_branching on wheeljoin33.grl
+Running aut_basic_multicore_branching on wheeljoin33.grl
+Running aut_fast_branching_v3 on wheeljoin33.grl
+Running aut_mixed_branching on wheeljoin33.grl
+Running aut_basic_branching on wheeljoin33.grl
+Running basic_branching on wheeljoin33.grl
+Running fast_branching on wheeljoin33.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 52.62769079999998s
+Total time of running aut_dupa_multicore_branching: 65.70241150000948s
+Total time of running aut_basic_branching: 73.49086479999823s
+Total time of running aut_basic_multicore_branching: 92.06925780000165s
+Total time of running aut_mixed_branching: 319.2674826000002s
+Total time of running aut_fast_branching_v3: 344.31974160001846s
+Timeout while running basic_branching on ../input/branching/wheeljoin33.grl: exceeded 600s
+Running aut_dupa_multicore_branching on wheelstar12.grl
+Running aut_dupa_branching on wheelstar12.grl
+Running aut_basic_multicore_branching on wheelstar12.grl
+Running aut_fast_branching_v3 on wheelstar12.grl
+Running aut_mixed_branching on wheelstar12.grl
+Running aut_basic_branching on wheelstar12.grl
+Running basic_branching on wheelstar12.grl
+Running fast_branching on wheelstar12.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 2.8384360000200104s
+Total time of running aut_dupa_multicore_branching: 5.653712200000882s
+Total time of running aut_fast_branching_v3: 8.623380900011398s
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 10.350876100012101s
+Comparing with iso class 2
+Total time of running aut_basic_multicore_branching: 26.784314699994866s
+Total time of running aut_basic_branching: 30.908500099991215s
+Timeout while running basic_branching on ../input/branching/wheelstar12.grl: exceeded 600s
+Running aut_dupa_multicore_branching on wheelstar15.grl
+Running aut_dupa_branching on wheelstar15.grl
+Running aut_basic_multicore_branching on wheelstar15.grl
+Running aut_fast_branching_v3 on wheelstar15.grl
+Running aut_mixed_branching on wheelstar15.grl
+Running aut_basic_branching on wheelstar15.grl
+Running basic_branching on wheelstar15.grl
+Running fast_branching on wheelstar15.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Timeout while running aut_dupa_multicore_branching on ../input/branching/wheelstar15.grl: exceeded 600s
+Running aut_dupa_multicore_branching on wheelstar16.grl
+Running aut_dupa_branching on wheelstar16.grl
+Running aut_basic_multicore_branching on wheelstar16.grl
+Running aut_fast_branching_v3 on wheelstar16.grl
+Running aut_mixed_branching on wheelstar16.grl
+Running aut_basic_branching on wheelstar16.grl
+Running basic_branching on wheelstar16.grl
+Running fast_branching on wheelstar16.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Timeout while running aut_dupa_multicore_branching on ../input/branching/wheelstar16.grl: exceeded 600s
+Running aut_dupa_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_branching_v3 on bigtrees1.grl
+Running aut_mixed_branching on bigtrees1.grl
+Running aut_basic_branching on bigtrees1.grl
+Running basic_branching on bigtrees1.grl
+Running fast_branching on bigtrees1.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 0.8083252000214998s
+Total time of running aut_basic_branching: 1.1847997000149917s
+Total time of running aut_dupa_multicore_branching: 2.5207986000168603s
+Total time of running aut_basic_multicore_branching: 2.722803799988469s
+
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 313.9532163999975s
+Total time of running aut_fast_branching_v3: 317.41571930001373s
+Timeout while running basic_branching on ../input/branching/bigtrees1.grl: exceeded 600s
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_branching_v3 on bigtrees2.grl
+Running aut_mixed_branching on bigtrees2.grl
+Running aut_basic_branching on bigtrees2.grl
+Running basic_branching on bigtrees2.grl
+Running fast_branching on bigtrees2.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 8.672584299987648s
+Total time of running aut_dupa_multicore_branching: 10.7201761000033s
+Total time of running aut_basic_branching: 10.721379200025694s
+Total time of running aut_mixed_branching: 12.947715499991318s
+Total time of running aut_basic_multicore_branching: 12.979112500004703s
+Total time of running aut_fast_branching_v3: 17.383504600002198s
+Timeout while running basic_branching on ../input/branching/bigtrees2.grl: exceeded 600s
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_branching_v3 on bigtrees3.grl
+Running aut_mixed_branching on bigtrees3.grl
+Running aut_basic_branching on bigtrees3.grl
+Running basic_branching on bigtrees3.grl
+Running fast_branching on bigtrees3.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_dupa_multicore_branching: 345.4044098999875s
+Total time of running aut_dupa_branching: 379.3430302000197s
+Total time of running aut_basic_branching: 500.551346799999s
+Total time of running aut_basic_multicore_branching: 505.5695562000037s
+Total time of running aut_mixed_branching: 515.573126000003s
+Timeout while running aut_fast_branching_v3 on ../input/branching/bigtrees3.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_branching_v3 on cographs1.grl
+Running aut_mixed_branching on cographs1.grl
+Running aut_basic_branching on cographs1.grl
+Running basic_branching on cographs1.grl
+Running fast_branching on cographs1.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 310.6367103999946s
+Total time of running aut_fast_branching_v3: 324.7705416000099s
+Total time of running aut_dupa_branching: 430.9875268000178s
+Total time of running aut_dupa_multicore_branching: 492.754099999991s
+Timeout while running aut_basic_multicore_branching on ../input/branching/cographs1.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_branching_v3 on cubes3.grl
+Running aut_mixed_branching on cubes3.grl
+Running aut_basic_branching on cubes3.grl
+Running basic_branching on cubes3.grl
+Running fast_branching on cubes3.grl
+Total time of running aut_dupa_branching: 0.02153199998429045s
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_fast_branching_v3: 0.02379429998109117s
+Total time of running aut_mixed_branching: 0.021244000003207475s
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+[0, 2] 48
+[1, 3] 16
+Total time of running fast_branching: 0.01739240001188591s
+Total time of running aut_basic_branching: 0.020016099995700642s
+Comparing with iso class 2
+[0, 2] 48
+[1, 3] 16
+Total time of running basic_branching: 0.022414800012484193s
+Total time of running aut_basic_multicore_branching: 1.8805364000145346s
+Total time of running aut_dupa_multicore_branching: 1.8935867999971379s
+Running aut_dupa_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_branching_v3 on cubes4.grl
+Running aut_mixed_branching on cubes4.grl
+Running aut_basic_branching on cubes4.grl
+Running basic_branching on cubes4.grl
+Running fast_branching on cubes4.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 0.09855830000014976s
+Total time of running aut_mixed_branching: 0.09859579999465495s
+Total time of running aut_basic_branching: 0.10314050002489239s
+Total time of running aut_fast_branching_v3: 0.12281219998840243s
+[0, 2] 8
+[1, 3] 384
+Total time of running fast_branching: 0.1911417000228539s
+[0, 2] 8
+[1, 3] 384
+Total time of running basic_branching: 0.21316569999908097s
+Total time of running aut_dupa_multicore_branching: 1.9234072999970522s
+Total time of running aut_basic_multicore_branching: 1.9336249000043608s
+Running aut_dupa_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_branching_v3 on cubes5.grl
+Running aut_mixed_branching on cubes5.grl
+Running aut_basic_branching on cubes5.grl
+Running basic_branching on cubes5.grl
+Running fast_branching on cubes5.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_fast_branching_v3: 0.8276964999968186s
+Total time of running aut_dupa_branching: 0.864321100001689s
+Total time of running aut_mixed_branching: 0.9601758000208065s
+Total time of running aut_basic_branching: 1.0478695000056177s
+Total time of running aut_dupa_multicore_branching: 2.623869899980491s
+Total time of running aut_basic_multicore_branching: 2.741314399987459s
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 3840
+[2, 3] 24
+Total time of running fast_branching: 4.482757899997523s
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+[0, 1] 3840
+[2, 3] 24
+Total time of running basic_branching: 5.653427799989004s
+Running aut_dupa_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_branching_v3 on cubes6.grl
+Running aut_mixed_branching on cubes6.grl
+Running aut_basic_branching on cubes6.grl
+Running basic_branching on cubes6.grl
+Running fast_branching on cubes6.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 6.4537308999861125s
+Total time of running aut_mixed_branching: 6.967233100003796s
+Total time of running aut_basic_branching: 7.177848299994366s
+Total time of running aut_fast_branching_v3: 7.6831498999963515s
+Total time of running aut_basic_multicore_branching: 7.792290599987609s
+Total time of running aut_dupa_multicore_branching: 9.700393999984954s
+[0, 1] 96
+[2, 3] 46080
+Total time of running fast_branching: 104.663613599987s
+[0, 1] 96
+[2, 3] 46080
+Total time of running basic_branching: 146.48748450001585s
+Running aut_dupa_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_branching_v3 on cubes7.grl
+Running aut_mixed_branching on cubes7.grl
+Running aut_basic_branching on cubes7.grl
+Running basic_branching on cubes7.grl
+Running fast_branching on cubes7.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Total time of running aut_fast_branching_v3: 55.71490309998626s
+Total time of running aut_dupa_branching: 78.61205989998416s
+Total time of running aut_dupa_multicore_branching: 81.90448900000774s
+Total time of running aut_basic_branching: 84.52281699999003s
+Total time of running aut_basic_multicore_branching: 85.75413479999406s
+Total time of running aut_mixed_branching: 86.05246999999508s
+Timeout while running basic_branching on ../input/branching/cubes7.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_branching_v3 on cubes8.grl
+Running aut_mixed_branching on cubes8.grl
+Running aut_basic_branching on cubes8.grl
+Running basic_branching on cubes8.grl
+Running fast_branching on cubes8.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Total time of running aut_dupa_branching: 370.8539402000024s
+Total time of running aut_basic_multicore_branching: 414.221386899997s
+Total time of running aut_dupa_multicore_branching: 420.1093241000199s
+Total time of running aut_basic_branching: 420.36966979998397s
+Total time of running aut_mixed_branching: 560.2631820999959s
+Timeout while running aut_fast_branching_v3 on ../input/branching/cubes8.grl: exceeded 600s
+Running aut_dupa_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_branching_v3 on cubes9.grl
+Running aut_mixed_branching on cubes9.grl
+Running aut_basic_branching on cubes9.grl
+Running basic_branching on cubes9.grl
+Running fast_branching on cubes9.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Timeout while running aut_dupa_multicore_branching on ../input/branching/cubes9.grl: exceeded 600s
+Running aut_dupa_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_branching_v3 on lecture.grl
+Running aut_mixed_branching on lecture.grl
+Running aut_basic_branching on lecture.grl
+Running basic_branching on lecture.grl
+Running fast_branching on lecture.grl
+Total time of running aut_dupa_branching: 0.0033755000040400773s
+Total time of running aut_fast_branching_v3: 0.004078099998878315s
+Total time of running aut_mixed_branching: 0.0030380999960470945s
+Processing graph 2
+Comparing with iso class 1
+[0, 1] 4
+Total time of running basic_branching: 0.0018834000220522285s
+Total time of running aut_basic_branching: 0.00347140000667423s
+
+Processing graph 1
+Comparing with iso class 1
+[0, 1] 4
+Total time of running fast_branching: 0.0024645999947097152s
+Total time of running aut_dupa_multicore_branching: 0.8408476999902632s
+Total time of running aut_basic_multicore_branching: 0.8364681999955792s
+Running aut_dupa_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_branching_v3 on modulesC.grl
+Running aut_mixed_branching on modulesC.grl
+Running aut_basic_branching on modulesC.grl
+Running basic_branching on modulesC.grl
+Running fast_branching on modulesC.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Timeout while running aut_dupa_multicore_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_dupa_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_branching_v3 on modulesD.grl
+Running aut_mixed_branching on modulesD.grl
+Running aut_basic_branching on modulesD.grl
+Running basic_branching on modulesD.grl
+Running fast_branching on modulesD.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_basic_multicore_branching: 46.018950400000904s
+Total time of running aut_dupa_multicore_branching: 50.75985880001099s
+
+Processing graph 3
+Comparing with iso class 1
+Total time of running aut_basic_branching: 54.486723500012886s
+Comparing with iso class 2
+Total time of running aut_dupa_branching: 61.739849900011905s
+
+Processing graph 4
+Comparing with iso class 1
+Total time of running aut_mixed_branching: 66.72065139998449s
+Comparing with iso class 2
+[0, 2] 24
+[1, 3] 1
+[4, 5] 24
+Total time of running basic_branching: 69.72624799999176s
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_fast_branching_v3: 84.00333440001123s
+[0, 2] 24
+[1, 3] 1
+[4, 5] 24
+Total time of running fast_branching: 86.32538680001744s
+Running aut_dupa_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_branching_v3 on products216.grl
+Running aut_mixed_branching on products216.grl
+Running aut_basic_branching on products216.grl
+Running basic_branching on products216.grl
+Running fast_branching on products216.grl
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 2
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 4
+
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 3
+Comparing with iso class 4
+Comparing with iso class 5
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 4
+Comparing with iso class 5
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 7
+Comparing with iso class 1
+
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+
+Processing graph 9
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+[0, 6] 1728
+[1, 7] 1728
+[2, 9] 1728
+[3, 8] 10368
+[4, 5] 1728
+Total time of running fast_branching: 221.1727699000039s
+Total time of running aut_dupa_branching: 406.7090521000209s
+Total time of running aut_fast_branching_v3: 425.9096816999954s
+Total time of running aut_dupa_multicore_branching: 447.4380261999904s
+Total time of running aut_mixed_branching: 482.3862783999939s
+Total time of running aut_basic_multicore_branching: 485.374782400002s
+Processing graph 10
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Total time of running aut_basic_branching: 541.886696600006s
+[0, 6] 1728
+[1, 7] 1728
+[2, 9] 1728
+[3, 8] 10368
+[4, 5] 1728
+Total time of running basic_branching: 596.7069565000129s
+Running aut_dupa_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_branching_v3 on products72.grl
+Running aut_mixed_branching on products72.grl
+Running aut_basic_branching on products72.grl
+Running basic_branching on products72.grl
+Running fast_branching on products72.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+
+Processing graph 4
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 5
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 3
+
+Processing graph 5
+Comparing with iso class 1
+Processing graph 6
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 2
+
+Processing graph 6
+Comparing with iso class 1
+Processing graph 7
+Comparing with iso class 1
+
+Processing graph 7
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+Processing graph 8
+Comparing with iso class 1
+Comparing with iso class 2
+Comparing with iso class 3
+Comparing with iso class 4
+[0, 6] 288
+[1, 5] 576
+[2, 3] 576
+[4, 7] 864
+Total time of running fast_branching: 11.086388800002169s
+Total time of running aut_dupa_branching: 12.062740599998506s
+[0, 6] 288
+[1, 5] 576
+[2, 3] 576
+[4, 7] 864
+Total time of running basic_branching: 14.096446599985939s
+Total time of running aut_basic_branching: 14.748221200017724s
+Total time of running aut_fast_branching_v3: 14.775962099985918s
+Total time of running aut_mixed_branching: 15.473846000008052s
+Total time of running aut_dupa_multicore_branching: 15.71726239999407s
+Total time of running aut_basic_multicore_branching: 16.54844049998792s
+Running aut_dupa_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_branching_v3 on regulartwins.grl
+Running aut_mixed_branching on regulartwins.grl
+Running aut_basic_branching on regulartwins.grl
+Running basic_branching on regulartwins.grl
+Running fast_branching on regulartwins.grl
+Processing graph 2
+Comparing with iso class 1
+
+Processing graph 1
+Comparing with iso class 1
+
+Processing graph 2
+Comparing with iso class 1
+Comparing with iso class 2
+Processing graph 3
+Comparing with iso class 1
+Comparing with iso class 2
+Total time of running aut_fast_branching_v3: 3.812008600012632s
+Total time of running aut_dupa_branching: 5.147060099989176s
+Total time of running aut_dupa_multicore_branching: 7.648199499992188s
+Total time of running aut_mixed_branching: 8.484450899995863s
+Total time of running aut_basic_branching: 12.489471100008814s
+Total time of running aut_basic_multicore_branching: 13.76593279998633s
