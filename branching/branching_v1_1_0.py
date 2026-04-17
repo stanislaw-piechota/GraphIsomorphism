@@ -73,6 +73,8 @@ def aut_dupa_branching(path: str, do_aut_count: bool = True, do_membership_testi
                 iso_counts.append(anal_result.automorphism_count)
             else:
                 iso_counts.append(0)
+    # for i, iso_class in enumerate(isomorphic_graphs):
+    #     print(iso_class, iso_counts[i])
 
     return IsomorphismAnalResult(isomorphic_graphs=isomorphic_graphs, automorphism_counts=iso_counts, was_counting_automorphism=do_aut_count)
 

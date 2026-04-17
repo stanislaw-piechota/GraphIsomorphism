@@ -1,0 +1,154 @@
+
+%! Author = stanislaw
+%! Date = 12.03.2026
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{seqsplit}
+
+% Document
+\begin{document}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|X|X|X|X|}
+        \hline
+        File name & \seqsplit{aut\_branching} & \seqsplit{aut\_basic\_multicore\_branching} & \seqsplit{aut\_fast\_multicore\_branching} & \seqsplit{aut\_dupa\_branching} & \seqsplit{aut\_dupa\_multicore\_branching} \\
+        \hline
+		bigtrees1.grl & 0.05 & 1.78 & 463.17 & 215.29 & 176.18 \\
+		bigtrees2.grl & 0.12 & 2.33 & 2.5 & 0.17 & 2.48 \\
+		bigtrees3.grl & 1.6 & 3.25 & 3.62 & 2.02 & 3.39 \\
+		cographs1.grl & 580.57 & 598.63 & 225.37 & 388.45 & 1.73 \\
+		cubes3.grl & 0.01 & 2.33 & 2.31 & 0.01 & 2.29 \\
+		cubes4.grl & 0.03 & 2.14 & 2.13 & 0.01 & 2.12 \\
+		cubes5.grl & 0.1 & 2.06 & 2.04 & 0.05 & 2.04 \\
+		cubes6.grl & 0.51 & 2.32 & 2.24 & 0.12 & 2.17 \\
+		cubes7.grl & 2.53 & 4.29 & 4.28 & 1.41 & 3.33 \\
+		cubes8.grl & 11.44 & 12.79 & 9.76 & 5.29 & 7.02 \\
+		cubes9.grl & 44.84 & 47.28 & 27.06 & 16.51 & 18.81 \\
+		lecture.grl & 0.0 & 0.87 & 0.87 & 0.0 & 0.87 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 32.95 & 18.62 & 29.84 & 20.11 & 27.97 \\
+		products216.grl & 70.64 & 36.32 & 23.27 & 20.92 & 22.23 \\
+		products72.grl & 0.53 & 6.47 & 6.75 & 1.23 & 6.74 \\
+		regulartwins.grl & 5.5 & 5.55 & 3.28 & 0.48 & 3.15 \\
+		small forest.gr & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		torus144.grl & 59.47 & 27.19 & 14.02 & 11.06 & 13.96 \\
+		torus24.grl & 0.04 & 2.06 & 2.02 & 0.02 & 2.1 \\
+		torus72.grl & 6.33 & 7.17 & 6.84 & 1.11 & 6.92 \\
+		trees11.grl & 0.01 & 3.61 & 3.66 & 0.02 & 3.65 \\
+		trees36.grl & 0.03 & 5.81 & 5.72 & 0.31 & 5.66 \\
+		trees90.grl & 0.13 & 2.08 & 2.41 & 0.5 & 2.35 \\
+		wheeljoin14.grl & 0.31 & 5.42 & 5.43 & 0.23 & 5.39 \\
+		wheeljoin19.grl & 9.87 & 10.02 & 8.81 & 6.14 & 8.85 \\
+		wheeljoin25.grl & 0.75 & 21.39 & 12.86 & 0.31 & 15.09 \\
+		wheeljoin33.grl & 545.38 & 285.12 & 225.99 & 368.38 & 325.14 \\
+		wheelstar12.grl & 26.23 & 19.64 & 2.03 & 0.14 & 23.43 \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR \\
+		bigtrees1.grl & 0.07 & 2.23 & ERR & ERR & ERR \\
+		bigtrees2.grl & 0.15 & 2.72 & 2.82 & 0.22 & 2.82 \\
+		bigtrees3.grl & 2.19 & 4.21 & 4.65 & 2.43 & 4.47 \\
+		cographs1.grl & ERR & ERR & ERR & ERR & ERR \\
+		cubes3.grl & 0.01 & 2.75 & 2.74 & 0.0 & 2.75 \\
+		cubes4.grl & 0.03 & 2.92 & 2.92 & 0.01 & 2.88 \\
+		cubes5.grl & 0.13 & 2.48 & 2.51 & 0.07 & 2.48 \\
+		cubes6.grl & 0.65 & 3.03 & 2.98 & 0.14 & 2.87 \\
+		cubes7.grl & 3.14 & 6.54 & 6.04 & 1.85 & 5.12 \\
+		cubes8.grl & 14.41 & 16.54 & 13.53 & 6.88 & 9.76 \\
+		cubes9.grl & 63.31 & 66.47 & 38.23 & 24.03 & 27.28 \\
+		lecture.grl & 0.0 & 1.01 & 1.01 & 0.0 & 1.0 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 34.76 & 33.38 & 44.94 & 22.93 & 36.22 \\
+		products216.grl & 80.68 & 59.92 & 44.27 & 22.07 & 41.36 \\
+		products72.grl & 0.65 & 13.75 & 13.85 & 1.34 & 13.83 \\
+		regulartwins.grl & 6.45 & 10.42 & 7.96 & 0.83 & 8.09 \\
+		small forest.gr & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		torus144.grl & 79.05 & 50.36 & 35.48 & 11.6 & 34.77 \\
+		torus24.grl & 0.06 & 3.22 & 3.08 & 0.03 & 3.05 \\
+		torus72.grl & 5.38 & 12.36 & 12.11 & 1.19 & 12.06 \\
+		trees11.grl & 0.01 & 6.18 & 6.25 & 0.02 & 6.34 \\
+		trees36.grl & 0.06 & 9.23 & 9.51 & 0.4 & 9.13 \\
+		trees90.grl & 0.17 & 2.81 & 3.24 & 0.53 & 3.14 \\
+		wheeljoin14.grl & 0.39 & 8.77 & 8.77 & 0.29 & 8.89 \\
+		wheeljoin19.grl & 10.35 & 14.79 & 14.76 & 6.02 & 14.64 \\
+		wheeljoin25.grl & 20.89 & 9.53 & 20.02 & 12.58 & 9.31 \\
+		wheeljoin33.grl & 482.28 & 26.11 & 245.55 & 322.24 & 17.45 \\
+		wheelstar12.grl & 25.18 & 22.18 & 10.91 & 8.14 & 22.86 \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR \\
+		bigtrees1.grl & 0.07 & 5.66 & ERR & ERR & ERR \\
+		bigtrees2.grl & 0.18 & 4.69 & 5.2 & 0.27 & 5.05 \\
+		bigtrees3.grl & 2.28 & 8.85 & 8.99 & 4.74 & 8.71 \\
+		cographs1.grl & ERR & ERR & ERR & ERR & ERR \\
+		cubes3.grl & 0.01 & 3.18 & 3.18 & 0.0 & 3.25 \\
+		cubes4.grl & 0.03 & 3.11 & 3.13 & 0.01 & 3.05 \\
+		cubes5.grl & 0.16 & 2.86 & 2.78 & 0.08 & 2.8 \\
+		cubes6.grl & 0.66 & 3.14 & 2.96 & 0.14 & 2.91 \\
+		cubes7.grl & 2.9 & 5.95 & 5.67 & 1.71 & 4.95 \\
+		cubes8.grl & 15.55 & 17.56 & 13.77 & 7.12 & 9.75 \\
+		cubes9.grl & 77.44 & 80.94 & 44.27 & 27.68 & 31.14 \\
+		lecture.grl & 0.0 & 1.07 & 1.07 & 0.0 & 1.05 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 42.7 & 44.83 & 62.78 & 29.89 & 49.14 \\
+		products216.grl & 83.11 & 74.31 & 54.53 & 20.3 & 47.7 \\
+		products72.grl & 0.88 & 21.44 & 21.42 & 1.99 & 21.31 \\
+		regulartwins.grl & 13.52 & 16.29 & 10.36 & 1.14 & 12.41 \\
+		small forest.gr & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		torus144.grl & 88.68 & 75.78 & 55.84 & 12.34 & 53.76 \\
+		torus24.grl & 0.1 & 6.26 & 5.97 & 0.04 & 6.01 \\
+		torus72.grl & 10.27 & 22.89 & 22.79 & 2.01 & 22.12 \\
+		trees11.grl & 0.01 & 12.28 & 11.87 & 0.02 & 12.08 \\
+		trees36.grl & 0.08 & 19.4 & 19.53 & 0.51 & 19.66 \\
+		trees90.grl & 0.26 & 6.86 & 6.93 & 0.85 & 6.88 \\
+		wheeljoin14.grl & 0.54 & 17.85 & 17.84 & 0.45 & 17.84 \\
+		wheeljoin19.grl & 8.7 & 27.81 & 27.57 & 8.49 & 27.44 \\
+		wheeljoin25.grl & 20.99 & 16.79 & 24.89 & 17.52 & 16.77 \\
+		wheeljoin33.grl & 558.08 & 38.75 & 224.99 & 356.97 & 28.56 \\
+		wheelstar12.grl & 30.93 & 29.36 & 15.06 & 8.85 & 29.23 \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR \\
+		bigtrees1.grl & 0.09 & 6.15 & 474.17 & 0.42 & 249.84 \\
+		bigtrees2.grl & 0.22 & 4.63 & 4.85 & 0.32 & 4.83 \\
+		bigtrees3.grl & 3.02 & 7.44 & 8.08 & 2.39 & 7.66 \\
+		cographs1.grl & ERR & ERR & ERR & ERR & ERR \\
+		cubes3.grl & 0.01 & 4.35 & 4.26 & 0.01 & 4.45 \\
+		cubes4.grl & 0.04 & 4.52 & 4.43 & 0.01 & 4.11 \\
+		cubes5.grl & 0.21 & 3.5 & 3.6 & 0.11 & 3.76 \\
+		cubes6.grl & 0.69 & 3.84 & 3.86 & 0.17 & 3.79 \\
+		cubes7.grl & 2.9 & 7.66 & 7.59 & 1.74 & 6.64 \\
+		cubes8.grl & 15.13 & 16.31 & 15.15 & 6.83 & 11.28 \\
+		cubes9.grl & 59.24 & 65.61 & 39.08 & 27.32 & 30.03 \\
+		lecture.grl & 0.0 & 1.16 & 1.15 & 0.0 & 1.14 \\
+		modulesC.grl & ERR & ERR & ERR & ERR & ERR \\
+		modulesD.grl & 40.14 & 94.41 & 174.31 & 34.67 & 87.25 \\
+		products216.grl & 95.42 & 115.77 & 93.48 & 56.64 & 82.56 \\
+		products72.grl & 1.47 & 32.54 & 33.26 & 2.89 & 32.96 \\
+		regulartwins.grl & 8.05 & 25.84 & 19.49 & 1.8 & 19.8 \\
+		small forest.gr & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+		torus144.grl & 96.12 & 100.11 & 53.43 & 14.67 & 53.06 \\
+		torus24.grl & 0.07 & 6.61 & 7.39 & 0.04 & 6.94 \\
+		torus72.grl & 4.76 & 24.65 & 24.57 & 2.07 & 24.3 \\
+		trees11.grl & 0.01 & 13.37 & 13.8 & 0.02 & 13.92 \\
+		trees36.grl & 0.06 & 22.17 & 22.16 & 0.56 & 22.25 \\
+		trees90.grl & 0.3 & 7.9 & 8.01 & 0.8 & 8.88 \\
+		wheeljoin14.grl & 0.66 & 19.84 & 18.78 & 0.42 & 19.09 \\
+		wheeljoin19.grl & 11.58 & 33.6 & 33.11 & 6.25 & 33.33 \\
+		wheeljoin25.grl & 31.18 & 25.31 & 33.33 & 20.33 & 25.31 \\
+		wheeljoin33.grl & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar12.grl & 38.77 & 35.08 & 23.97 & 11.95 & 36.14 \\
+		wheelstar15.grl & ERR & ERR & ERR & ERR & ERR \\
+		wheelstar16.grl & ERR & ERR & ERR & ERR & ERR \\
+        \hline
+    \end{tabularx}
+    \caption{Example of a basic table}
+    \label{tab:1}
+\end{table}
+
+\end{document}

@@ -1,0 +1,1210 @@
+﻿C:\Users\wojte\PycharmProjects\GraphIsomorphism\.venv\Scripts\python.exe C:\Users\wojte\PycharmProjects\GraphIsomorphism\testing\GI_tester.py
+Running aut_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_dupa_multicore_branching on bigtrees1.grl
+Total time of running aut_branching: 0.05079750000004424s
+Total time of running aut_basic_multicore_branching: 1.7789838999999574s
+Total time of running aut_dupa_multicore_branching: 176.183625s
+Total time of running aut_dupa_branching: 215.28518339999994s
+Total time of running aut_fast_multicore_branching: 463.1747821s
+Running aut_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Total time of running aut_branching: 0.11731159999999363s
+Total time of running aut_dupa_branching: 0.16755100000000311s
+Total time of running aut_basic_multicore_branching: 2.3308331999999155s
+Total time of running aut_dupa_multicore_branching: 2.4756726000000526s
+Total time of running aut_fast_multicore_branching: 2.4952356999999665s
+Running aut_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Total time of running aut_branching: 1.6019933999998557s
+Total time of running aut_dupa_branching: 2.0191496999998435s
+Total time of running aut_basic_multicore_branching: 3.24798839999994s
+Total time of running aut_dupa_multicore_branching: 3.3912007000001267s
+Total time of running aut_fast_multicore_branching: 3.6207373999998254s
+Running aut_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_dupa_multicore_branching on cographs1.grl
+Total time of running aut_dupa_multicore_branching: 1.7326358000000255s
+Total time of running aut_fast_multicore_branching: 225.36677489999988s
+Total time of running aut_dupa_branching: 388.45043080000005s
+Total time of running aut_branching: 580.5730320999999s
+Total time of running aut_basic_multicore_branching: 598.6252826s
+Running aut_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_dupa_multicore_branching on cubes3.grl
+Total time of running aut_branching: 0.005899300000010044s
+Total time of running aut_dupa_branching: 0.005356600000141043s
+Total time of running aut_dupa_multicore_branching: 2.2859176000001753s
+Total time of running aut_fast_multicore_branching: 2.3136716999999862s
+Total time of running aut_basic_multicore_branching: 2.3315145000001394s
+Running aut_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_dupa_multicore_branching on cubes4.grl
+Total time of running aut_dupa_branching: 0.009158599999864236s
+Total time of running aut_branching: 0.02544509999984257s
+Total time of running aut_basic_multicore_branching: 2.135345599999937s
+Total time of running aut_fast_multicore_branching: 2.1314780000000155s
+Total time of running aut_dupa_multicore_branching: 2.124028099999805s
+Running aut_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_dupa_multicore_branching on cubes5.grl
+Total time of running aut_dupa_branching: 0.051318799999990006s
+Total time of running aut_branching: 0.1044504000001325s
+Total time of running aut_fast_multicore_branching: 2.0422960999999304s
+Total time of running aut_basic_multicore_branching: 2.0646646000000146s
+Total time of running aut_dupa_multicore_branching: 2.0428759000001264s
+Running aut_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_dupa_multicore_branching on cubes6.grl
+Total time of running aut_dupa_branching: 0.1159007000001111s
+Total time of running aut_branching: 0.5095745000000989s
+Total time of running aut_dupa_multicore_branching: 2.1671708999999737s
+Total time of running aut_fast_multicore_branching: 2.23540109999999s
+Total time of running aut_basic_multicore_branching: 2.3222350999999435s
+Running aut_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_dupa_multicore_branching on cubes7.grl
+Total time of running aut_dupa_branching: 1.4086320000001251s
+Total time of running aut_branching: 2.5342011000000184s
+Total time of running aut_dupa_multicore_branching: 3.327914700000065s
+Total time of running aut_fast_multicore_branching: 4.281131899999991s
+Total time of running aut_basic_multicore_branching: 4.289885400000003s
+Running aut_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_dupa_multicore_branching on cubes8.grl
+Total time of running aut_dupa_branching: 5.290760099999943s
+Total time of running aut_dupa_multicore_branching: 7.021236300000055s
+Total time of running aut_fast_multicore_branching: 9.757033699999965s
+Total time of running aut_branching: 11.442972900000086s
+Total time of running aut_basic_multicore_branching: 12.792060400000082s
+Running aut_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_dupa_multicore_branching on cubes9.grl
+Total time of running aut_dupa_branching: 16.51444749999996s
+Total time of running aut_dupa_multicore_branching: 18.805581900000107s
+Total time of running aut_fast_multicore_branching: 27.058185099999946s
+Total time of running aut_branching: 44.84177619999991s
+Total time of running aut_basic_multicore_branching: 47.277560600000015s
+Running aut_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_dupa_multicore_branching on lecture.grl
+Total time of running aut_branching: 0.002786900000046444s
+Total time of running aut_dupa_branching: 0.0025456999999278196s
+Total time of running aut_basic_multicore_branching: 0.8664573999999448s
+Total time of running aut_dupa_multicore_branching: 0.8661666999998943s
+Total time of running aut_fast_multicore_branching: 0.8686764000001403s
+Running aut_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_dupa_multicore_branching on modulesC.grl
+Timeout while running aut_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_dupa_multicore_branching on modulesD.grl
+Total time of running aut_basic_multicore_branching: 18.621938799999953s
+Total time of running aut_dupa_branching: 20.113800900000115s
+Total time of running aut_dupa_multicore_branching: 27.971395200000188s
+Total time of running aut_fast_multicore_branching: 29.84358999999995s
+Total time of running aut_branching: 32.94900530000041s
+Running aut_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_dupa_multicore_branching on products216.grl
+Total time of running aut_dupa_branching: 20.917469900000015s
+Total time of running aut_dupa_multicore_branching: 22.2328708s
+Total time of running aut_fast_multicore_branching: 23.270030399999996s
+Total time of running aut_basic_multicore_branching: 36.31909600000017s
+Total time of running aut_branching: 70.63745489999974s
+Running aut_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_dupa_multicore_branching on products72.grl
+Total time of running aut_branching: 0.5268075999997563s
+Total time of running aut_dupa_branching: 1.2250192999999854s
+Total time of running aut_basic_multicore_branching: 6.470121800000015s
+Total time of running aut_fast_multicore_branching: 6.750323799999933s
+Total time of running aut_dupa_multicore_branching: 6.741637099999934s
+Running aut_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_dupa_multicore_branching on regulartwins.grl
+Total time of running aut_dupa_branching: 0.48114010000017515s
+Total time of running aut_dupa_multicore_branching: 3.1523677000000134s
+Total time of running aut_fast_multicore_branching: 3.275753100000202s
+Total time of running aut_branching: 5.504133100000217s
+Total time of running aut_basic_multicore_branching: 5.551343600000109s
+Running aut_branching on small forest.gr
+Running aut_basic_multicore_branching on small forest.gr
+Running aut_fast_multicore_branching on small forest.gr
+Running aut_dupa_branching on small forest.gr
+Running aut_dupa_multicore_branching on small forest.gr
+Total time of running aut_branching: 0.0017612000001463457s
+Total time of running aut_dupa_branching: 0.0004274999996596307s
+Total time of running aut_basic_multicore_branching: 0.0023776000002726505s
+Total time of running aut_fast_multicore_branching: 0.0018811999998433748s
+Total time of running aut_dupa_multicore_branching: 0.0017810999997891486s
+Running aut_branching on torus144.grl
+Running aut_basic_multicore_branching on torus144.grl
+Running aut_fast_multicore_branching on torus144.grl
+Running aut_dupa_branching on torus144.grl
+Running aut_dupa_multicore_branching on torus144.grl
+Total time of running aut_dupa_branching: 11.06296650000013s
+Total time of running aut_dupa_multicore_branching: 13.962010499999906s
+Total time of running aut_fast_multicore_branching: 14.024349699999675s
+Total time of running aut_basic_multicore_branching: 27.191716700000143s
+Total time of running aut_branching: 59.474010100000214s
+Running aut_branching on torus24.grl
+Running aut_basic_multicore_branching on torus24.grl
+Running aut_fast_multicore_branching on torus24.grl
+Running aut_dupa_branching on torus24.grl
+Running aut_dupa_multicore_branching on torus24.grl
+Total time of running aut_dupa_branching: 0.02164409999977579s
+Total time of running aut_branching: 0.039386999999805994s
+Total time of running aut_fast_multicore_branching: 2.0243674999996983s
+Total time of running aut_basic_multicore_branching: 2.0560593000000154s
+Total time of running aut_dupa_multicore_branching: 2.0992997000003015s
+Running aut_branching on torus72.grl
+Running aut_basic_multicore_branching on torus72.grl
+Running aut_fast_multicore_branching on torus72.grl
+Running aut_dupa_branching on torus72.grl
+Running aut_dupa_multicore_branching on torus72.grl
+Total time of running aut_dupa_branching: 1.105088600000272s
+Total time of running aut_branching: 6.333394799999951s
+Total time of running aut_fast_multicore_branching: 6.838216699999975s
+Total time of running aut_dupa_multicore_branching: 6.918246000000181s
+Total time of running aut_basic_multicore_branching: 7.17424230000006s
+Running aut_branching on trees11.grl
+Running aut_basic_multicore_branching on trees11.grl
+Running aut_fast_multicore_branching on trees11.grl
+Running aut_dupa_branching on trees11.grl
+Running aut_dupa_multicore_branching on trees11.grl
+Total time of running aut_branching: 0.00695350000023609s
+Total time of running aut_dupa_branching: 0.017353499999899213s
+Total time of running aut_basic_multicore_branching: 3.612873000000036s
+Total time of running aut_dupa_multicore_branching: 3.6516649999998663s
+Total time of running aut_fast_multicore_branching: 3.6594638999999916s
+Running aut_branching on trees36.grl
+Running aut_basic_multicore_branching on trees36.grl
+Running aut_fast_multicore_branching on trees36.grl
+Running aut_dupa_branching on trees36.grl
+Running aut_dupa_multicore_branching on trees36.grl
+Total time of running aut_branching: 0.033426199999667006s
+Total time of running aut_dupa_branching: 0.31053309999970224s
+Total time of running aut_dupa_multicore_branching: 5.66237639999963s
+Total time of running aut_fast_multicore_branching: 5.719345699999849s
+Total time of running aut_basic_multicore_branching: 5.807361499999843s
+Running aut_branching on trees90.grl
+Running aut_basic_multicore_branching on trees90.grl
+Running aut_fast_multicore_branching on trees90.grl
+Running aut_dupa_branching on trees90.grl
+Running aut_dupa_multicore_branching on trees90.grl
+Total time of running aut_branching: 0.12703319999991436s
+Total time of running aut_dupa_branching: 0.5045332999998209s
+Total time of running aut_basic_multicore_branching: 2.0793429000000287s
+Total time of running aut_dupa_multicore_branching: 2.346049600000242s
+Total time of running aut_fast_multicore_branching: 2.4068053999999393s
+Running aut_branching on wheeljoin14.grl
+Running aut_basic_multicore_branching on wheeljoin14.grl
+Running aut_fast_multicore_branching on wheeljoin14.grl
+Running aut_dupa_branching on wheeljoin14.grl
+Running aut_dupa_multicore_branching on wheeljoin14.grl
+Total time of running aut_dupa_branching: 0.22838700000011158s
+Total time of running aut_branching: 0.30704270000023826s
+Total time of running aut_dupa_multicore_branching: 5.389682800000173s
+Total time of running aut_basic_multicore_branching: 5.42269639999995s
+Total time of running aut_fast_multicore_branching: 5.430339699999877s
+Running aut_branching on wheeljoin19.grl
+Running aut_basic_multicore_branching on wheeljoin19.grl
+Running aut_fast_multicore_branching on wheeljoin19.grl
+Running aut_dupa_branching on wheeljoin19.grl
+Running aut_dupa_multicore_branching on wheeljoin19.grl
+Total time of running aut_dupa_branching: 6.14373760000035s
+Total time of running aut_fast_multicore_branching: 8.807281899999907s
+Total time of running aut_dupa_multicore_branching: 8.848947299999963s
+Total time of running aut_branching: 9.86738349999996s
+Total time of running aut_basic_multicore_branching: 10.02350770000021s
+Running aut_branching on wheeljoin25.grl
+Running aut_basic_multicore_branching on wheeljoin25.grl
+Running aut_fast_multicore_branching on wheeljoin25.grl
+Running aut_dupa_branching on wheeljoin25.grl
+Running aut_dupa_multicore_branching on wheeljoin25.grl
+Total time of running aut_dupa_branching: 0.3106363000001693s
+Total time of running aut_branching: 0.7485952999995789s
+Total time of running aut_fast_multicore_branching: 12.859181299999818s
+Total time of running aut_dupa_multicore_branching: 15.086278100000072s
+Total time of running aut_basic_multicore_branching: 21.39146219999975s
+Running aut_branching on wheeljoin33.grl
+Running aut_basic_multicore_branching on wheeljoin33.grl
+Running aut_fast_multicore_branching on wheeljoin33.grl
+Running aut_dupa_branching on wheeljoin33.grl
+Running aut_dupa_multicore_branching on wheeljoin33.grl
+Total time of running aut_fast_multicore_branching: 225.98870549999992s
+Total time of running aut_basic_multicore_branching: 285.1166638999998s
+Total time of running aut_dupa_multicore_branching: 325.1378615000003s
+Total time of running aut_dupa_branching: 368.38308659999984s
+Total time of running aut_branching: 545.383906s
+Running aut_branching on wheelstar12.grl
+Running aut_basic_multicore_branching on wheelstar12.grl
+Running aut_fast_multicore_branching on wheelstar12.grl
+Running aut_dupa_branching on wheelstar12.grl
+Running aut_dupa_multicore_branching on wheelstar12.grl
+Total time of running aut_dupa_branching: 0.1379319000002397s
+Total time of running aut_fast_multicore_branching: 2.029778100000385s
+Total time of running aut_basic_multicore_branching: 19.64396859999988s
+Total time of running aut_dupa_multicore_branching: 23.433201600000302s
+Total time of running aut_branching: 26.227621899999576s
+Running aut_branching on wheelstar15.grl
+Running aut_basic_multicore_branching on wheelstar15.grl
+Running aut_fast_multicore_branching on wheelstar15.grl
+Running aut_dupa_branching on wheelstar15.grl
+Running aut_dupa_multicore_branching on wheelstar15.grl
+Timeout while running aut_branching on ../input/branching/wheelstar15.grl: exceeded 600s
+Running aut_branching on wheelstar16.grl
+Running aut_basic_multicore_branching on wheelstar16.grl
+Running aut_fast_multicore_branching on wheelstar16.grl
+Running aut_dupa_branching on wheelstar16.grl
+Running aut_dupa_multicore_branching on wheelstar16.grl
+Timeout while running aut_branching on ../input/branching/wheelstar16.grl: exceeded 600s
+Running aut_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_dupa_multicore_branching on bigtrees1.grl
+Total time of running aut_branching: 0.06515690000014729s
+Total time of running aut_dupa_branching: 0.3492767999996431s
+Total time of running aut_basic_multicore_branching: 2.231590700000197s
+Total time of running aut_dupa_multicore_branching: 596.1257434999998s
+Timeout while running aut_fast_multicore_branching on ../input/branching/bigtrees1.grl: exceeded 600s
+Running aut_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Total time of running aut_branching: 0.15158830000018497s
+Total time of running aut_dupa_branching: 0.2229750000005879s
+Total time of running aut_basic_multicore_branching: 2.7195388999998613s
+Total time of running aut_fast_multicore_branching: 2.8151148000006287s
+Total time of running aut_dupa_multicore_branching: 2.8214122999997926s
+Running aut_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Total time of running aut_branching: 2.1874621999995725s
+Total time of running aut_dupa_branching: 2.4252902999996877s
+Total time of running aut_basic_multicore_branching: 4.211837800000467s
+Total time of running aut_dupa_multicore_branching: 4.469310500000574s
+Total time of running aut_fast_multicore_branching: 4.652470300000459s
+Running aut_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_dupa_multicore_branching on cographs1.grl
+Total time of running aut_dupa_multicore_branching: 2.71590070000002s
+Total time of running aut_fast_multicore_branching: 263.2571918000003s
+Total time of running aut_dupa_branching: 492.70906749999995s
+Timeout while running aut_branching on ../input/branching/cographs1.grl: exceeded 600s
+Running aut_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_dupa_multicore_branching on cubes3.grl
+Total time of running aut_branching: 0.007266799999342766s
+Total time of running aut_dupa_branching: 0.004911200000606186s
+Total time of running aut_fast_multicore_branching: 2.7350204999993366s
+Total time of running aut_basic_multicore_branching: 2.749317499999961s
+Total time of running aut_dupa_multicore_branching: 2.7500810999999885s
+Running aut_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_dupa_multicore_branching on cubes4.grl
+Total time of running aut_branching: 0.0330337999994299s
+Total time of running aut_dupa_branching: 0.00994040000023233s
+Total time of running aut_dupa_multicore_branching: 2.881928400000106s
+Total time of running aut_basic_multicore_branching: 2.917143099999521s
+Total time of running aut_fast_multicore_branching: 2.922634399999879s
+Running aut_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_dupa_multicore_branching on cubes5.grl
+Total time of running aut_dupa_branching: 0.06996080000044458s
+Total time of running aut_branching: 0.12928139999985433s
+Total time of running aut_basic_multicore_branching: 2.4797754000001078s
+Total time of running aut_dupa_multicore_branching: 2.482741100000567s
+Total time of running aut_fast_multicore_branching: 2.51145280000037s
+Running aut_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_dupa_multicore_branching on cubes6.grl
+Total time of running aut_dupa_branching: 0.14443630000005214s
+Total time of running aut_branching: 0.6516672999996445s
+Total time of running aut_dupa_multicore_branching: 2.871843099999751s
+Total time of running aut_fast_multicore_branching: 2.983276300000398s
+Total time of running aut_basic_multicore_branching: 3.0298777999996673s
+Running aut_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_dupa_multicore_branching on cubes7.grl
+Total time of running aut_dupa_branching: 1.850760999999693s
+Total time of running aut_branching: 3.136259500000051s
+Total time of running aut_dupa_multicore_branching: 5.120890600000166s
+Total time of running aut_fast_multicore_branching: 6.039440400000785s
+Total time of running aut_basic_multicore_branching: 6.535737100000006s
+Running aut_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_dupa_multicore_branching on cubes8.grl
+Total time of running aut_dupa_branching: 6.8827400000000125s
+Total time of running aut_dupa_multicore_branching: 9.761924100000215s
+Total time of running aut_fast_multicore_branching: 13.527374799999961s
+Total time of running aut_branching: 14.40756379999948s
+Total time of running aut_basic_multicore_branching: 16.53935509999974s
+Running aut_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_dupa_multicore_branching on cubes9.grl
+Total time of running aut_dupa_branching: 24.026429100000314s
+Total time of running aut_dupa_multicore_branching: 27.27774120000049s
+Total time of running aut_fast_multicore_branching: 38.23115779999989s
+Total time of running aut_branching: 63.3088029999999s
+Total time of running aut_basic_multicore_branching: 66.4699569000004s
+Running aut_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_dupa_multicore_branching on lecture.grl
+Total time of running aut_branching: 0.002868300000045565s
+Total time of running aut_dupa_branching: 0.0011374999994586688s
+Total time of running aut_dupa_multicore_branching: 0.9983619000004182s
+Total time of running aut_fast_multicore_branching: 1.0091325000003053s
+Total time of running aut_basic_multicore_branching: 1.0101205999999365s
+Running aut_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_dupa_multicore_branching on modulesC.grl
+Timeout while running aut_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_dupa_multicore_branching on modulesD.grl
+Total time of running aut_dupa_branching: 22.933444899999813s
+Total time of running aut_basic_multicore_branching: 33.377568599999904s
+Total time of running aut_branching: 34.76140510000005s
+Total time of running aut_dupa_multicore_branching: 36.22275130000071s
+Total time of running aut_fast_multicore_branching: 44.938549700000294s
+Running aut_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_dupa_multicore_branching on products216.grl
+Total time of running aut_dupa_branching: 22.065810600000077s
+Total time of running aut_dupa_multicore_branching: 41.358693199999834s
+Total time of running aut_fast_multicore_branching: 44.26791229999981s
+Total time of running aut_basic_multicore_branching: 59.917695499999354s
+Total time of running aut_branching: 80.6848747999993s
+Running aut_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_dupa_multicore_branching on products72.grl
+Total time of running aut_branching: 0.6510059000002002s
+Total time of running aut_dupa_branching: 1.3393305000008695s
+Total time of running aut_basic_multicore_branching: 13.752413700000034s
+Total time of running aut_fast_multicore_branching: 13.849244700000781s
+Total time of running aut_dupa_multicore_branching: 13.834120999999868s
+Running aut_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_dupa_multicore_branching on regulartwins.grl
+Total time of running aut_dupa_branching: 0.8333424000002196s
+Total time of running aut_branching: 6.448215000000346s
+Total time of running aut_fast_multicore_branching: 7.959549600000173s
+Total time of running aut_dupa_multicore_branching: 8.092972799999188s
+Total time of running aut_basic_multicore_branching: 10.419121500000074s
+Running aut_branching on small forest.gr
+Running aut_basic_multicore_branching on small forest.gr
+Running aut_fast_multicore_branching on small forest.gr
+Running aut_dupa_branching on small forest.gr
+Running aut_dupa_multicore_branching on small forest.gr
+Total time of running aut_branching: 0.0020100000001548324s
+Total time of running aut_basic_multicore_branching: 0.0015750000002299203s
+Total time of running aut_fast_multicore_branching: 0.0010486999999557156s
+Total time of running aut_dupa_branching: 0.000423899999987043s
+Total time of running aut_dupa_multicore_branching: 0.0010388000000602915s
+Running aut_branching on torus144.grl
+Running aut_basic_multicore_branching on torus144.grl
+Running aut_fast_multicore_branching on torus144.grl
+Running aut_dupa_branching on torus144.grl
+Running aut_dupa_multicore_branching on torus144.grl
+Total time of running aut_dupa_branching: 11.598695200000293s
+Total time of running aut_dupa_multicore_branching: 34.767807999999604s
+Total time of running aut_fast_multicore_branching: 35.478223699999944s
+Total time of running aut_basic_multicore_branching: 50.364304300000185s
+Total time of running aut_branching: 79.04705960000047s
+Running aut_branching on torus24.grl
+Running aut_basic_multicore_branching on torus24.grl
+Running aut_fast_multicore_branching on torus24.grl
+Running aut_dupa_branching on torus24.grl
+Running aut_dupa_multicore_branching on torus24.grl
+Total time of running aut_dupa_branching: 0.025012600000081875s
+Total time of running aut_branching: 0.05518269999993208s
+Total time of running aut_dupa_multicore_branching: 3.048985000000357s
+Total time of running aut_fast_multicore_branching: 3.075457599999936s
+Total time of running aut_basic_multicore_branching: 3.216159399999924s
+Running aut_branching on torus72.grl
+Running aut_basic_multicore_branching on torus72.grl
+Running aut_fast_multicore_branching on torus72.grl
+Running aut_dupa_branching on torus72.grl
+Running aut_dupa_multicore_branching on torus72.grl
+Total time of running aut_dupa_branching: 1.1925344999999652s
+Total time of running aut_branching: 5.381932400000551s
+Total time of running aut_dupa_multicore_branching: 12.064425599999595s
+Total time of running aut_fast_multicore_branching: 12.10546549999981s
+Total time of running aut_basic_multicore_branching: 12.357718200000818s
+Running aut_branching on trees11.grl
+Running aut_basic_multicore_branching on trees11.grl
+Running aut_fast_multicore_branching on trees11.grl
+Running aut_dupa_branching on trees11.grl
+Running aut_dupa_multicore_branching on trees11.grl
+Total time of running aut_branching: 0.007798300000104064s
+Total time of running aut_dupa_branching: 0.02367549999962648s
+Total time of running aut_basic_multicore_branching: 6.177667699999802s
+Total time of running aut_fast_multicore_branching: 6.253997099999651s
+Total time of running aut_dupa_multicore_branching: 6.339037700000517s
+Running aut_branching on trees36.grl
+Running aut_basic_multicore_branching on trees36.grl
+Running aut_fast_multicore_branching on trees36.grl
+Running aut_dupa_branching on trees36.grl
+Running aut_dupa_multicore_branching on trees36.grl
+Total time of running aut_branching: 0.05977309999980207s
+Total time of running aut_dupa_branching: 0.39760910000040894s
+Total time of running aut_dupa_multicore_branching: 9.134839600000305s
+Total time of running aut_basic_multicore_branching: 9.228459400000247s
+Total time of running aut_fast_multicore_branching: 9.511583000000428s
+Running aut_branching on trees90.grl
+Running aut_basic_multicore_branching on trees90.grl
+Running aut_fast_multicore_branching on trees90.grl
+Running aut_dupa_branching on trees90.grl
+Running aut_dupa_multicore_branching on trees90.grl
+Total time of running aut_branching: 0.16834749999998166s
+Total time of running aut_dupa_branching: 0.5250716999998986s
+Total time of running aut_basic_multicore_branching: 2.8137193999991723s
+Total time of running aut_dupa_multicore_branching: 3.139742099999239s
+Total time of running aut_fast_multicore_branching: 3.2351925000002666s
+Running aut_branching on wheeljoin14.grl
+Running aut_basic_multicore_branching on wheeljoin14.grl
+Running aut_fast_multicore_branching on wheeljoin14.grl
+Running aut_dupa_branching on wheeljoin14.grl
+Running aut_dupa_multicore_branching on wheeljoin14.grl
+Total time of running aut_dupa_branching: 0.2863419999994221s
+Total time of running aut_branching: 0.38967909999973926s
+Total time of running aut_fast_multicore_branching: 8.765265699999873s
+Total time of running aut_basic_multicore_branching: 8.774816299999657s
+Total time of running aut_dupa_multicore_branching: 8.88842460000069s
+Running aut_branching on wheeljoin19.grl
+Running aut_basic_multicore_branching on wheeljoin19.grl
+Running aut_fast_multicore_branching on wheeljoin19.grl
+Running aut_dupa_branching on wheeljoin19.grl
+Running aut_dupa_multicore_branching on wheeljoin19.grl
+Total time of running aut_dupa_branching: 6.017687900000055s
+Total time of running aut_branching: 10.350691200000256s
+Total time of running aut_dupa_multicore_branching: 14.638810299999932s
+Total time of running aut_fast_multicore_branching: 14.756905800000823s
+Total time of running aut_basic_multicore_branching: 14.794665599999462s
+Running aut_branching on wheeljoin25.grl
+Running aut_basic_multicore_branching on wheeljoin25.grl
+Running aut_fast_multicore_branching on wheeljoin25.grl
+Running aut_dupa_branching on wheeljoin25.grl
+Running aut_dupa_multicore_branching on wheeljoin25.grl
+Total time of running aut_dupa_multicore_branching: 9.312680099999852s
+Total time of running aut_basic_multicore_branching: 9.527057899999818s
+Total time of running aut_dupa_branching: 12.577518399999462s
+Total time of running aut_fast_multicore_branching: 20.020907199999783s
+Total time of running aut_branching: 20.889439099999436s
+Running aut_branching on wheeljoin33.grl
+Running aut_basic_multicore_branching on wheeljoin33.grl
+Running aut_fast_multicore_branching on wheeljoin33.grl
+Running aut_dupa_branching on wheeljoin33.grl
+Running aut_dupa_multicore_branching on wheeljoin33.grl
+Total time of running aut_dupa_multicore_branching: 17.45171560000017s
+Total time of running aut_basic_multicore_branching: 26.11466500000006s
+Total time of running aut_fast_multicore_branching: 245.54610479999974s
+Total time of running aut_dupa_branching: 322.23904089999996s
+Total time of running aut_branching: 482.2792665999996s
+Running aut_branching on wheelstar12.grl
+Running aut_basic_multicore_branching on wheelstar12.grl
+Running aut_fast_multicore_branching on wheelstar12.grl
+Running aut_dupa_branching on wheelstar12.grl
+Running aut_dupa_multicore_branching on wheelstar12.grl
+Total time of running aut_dupa_branching: 8.137951700000485s
+Total time of running aut_fast_multicore_branching: 10.908847600000627s
+Total time of running aut_basic_multicore_branching: 22.176954800000203s
+Total time of running aut_dupa_multicore_branching: 22.85509110000021s
+Total time of running aut_branching: 25.178119900000638s
+Running aut_branching on wheelstar15.grl
+Running aut_basic_multicore_branching on wheelstar15.grl
+Running aut_fast_multicore_branching on wheelstar15.grl
+Running aut_dupa_branching on wheelstar15.grl
+Running aut_dupa_multicore_branching on wheelstar15.grl
+Timeout while running aut_branching on ../input/branching/wheelstar15.grl: exceeded 600s
+Running aut_branching on wheelstar16.grl
+Running aut_basic_multicore_branching on wheelstar16.grl
+Running aut_fast_multicore_branching on wheelstar16.grl
+Running aut_dupa_branching on wheelstar16.grl
+Running aut_dupa_multicore_branching on wheelstar16.grl
+Timeout while running aut_branching on ../input/branching/wheelstar16.grl: exceeded 600s
+Running aut_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_dupa_multicore_branching on bigtrees1.grl
+Total time of running aut_branching: 0.0689767000003485s
+Total time of running aut_dupa_branching: 0.3443862000003719s
+Total time of running aut_basic_multicore_branching: 5.659288099999685s
+Total time of running aut_dupa_multicore_branching: 320.7711973000005s
+Timeout while running aut_fast_multicore_branching on ../input/branching/bigtrees1.grl: exceeded 600s
+Running aut_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Total time of running aut_branching: 0.18060130000048957s
+Total time of running aut_dupa_branching: 0.26965279999967606s
+Total time of running aut_basic_multicore_branching: 4.689199000000372s
+Total time of running aut_dupa_multicore_branching: 5.047940299999027s
+Total time of running aut_fast_multicore_branching: 5.201186399999642s
+Running aut_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Total time of running aut_branching: 2.281161400000201s
+Total time of running aut_dupa_branching: 4.736524900001314s
+Total time of running aut_basic_multicore_branching: 8.852158699999563s
+Total time of running aut_dupa_multicore_branching: 8.705288899998777s
+Total time of running aut_fast_multicore_branching: 8.991429000001517s
+Running aut_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_dupa_multicore_branching on cographs1.grl
+Total time of running aut_dupa_multicore_branching: 3.394972300000518s
+Total time of running aut_fast_multicore_branching: 343.7997813000002s
+Total time of running aut_dupa_branching: 567.5191586000001s
+Timeout while running aut_branching on ../input/branching/cographs1.grl: exceeded 600s
+Running aut_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_dupa_multicore_branching on cubes3.grl
+Total time of running aut_branching: 0.007879999999204301s
+Total time of running aut_dupa_branching: 0.003411699999560369s
+Total time of running aut_fast_multicore_branching: 3.1760779000014736s
+Total time of running aut_basic_multicore_branching: 3.1777251999992586s
+Total time of running aut_dupa_multicore_branching: 3.253382099999726s
+Running aut_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_dupa_multicore_branching on cubes4.grl
+Total time of running aut_branching: 0.031124799999815878s
+Total time of running aut_dupa_branching: 0.009802399999898626s
+Total time of running aut_dupa_multicore_branching: 3.0477092000000994s
+Total time of running aut_basic_multicore_branching: 3.1104829000014433s
+Total time of running aut_fast_multicore_branching: 3.130037799999627s
+Running aut_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_dupa_multicore_branching on cubes5.grl
+Total time of running aut_dupa_branching: 0.07751619999908144s
+Total time of running aut_branching: 0.1550733999993099s
+Total time of running aut_fast_multicore_branching: 2.775563900000634s
+Total time of running aut_dupa_multicore_branching: 2.804922900000747s
+Total time of running aut_basic_multicore_branching: 2.856152499998643s
+Running aut_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_dupa_multicore_branching on cubes6.grl
+Total time of running aut_dupa_branching: 0.1374390000000858s
+Total time of running aut_branching: 0.6632811999988917s
+Total time of running aut_dupa_multicore_branching: 2.9052798000011535s
+Total time of running aut_fast_multicore_branching: 2.9569329999994807s
+Total time of running aut_basic_multicore_branching: 3.136235599999054s
+Running aut_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_dupa_multicore_branching on cubes7.grl
+Total time of running aut_dupa_branching: 1.7119910000001255s
+Total time of running aut_branching: 2.9009501000000455s
+Total time of running aut_dupa_multicore_branching: 4.9457181000016135s
+Total time of running aut_fast_multicore_branching: 5.665787300000375s
+Total time of running aut_basic_multicore_branching: 5.951242799999818s
+Running aut_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_dupa_multicore_branching on cubes8.grl
+Total time of running aut_dupa_branching: 7.124192700001004s
+Total time of running aut_dupa_multicore_branching: 9.746164700000008s
+Total time of running aut_fast_multicore_branching: 13.773689699999522s
+Total time of running aut_branching: 15.549336599999151s
+Total time of running aut_basic_multicore_branching: 17.555107200001657s
+Running aut_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_dupa_multicore_branching on cubes9.grl
+Total time of running aut_dupa_branching: 27.684058700000605s
+Total time of running aut_dupa_multicore_branching: 31.143819499999154s
+Total time of running aut_fast_multicore_branching: 44.2686679999988s
+Total time of running aut_branching: 77.44095310000012s
+Total time of running aut_basic_multicore_branching: 80.94214310000098s
+Running aut_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_dupa_multicore_branching on lecture.grl
+Total time of running aut_branching: 0.002494299998943461s
+Total time of running aut_dupa_branching: 0.002535899999202229s
+Total time of running aut_basic_multicore_branching: 1.0658550999996805s
+Total time of running aut_fast_multicore_branching: 1.0675054000003001s
+Total time of running aut_dupa_multicore_branching: 1.0536745999997947s
+Running aut_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_dupa_multicore_branching on modulesC.grl
+Timeout while running aut_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_dupa_multicore_branching on modulesD.grl
+Total time of running aut_dupa_branching: 29.88723570000002s
+Total time of running aut_branching: 42.70169680000072s
+Total time of running aut_basic_multicore_branching: 44.831187199999476s
+Total time of running aut_dupa_multicore_branching: 49.13619870000002s
+Total time of running aut_fast_multicore_branching: 62.77561119999882s
+Running aut_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_dupa_multicore_branching on products216.grl
+Total time of running aut_dupa_branching: 20.29966389999936s
+Total time of running aut_dupa_multicore_branching: 47.70124020000003s
+Total time of running aut_fast_multicore_branching: 54.53286600000138s
+Total time of running aut_basic_multicore_branching: 74.31496760000118s
+Total time of running aut_branching: 83.10628739999993s
+Running aut_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_dupa_multicore_branching on products72.grl
+Total time of running aut_branching: 0.8835048999990249s
+Total time of running aut_dupa_branching: 1.9930674999995972s
+Total time of running aut_basic_multicore_branching: 21.443770800000493s
+Total time of running aut_dupa_multicore_branching: 21.311114899999666s
+Total time of running aut_fast_multicore_branching: 21.421107800000755s
+Running aut_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_dupa_multicore_branching on regulartwins.grl
+Total time of running aut_dupa_branching: 1.1374770999991597s
+Total time of running aut_fast_multicore_branching: 10.357190799999444s
+Total time of running aut_dupa_multicore_branching: 12.411223999999493s
+Total time of running aut_branching: 13.51778810000178s
+Total time of running aut_basic_multicore_branching: 16.294567000000825s
+Running aut_branching on small forest.gr
+Running aut_basic_multicore_branching on small forest.gr
+Running aut_fast_multicore_branching on small forest.gr
+Running aut_dupa_branching on small forest.gr
+Running aut_dupa_multicore_branching on small forest.gr
+Total time of running aut_branching: 0.0017535999995743623s
+Total time of running aut_basic_multicore_branching: 0.0013872999988961965s
+Total time of running aut_fast_multicore_branching: 0.001100600000427221s
+Total time of running aut_dupa_branching: 0.0004272999995009741s
+Total time of running aut_dupa_multicore_branching: 0.000979499998720712s
+Running aut_branching on torus144.grl
+Running aut_basic_multicore_branching on torus144.grl
+Running aut_fast_multicore_branching on torus144.grl
+Running aut_dupa_branching on torus144.grl
+Running aut_dupa_multicore_branching on torus144.grl
+Total time of running aut_dupa_branching: 12.340567300001567s
+Total time of running aut_dupa_multicore_branching: 53.755734100001064s
+Total time of running aut_fast_multicore_branching: 55.8384371000011s
+Total time of running aut_basic_multicore_branching: 75.77580449999914s
+Total time of running aut_branching: 88.68064320000121s
+Running aut_branching on torus24.grl
+Running aut_basic_multicore_branching on torus24.grl
+Running aut_fast_multicore_branching on torus24.grl
+Running aut_dupa_branching on torus24.grl
+Running aut_dupa_multicore_branching on torus24.grl
+Total time of running aut_branching: 0.09734039999966626s
+Total time of running aut_dupa_branching: 0.03664369999933115s
+Total time of running aut_fast_multicore_branching: 5.9654544000004535s
+Total time of running aut_dupa_multicore_branching: 6.006387999999788s
+Total time of running aut_basic_multicore_branching: 6.258816700001262s
+Running aut_branching on torus72.grl
+Running aut_basic_multicore_branching on torus72.grl
+Running aut_fast_multicore_branching on torus72.grl
+Running aut_dupa_branching on torus72.grl
+Running aut_dupa_multicore_branching on torus72.grl
+Total time of running aut_dupa_branching: 2.013619999999719s
+Total time of running aut_branching: 10.265676900000472s
+Total time of running aut_dupa_multicore_branching: 22.11592810000002s
+Total time of running aut_fast_multicore_branching: 22.78517760000068s
+Total time of running aut_basic_multicore_branching: 22.887522400000307s
+Running aut_branching on trees11.grl
+Running aut_basic_multicore_branching on trees11.grl
+Running aut_fast_multicore_branching on trees11.grl
+Running aut_dupa_branching on trees11.grl
+Running aut_dupa_multicore_branching on trees11.grl
+Total time of running aut_branching: 0.006575200000952464s
+Total time of running aut_dupa_branching: 0.023941599998579477s
+Total time of running aut_fast_multicore_branching: 11.873838499999692s
+Total time of running aut_dupa_multicore_branching: 12.081055200000264s
+Total time of running aut_basic_multicore_branching: 12.277918900001168s
+Running aut_branching on trees36.grl
+Running aut_basic_multicore_branching on trees36.grl
+Running aut_fast_multicore_branching on trees36.grl
+Running aut_dupa_branching on trees36.grl
+Running aut_dupa_multicore_branching on trees36.grl
+Total time of running aut_branching: 0.07689709999976913s
+Total time of running aut_dupa_branching: 0.5096312000005128s
+Total time of running aut_basic_multicore_branching: 19.39869820000058s
+Total time of running aut_fast_multicore_branching: 19.526521499999944s
+Total time of running aut_dupa_multicore_branching: 19.66264769999907s
+Running aut_branching on trees90.grl
+Running aut_basic_multicore_branching on trees90.grl
+Running aut_fast_multicore_branching on trees90.grl
+Running aut_dupa_branching on trees90.grl
+Running aut_dupa_multicore_branching on trees90.grl
+Total time of running aut_branching: 0.2579244999997172s
+Total time of running aut_dupa_branching: 0.8538447999999335s
+Total time of running aut_basic_multicore_branching: 6.864449099999547s
+Total time of running aut_fast_multicore_branching: 6.930204199999935s
+Total time of running aut_dupa_multicore_branching: 6.87546360000124s
+Running aut_branching on wheeljoin14.grl
+Running aut_basic_multicore_branching on wheeljoin14.grl
+Running aut_fast_multicore_branching on wheeljoin14.grl
+Running aut_dupa_branching on wheeljoin14.grl
+Running aut_dupa_multicore_branching on wheeljoin14.grl
+Total time of running aut_dupa_branching: 0.4493070999997144s
+Total time of running aut_branching: 0.5368988999998692s
+Total time of running aut_fast_multicore_branching: 17.840137099999993s
+Total time of running aut_basic_multicore_branching: 17.8517109000004s
+Total time of running aut_dupa_multicore_branching: 17.838330900000074s
+Running aut_branching on wheeljoin19.grl
+Running aut_basic_multicore_branching on wheeljoin19.grl
+Running aut_fast_multicore_branching on wheeljoin19.grl
+Running aut_dupa_branching on wheeljoin19.grl
+Running aut_dupa_multicore_branching on wheeljoin19.grl
+Total time of running aut_dupa_branching: 8.487434600001507s
+Total time of running aut_branching: 8.704535899998518s
+Total time of running aut_dupa_multicore_branching: 27.43954010000016s
+Total time of running aut_fast_multicore_branching: 27.570168199999898s
+Total time of running aut_basic_multicore_branching: 27.808134700000664s
+Running aut_branching on wheeljoin25.grl
+Running aut_basic_multicore_branching on wheeljoin25.grl
+Running aut_fast_multicore_branching on wheeljoin25.grl
+Running aut_dupa_branching on wheeljoin25.grl
+Running aut_dupa_multicore_branching on wheeljoin25.grl
+Total time of running aut_basic_multicore_branching: 16.791923400000087s
+Total time of running aut_dupa_multicore_branching: 16.76571950000107s
+Total time of running aut_dupa_branching: 17.524167699999452s
+Total time of running aut_branching: 20.98735779999879s
+Total time of running aut_fast_multicore_branching: 24.889712899999722s
+Running aut_branching on wheeljoin33.grl
+Running aut_basic_multicore_branching on wheeljoin33.grl
+Running aut_fast_multicore_branching on wheeljoin33.grl
+Running aut_dupa_branching on wheeljoin33.grl
+Running aut_dupa_multicore_branching on wheeljoin33.grl
+Total time of running aut_dupa_multicore_branching: 28.557058599999436s
+Total time of running aut_basic_multicore_branching: 38.75307040000007s
+Total time of running aut_fast_multicore_branching: 224.99356129999978s
+Total time of running aut_dupa_branching: 356.96617549999974s
+Total time of running aut_branching: 558.0823046999994s
+Running aut_branching on wheelstar12.grl
+Running aut_basic_multicore_branching on wheelstar12.grl
+Running aut_fast_multicore_branching on wheelstar12.grl
+Running aut_dupa_branching on wheelstar12.grl
+Running aut_dupa_multicore_branching on wheelstar12.grl
+Total time of running aut_dupa_branching: 8.846912500001054s
+Total time of running aut_fast_multicore_branching: 15.064486499999475s
+Total time of running aut_dupa_multicore_branching: 29.234339399999953s
+Total time of running aut_basic_multicore_branching: 29.360080599999492s
+Total time of running aut_branching: 30.926982700000735s
+Running aut_branching on wheelstar15.grl
+Running aut_basic_multicore_branching on wheelstar15.grl
+Running aut_fast_multicore_branching on wheelstar15.grl
+Running aut_dupa_branching on wheelstar15.grl
+Running aut_dupa_multicore_branching on wheelstar15.grl
+Timeout while running aut_branching on ../input/branching/wheelstar15.grl: exceeded 600s
+Running aut_branching on wheelstar16.grl
+Running aut_basic_multicore_branching on wheelstar16.grl
+Running aut_fast_multicore_branching on wheelstar16.grl
+Running aut_dupa_branching on wheelstar16.grl
+Running aut_dupa_multicore_branching on wheelstar16.grl
+Timeout while running aut_branching on ../input/branching/wheelstar16.grl: exceeded 600s
+Running aut_branching on bigtrees1.grl
+Running aut_basic_multicore_branching on bigtrees1.grl
+Running aut_fast_multicore_branching on bigtrees1.grl
+Running aut_dupa_branching on bigtrees1.grl
+Running aut_dupa_multicore_branching on bigtrees1.grl
+Total time of running aut_branching: 0.08714380000128585s
+Total time of running aut_dupa_branching: 0.4191960999996809s
+Total time of running aut_basic_multicore_branching: 6.148852199999965s
+Total time of running aut_dupa_multicore_branching: 249.84483790000013s
+Total time of running aut_fast_multicore_branching: 474.16959380000117s
+Running aut_branching on bigtrees2.grl
+Running aut_basic_multicore_branching on bigtrees2.grl
+Running aut_fast_multicore_branching on bigtrees2.grl
+Running aut_dupa_branching on bigtrees2.grl
+Running aut_dupa_multicore_branching on bigtrees2.grl
+Total time of running aut_branching: 0.21513649999906193s
+Total time of running aut_dupa_branching: 0.31501720000051137s
+Total time of running aut_basic_multicore_branching: 4.631238199999643s
+Total time of running aut_fast_multicore_branching: 4.846954100001312s
+Total time of running aut_dupa_multicore_branching: 4.827001700001347s
+Running aut_branching on bigtrees3.grl
+Running aut_basic_multicore_branching on bigtrees3.grl
+Running aut_fast_multicore_branching on bigtrees3.grl
+Running aut_dupa_branching on bigtrees3.grl
+Running aut_dupa_multicore_branching on bigtrees3.grl
+Total time of running aut_dupa_branching: 2.3895523000010144s
+Total time of running aut_branching: 3.0220681999999215s
+Total time of running aut_basic_multicore_branching: 7.443518299998686s
+Total time of running aut_dupa_multicore_branching: 7.663693499998772s
+Total time of running aut_fast_multicore_branching: 8.084013400000913s
+Running aut_branching on cographs1.grl
+Running aut_basic_multicore_branching on cographs1.grl
+Running aut_fast_multicore_branching on cographs1.grl
+Running aut_dupa_branching on cographs1.grl
+Running aut_dupa_multicore_branching on cographs1.grl
+Total time of running aut_dupa_multicore_branching: 4.884435099998882s
+Total time of running aut_fast_multicore_branching: 328.1412089000005s
+Total time of running aut_dupa_branching: 489.67298219999975s
+Timeout while running aut_branching on ../input/branching/cographs1.grl: exceeded 600s
+Running aut_branching on cubes3.grl
+Running aut_basic_multicore_branching on cubes3.grl
+Running aut_fast_multicore_branching on cubes3.grl
+Running aut_dupa_branching on cubes3.grl
+Running aut_dupa_multicore_branching on cubes3.grl
+Total time of running aut_branching: 0.008326200000738027s
+Total time of running aut_dupa_branching: 0.0057744000005186535s
+Total time of running aut_fast_multicore_branching: 4.256545700000061s
+Total time of running aut_basic_multicore_branching: 4.351528000001053s
+Total time of running aut_dupa_multicore_branching: 4.445080100000268s
+Running aut_branching on cubes4.grl
+Running aut_basic_multicore_branching on cubes4.grl
+Running aut_fast_multicore_branching on cubes4.grl
+Running aut_dupa_branching on cubes4.grl
+Running aut_dupa_multicore_branching on cubes4.grl
+Total time of running aut_branching: 0.0430636000000959s
+Total time of running aut_dupa_branching: 0.009202200000800076s
+Total time of running aut_dupa_multicore_branching: 4.114187099999981s
+Total time of running aut_fast_multicore_branching: 4.433782000000065s
+Total time of running aut_basic_multicore_branching: 4.523967700000867s
+Running aut_branching on cubes5.grl
+Running aut_basic_multicore_branching on cubes5.grl
+Running aut_fast_multicore_branching on cubes5.grl
+Running aut_dupa_branching on cubes5.grl
+Running aut_dupa_multicore_branching on cubes5.grl
+Total time of running aut_dupa_branching: 0.11269129999891447s
+Total time of running aut_branching: 0.20521189999999478s
+Total time of running aut_basic_multicore_branching: 3.503992699999799s
+Total time of running aut_fast_multicore_branching: 3.5997803999998723s
+Total time of running aut_dupa_multicore_branching: 3.7648271000016393s
+Running aut_branching on cubes6.grl
+Running aut_basic_multicore_branching on cubes6.grl
+Running aut_fast_multicore_branching on cubes6.grl
+Running aut_dupa_branching on cubes6.grl
+Running aut_dupa_multicore_branching on cubes6.grl
+Total time of running aut_dupa_branching: 0.16811349999989034s
+Total time of running aut_branching: 0.6935550000016519s
+Total time of running aut_basic_multicore_branching: 3.843234799998754s
+Total time of running aut_fast_multicore_branching: 3.861624999999549s
+Total time of running aut_dupa_multicore_branching: 3.78737910000018s
+Running aut_branching on cubes7.grl
+Running aut_basic_multicore_branching on cubes7.grl
+Running aut_fast_multicore_branching on cubes7.grl
+Running aut_dupa_branching on cubes7.grl
+Running aut_dupa_multicore_branching on cubes7.grl
+Total time of running aut_dupa_branching: 1.740822300000218s
+Total time of running aut_branching: 2.9003080999991653s
+Total time of running aut_dupa_multicore_branching: 6.6421933000001445s
+Total time of running aut_fast_multicore_branching: 7.591702199999418s
+Total time of running aut_basic_multicore_branching: 7.6550428999998985s
+Running aut_branching on cubes8.grl
+Running aut_basic_multicore_branching on cubes8.grl
+Running aut_fast_multicore_branching on cubes8.grl
+Running aut_dupa_branching on cubes8.grl
+Running aut_dupa_multicore_branching on cubes8.grl
+Total time of running aut_dupa_branching: 6.833037099999274s
+Total time of running aut_dupa_multicore_branching: 11.275665199998912s
+Total time of running aut_branching: 15.131666299999779s
+Total time of running aut_fast_multicore_branching: 15.14781739999853s
+Total time of running aut_basic_multicore_branching: 16.314810599998964s
+Running aut_branching on cubes9.grl
+Running aut_basic_multicore_branching on cubes9.grl
+Running aut_fast_multicore_branching on cubes9.grl
+Running aut_dupa_branching on cubes9.grl
+Running aut_dupa_multicore_branching on cubes9.grl
+Total time of running aut_dupa_branching: 27.319567600001392s
+Total time of running aut_dupa_multicore_branching: 30.026518999999098s
+Total time of running aut_fast_multicore_branching: 39.07640589999937s
+Total time of running aut_branching: 59.23886510000011s
+Total time of running aut_basic_multicore_branching: 65.61013829999865s
+Running aut_branching on lecture.grl
+Running aut_basic_multicore_branching on lecture.grl
+Running aut_fast_multicore_branching on lecture.grl
+Running aut_dupa_branching on lecture.grl
+Running aut_dupa_multicore_branching on lecture.grl
+Total time of running aut_branching: 0.002671399999599089s
+Total time of running aut_dupa_branching: 0.0021456000013131415s
+Total time of running aut_dupa_multicore_branching: 1.1377727999988565s
+Total time of running aut_fast_multicore_branching: 1.1483459999999468s
+Total time of running aut_basic_multicore_branching: 1.1597691000006307s
+Running aut_branching on modulesC.grl
+Running aut_basic_multicore_branching on modulesC.grl
+Running aut_fast_multicore_branching on modulesC.grl
+Running aut_dupa_branching on modulesC.grl
+Running aut_dupa_multicore_branching on modulesC.grl
+Timeout while running aut_branching on ../input/branching/modulesC.grl: exceeded 600s
+Running aut_branching on modulesD.grl
+Running aut_basic_multicore_branching on modulesD.grl
+Running aut_fast_multicore_branching on modulesD.grl
+Running aut_dupa_branching on modulesD.grl
+Running aut_dupa_multicore_branching on modulesD.grl
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=10432, pipe_handle=472)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+  File "C:\Python314\Lib\multiprocessing\connection.py", line 1196, in rebuild_pipe_connection
+    handle = dh.detach()
+  File "C:\Python314\Lib\multiprocessing\reduction.py", line 131, in detach
+    return _winapi.DuplicateHandle(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        proc, self._handle, _winapi.GetCurrentProcess(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self._access, False, _winapi.DUPLICATE_CLOSE_SOURCE)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied
+Total time of running aut_dupa_branching: 34.6678952000002s
+Total time of running aut_branching: 40.136962500000664s
+Total time of running aut_dupa_multicore_branching: 87.25216999999975s
+Total time of running aut_basic_multicore_branching: 94.41481199999907s
+Total time of running aut_fast_multicore_branching: 174.3115682000007s
+Running aut_branching on products216.grl
+Running aut_basic_multicore_branching on products216.grl
+Running aut_fast_multicore_branching on products216.grl
+Running aut_dupa_branching on products216.grl
+Running aut_dupa_multicore_branching on products216.grl
+Total time of running aut_dupa_branching: 56.63871510000172s
+Total time of running aut_dupa_multicore_branching: 82.5622736999976s
+Total time of running aut_branching: 95.42281430000003s
+Total time of running aut_fast_multicore_branching: 93.47753999999986s
+Total time of running aut_basic_multicore_branching: 115.77483859999847s
+Running aut_branching on products72.grl
+Running aut_basic_multicore_branching on products72.grl
+Running aut_fast_multicore_branching on products72.grl
+Running aut_dupa_branching on products72.grl
+Running aut_dupa_multicore_branching on products72.grl
+Total time of running aut_branching: 1.4652691000010236s
+Total time of running aut_dupa_branching: 2.8947942000013427s
+Total time of running aut_basic_multicore_branching: 32.543268700002955s
+Total time of running aut_dupa_multicore_branching: 32.95913920000021s
+Total time of running aut_fast_multicore_branching: 33.25677939999878s
+Running aut_branching on regulartwins.grl
+Running aut_basic_multicore_branching on regulartwins.grl
+Running aut_fast_multicore_branching on regulartwins.grl
+Running aut_dupa_branching on regulartwins.grl
+Running aut_dupa_multicore_branching on regulartwins.grl
+Total time of running aut_dupa_branching: 1.8044914999991306s
+Total time of running aut_branching: 8.047552299998642s
+Total time of running aut_fast_multicore_branching: 19.488662799998565s
+Total time of running aut_dupa_multicore_branching: 19.79964530000143s
+Total time of running aut_basic_multicore_branching: 25.84072219999871s
+Running aut_branching on small forest.gr
+Running aut_basic_multicore_branching on small forest.gr
+Running aut_fast_multicore_branching on small forest.gr
+Running aut_dupa_branching on small forest.gr
+Running aut_dupa_multicore_branching on small forest.gr
+Total time of running aut_branching: 0.0018032999978458975s
+Total time of running aut_basic_multicore_branching: 0.001333899999735877s
+Total time of running aut_fast_multicore_branching: 0.001076900000043679s
+Total time of running aut_dupa_branching: 0.00039400000241585076s
+Total time of running aut_dupa_multicore_branching: 0.0009791999982553534s
+Running aut_branching on torus144.grl
+Running aut_basic_multicore_branching on torus144.grl
+Running aut_fast_multicore_branching on torus144.grl
+Running aut_dupa_branching on torus144.grl
+Running aut_dupa_multicore_branching on torus144.grl
+Total time of running aut_dupa_branching: 14.669411200000468s
+Total time of running aut_dupa_multicore_branching: 53.061596700001246s
+Total time of running aut_fast_multicore_branching: 53.43242519999694s
+Total time of running aut_branching: 96.1233691999987s
+Total time of running aut_basic_multicore_branching: 100.1147667999976s
+Running aut_branching on torus24.grl
+Running aut_basic_multicore_branching on torus24.grl
+Running aut_fast_multicore_branching on torus24.grl
+Running aut_dupa_branching on torus24.grl
+Running aut_dupa_multicore_branching on torus24.grl
+Total time of running aut_branching: 0.07214260000182549s
+Total time of running aut_dupa_branching: 0.04373169999962556s
+Total time of running aut_basic_multicore_branching: 6.6078703999992285s
+Total time of running aut_dupa_multicore_branching: 6.936511700001574s
+Total time of running aut_fast_multicore_branching: 7.390950099998008s
+Running aut_branching on torus72.grl
+Running aut_basic_multicore_branching on torus72.grl
+Running aut_fast_multicore_branching on torus72.grl
+Running aut_dupa_branching on torus72.grl
+Running aut_dupa_multicore_branching on torus72.grl
+Total time of running aut_dupa_branching: 2.0658422999986215s
+Total time of running aut_branching: 4.7649641999996675s
+Total time of running aut_basic_multicore_branching: 24.645284700000047s
+Total time of running aut_fast_multicore_branching: 24.574670899997727s
+Total time of running aut_dupa_multicore_branching: 24.300085999999283s
+Running aut_branching on trees11.grl
+Running aut_basic_multicore_branching on trees11.grl
+Running aut_fast_multicore_branching on trees11.grl
+Running aut_dupa_branching on trees11.grl
+Running aut_dupa_multicore_branching on trees11.grl
+Total time of running aut_branching: 0.006702999999106396s
+Total time of running aut_dupa_branching: 0.023211299998365575s
+Total time of running aut_basic_multicore_branching: 13.36543470000106s
+Total time of running aut_fast_multicore_branching: 13.804766400000517s
+Total time of running aut_dupa_multicore_branching: 13.915133700000297s
+Running aut_branching on trees36.grl
+Running aut_basic_multicore_branching on trees36.grl
+Running aut_fast_multicore_branching on trees36.grl
+Running aut_dupa_branching on trees36.grl
+Running aut_dupa_multicore_branching on trees36.grl
+Total time of running aut_branching: 0.06085710000115796s
+Total time of running aut_dupa_branching: 0.5598933000001125s
+Total time of running aut_basic_multicore_branching: 22.173863300002267s
+Total time of running aut_fast_multicore_branching: 22.158420799998567s
+Total time of running aut_dupa_multicore_branching: 22.246487699998397s
+Running aut_branching on trees90.grl
+Running aut_basic_multicore_branching on trees90.grl
+Running aut_fast_multicore_branching on trees90.grl
+Running aut_dupa_branching on trees90.grl
+Running aut_dupa_multicore_branching on trees90.grl
+Total time of running aut_branching: 0.30004140000164625s
+Total time of running aut_dupa_branching: 0.7992119000009552s
+Total time of running aut_basic_multicore_branching: 7.90145240000129s
+Total time of running aut_fast_multicore_branching: 8.01005829999849s
+Total time of running aut_dupa_multicore_branching: 8.882600499997352s
+Running aut_branching on wheeljoin14.grl
+Running aut_basic_multicore_branching on wheeljoin14.grl
+Running aut_fast_multicore_branching on wheeljoin14.grl
+Running aut_dupa_branching on wheeljoin14.grl
+Running aut_dupa_multicore_branching on wheeljoin14.grl
+Total time of running aut_branching: 0.6576271000012639s
+Total time of running aut_dupa_branching: 0.41662319999886677s
+Total time of running aut_fast_multicore_branching: 18.778225800000655s
+Total time of running aut_dupa_multicore_branching: 19.090204700001777s
+Total time of running aut_basic_multicore_branching: 19.84379009999975s
+Running aut_branching on wheeljoin19.grl
+Running aut_basic_multicore_branching on wheeljoin19.grl
+Running aut_fast_multicore_branching on wheeljoin19.grl
+Running aut_dupa_branching on wheeljoin19.grl
+Running aut_dupa_multicore_branching on wheeljoin19.grl
+Total time of running aut_dupa_branching: 6.249086200001329s
+Total time of running aut_branching: 11.580088099999557s
+Total time of running aut_fast_multicore_branching: 33.109488099999s
+Total time of running aut_basic_multicore_branching: 33.602202600002784s
+Total time of running aut_dupa_multicore_branching: 33.33056199999919s
+Running aut_branching on wheeljoin25.grl
+Running aut_basic_multicore_branching on wheeljoin25.grl
+Running aut_fast_multicore_branching on wheeljoin25.grl
+Running aut_dupa_branching on wheeljoin25.grl
+Running aut_dupa_multicore_branching on wheeljoin25.grl
+Total time of running aut_dupa_branching: 20.326628300001175s
+Total time of running aut_basic_multicore_branching: 25.310269900001003s
+Total time of running aut_dupa_multicore_branching: 25.314635999999155s
+Total time of running aut_branching: 31.180193600001076s
+Total time of running aut_fast_multicore_branching: 33.32546689999799s
+Running aut_branching on wheeljoin33.grl
+Running aut_basic_multicore_branching on wheeljoin33.grl
+Running aut_fast_multicore_branching on wheeljoin33.grl
+Running aut_dupa_branching on wheeljoin33.grl
+Running aut_dupa_multicore_branching on wheeljoin33.grl
+Total time of running aut_dupa_multicore_branching: 45.44608969999899s
+Total time of running aut_basic_multicore_branching: 55.6332502999976s
+Total time of running aut_fast_multicore_branching: 331.6560902000019s
+Total time of running aut_dupa_branching: 427.6024608000007s
+Timeout while running aut_branching on ../input/branching/wheeljoin33.grl: exceeded 600s
+Running aut_branching on wheelstar12.grl
+Running aut_basic_multicore_branching on wheelstar12.grl
+Running aut_fast_multicore_branching on wheelstar12.grl
+Running aut_dupa_branching on wheelstar12.grl
+Running aut_dupa_multicore_branching on wheelstar12.grl
+Total time of running aut_dupa_branching: 11.95000440000149s
+Total time of running aut_fast_multicore_branching: 23.972669300001144s
+Total time of running aut_basic_multicore_branching: 35.08421660000022s
+Total time of running aut_dupa_multicore_branching: 36.143755600001896s
+Total time of running aut_branching: 38.772077500001615s
+Running aut_branching on wheelstar15.grl
+Running aut_basic_multicore_branching on wheelstar15.grl
+Running aut_fast_multicore_branching on wheelstar15.grl
+Running aut_dupa_branching on wheelstar15.grl
+Running aut_dupa_multicore_branching on wheelstar15.grl
+Timeout while running aut_branching on ../input/branching/wheelstar15.grl: exceeded 600s
+Running aut_branching on wheelstar16.grl
+Running aut_basic_multicore_branching on wheelstar16.grl
+Running aut_fast_multicore_branching on wheelstar16.grl
+Running aut_dupa_branching on wheelstar16.grl
+Running aut_dupa_multicore_branching on wheelstar16.grl
+Timeout while running aut_branching on ../input/branching/wheelstar16.grl: exceeded 600s
+
+Process finished with exit code 0

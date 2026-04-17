@@ -1,4 +1,5 @@
-﻿from testing.test_function_multicore import create_report
+﻿from branching.branching_v1_0_7 import aut_fast_branching_v3
+from testing.test_function import create_report
 
 # Import all the branching functions
 from branching.branching_v1_0_5 import aut_branching
@@ -24,6 +25,8 @@ def run_aut_basic_multicore_branching(p):
 def run_aut_fast_multicore_branching(p):
     return aut_fast_multicore_branching(p, do_aut_count=False)
 
+def run_aut_fast_branching(p):
+    return aut_fast_branching_v3(p, do_aut_count=False)
 
 def run_aut_dupa_branching(p):
     return aut_dupa_branching(p, do_aut_count=False)
@@ -86,9 +89,9 @@ def run_gi_benchmarks():
 
     functions_to_test = {
         "aut_branching": run_aut_branching,
-        "aut_mixed_branching": run_aut_mixed_branching,
+        #"aut_mixed_branching": run_aut_mixed_branching,
         "aut_basic_multicore_branching": run_aut_basic_multicore_branching,
-        "aut_fast_multicore_branching": run_aut_fast_multicore_branching,
+        #"aut_fast_multicore_branching": run_aut_fast_multicore_branching,
         "aut_dupa_branching": run_aut_dupa_branching,
         "aut_dupa_multicore_branching": run_aut_dupa_multicore_branching,
     }

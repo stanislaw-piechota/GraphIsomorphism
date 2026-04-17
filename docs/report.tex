@@ -267,10 +267,41 @@ We experimented with different methods, first -threading- but found that it stil
 To actually get it to utilize multiple cores, we switched to -concurrent- and used the ProcessPoolExecutor.
 We tried to make branching itself spawn new processes, but even with this being limited to the first level of the search tree, the overhead of spawning processes and inter-process communication was too high, leading to worse performance than the single-threaded version.
 Instead, we implemented a more coarse-grained parallelism approach, where graphs are compared to known isomorphic classes in parallel, the first match being returned and the rest of the comparisons being cancelled.
-It still does add a couple seconds of overhead, but for a couple datasets it was the difference between solving the instance and timing out
+It still does add a couple seconds of overhead (seen especially in the \emph{lecture} graph), but for a couple datasets it was the difference between solving the instance and timing out
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|r|r||r|r}
+& \multicolumn{2}{c||}{Basic Branching} & \multicolumn{2}{c}{Fast Ref Branching (v1.0.0/1.0.1)}\\
+instance & standard (s) & multicore (s) & standard (s) & multicore (s) \\
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+bigtrees1   & $0.07 \pm 0.01$    & $3.95 \pm 2.27$     & $54.10 \pm 107.46$ & $335.73 \pm 183.36$ \\
+cographs1   & --                 & --                  & $484.59 \pm 73.51$ & $3.18 \pm 1.32$ \\
+cubes6      & $0.63 \pm 0.08$    & $3.08 \pm 0.62$     & $0.14 \pm 0.02$    & $2.93 \pm 0.66$ \\
+cubes9      & $61.21 \pm 13.41$  & $65.07 \pm 13.79$   & $23.89 \pm 5.18$   & $26.81 \pm 5.58$ \\
+lecture     & $0.00 \pm 0.00$    & $1.03 \pm 0.12$     & $0.00 \pm 0.00$    & $1.01 \pm 0.11$ \\
+modulesC    & --                 & --                  & --                 & -- \\
+products216 & $82.46 \pm 10.19$  & $71.58 \pm 33.37$   & $29.98 \pm 17.79$  & $48.46 \pm 25.18$ \\
+torus144    & $80.83 \pm 15.86$  & $63.36 \pm 31.53$   & $12.42 \pm 1.59$   & $38.89 \pm 18.80$ \\
+wheeljoin33 & $546.44 \pm 48.72$ & $101.40 \pm 123.07$ & $368.80 \pm 43.84$ & $104.15 \pm 147.78$ \\
+wheelstar15 & --                 & --                  & --                 & -- \\
+\end{tabular}
+}
+\caption{Comparison of single-threaded vs.\ multithreaded computation times for computing $|Aut(G)|$ across 4 runs.
+Basic branching uses the standard colorref algorithm, while Fast Ref Branching utilizes the fast partition refinement implementation.
+Times include standard deviation to illustrate run-to-run variance - some instances show significant variability, we weren't able to pin down the reason as the times differed wildly even when core contention was minimal.
+We felt excluding these outliers would give a misleading picture of the performance, so we included them to show the full range of observed times.
+We unfortunately were not able to run the tests more than 4 times due to time constraints.
+``--'' indicates the algorithm timed out (600s limit) on the majority of its runs.}
+\label{tab:aut_multithreading}
+\end{table}
 
 
-In the pure Aut(G) tasks parallelism was used to run the automorphism counting algorithm for each graph in a separate process
+
+
+
+In the pure Aut(G) tasks parallelism was used to run the automorphism counting algorithm (with membership testing) for each graph in a separate process
 \begin{table}[H]
 \centering
 \begin{tabular}{l|r|r}
@@ -360,6 +391,7 @@ These are links to all prompts and responses that we used while working on this 
     \item \url{# https://gemini.google.com/share/0082b4da8b45}
     \item \url{# https://gemini.google.com/share/a2b6242f6fb5}
     \item \url{# https://gemini.google.com/share/d4a4a9965887}
+    \item \url{# https://gemini.google.com/share/7e0aec379ba0}
 \end{itemize}
 
 
