@@ -118,7 +118,7 @@
 
 %\begin{multicols}{2} % Two-column layout throughout the main article text
 
-According to the following documentation of computational results for the graph isomorphism project, we aim at a group-average grade of 9.5, which is in accordance to the grading rules. Since Maarten put in more than average work and Pietje less than average, as evidenced by Table~\ref{tab:workdistr}, we suggest that Maarten receive a 0.5 point higher grade and Pietje a 0.5 point lower grade.
+According to the following documentation of computational results for the graph isomorphism project, we aim at a group-average grade of 9.5, which is in accordance to the grading rules (6 for solving basic instances, +1 for implementing the fast partition refinement algorithm, +1 for implementing pruning rules for the branching algorithm based on automorphism groups, +0.5 for digging deeper in optimization of the fast partitioning algorithms, +1 for the multi threading, +0.4 for bonus instances).
 % TODO: revise the point calculation
 \begin{table}[h]
 	\centering
@@ -126,8 +126,8 @@ According to the following documentation of computational results for the graph 
 		Team member &grade (deviation from average)\\
 		\hline
 		Alexander Zhuralev & 9.5 (+0.0)\\
-		Stanislaw Piechota & 10.0 (+0.5)\\
-		Wojciech Walczak & 9.0 (-0.5)
+		Stanislaw Piechota & 9.5 (+0.0)\\
+		Wojciech Walczak & 9.5 (+0.0)
 	\end{tabular}
 	\caption{Suggested grades}
 \end{table}
@@ -139,7 +139,6 @@ We did ensure that the computation times presented within one table, come from t
 %------------------------------------------------
 \section{Category 6 (pass): Basic Problem Instances}
 The basic problem instances have been solved correctly during the programming delivery/competition. Table~\ref{tab:basic} shows the computation times. (The ``\xmark''  should not be there when you want to have a sufficient grade ;-) )
-% TODO: run these tests and update the table with actual results
 \begin{table}[h]
 \centering
 \begin{tabular}{r|c|r}
@@ -160,14 +159,12 @@ basic07GIAut& \cmark & 2.61\\
 \vspace{-1ex}
 \section{Implementation of Fast Partition Refinement (grade +1)}
 We have implemented the fast partition refinement Algorithm based on Hopcroft's algorithm for DFA minimization of finite automata \cite{Hop1971}.
-In order to achieve a speedup with this algorithm, we used \ldots [datastructure(s)].
+In order to achieve a speedup with this algorithm, we rewrote the Graph class to reduce the overhead. Edges as objects were omitted, so was deleted the vertex list. All graph structure was described with a set of vertices, having an adjacency list. Also, we added new properties to the Vertex class to store the information relevant to fast refinement (color, i). Data structures used are: list for the queue (to support the order); set for visited vertices (for better add/delete complexity), Dict of A: vertices having i neighbors of given color, where i is the key of the dict for easier access of all such vertices and also a property of a vertex to modify it easier.
 The speedup on the mandatory sample instances with
 this algorithm for computing a stable colouring is documented in
-Table~\ref{tab:FPR}\footnote{The table for this category needs to include at least these examples specifically}.
+Table~\ref{tab:FPR}.
 As expected, the computation time(s) scale roughly linear with the size of the instances. On other instances the
 algorithm is also significantly faster than our basic colour refinement algorithm.
-
-% TODO: the stuff above this still needs to be replaced with the actual report content (Alex)
 Late in the project we rewrote the fast partition refinement algorithm to be backwards compatible with basic graph class so we could isolate the speedup of the cref algorithm itself used in the basic branching algorithm.
 This backwards-compatible implementation used dictionaries instead of attaching properties to the vertices, which made it slighly slower than the original implementation, but still showcased the algorithmic dominance of fast part. ref.
 
@@ -326,7 +323,6 @@ products216  & --     & 147.15 \\
 (This is reserved for your own, genuinely new ideas, which you need to explain here briefly. If you want to get points for your idea, you need to
 explain what it is, why it works, and prove why it is correct. Additionally,
 a table with a comparison of computational times is mandatory.)
-% TODO: alex's graph copying and custom graph class?
 
 \subsection{Algorithm for ``Class'' graphs (grade +1)}
 Not implemented.
